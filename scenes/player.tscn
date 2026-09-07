@@ -7,7 +7,7 @@ bg_color = Color(2.8878452e-07, 0.287885, 0.25852492, 1)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vyb7"]
 radius = 19.0
-height = 64.0
+height = 116.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1089869233]
 script = ExtResource("1_3vyb7")
@@ -22,5 +22,5 @@ mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u8vuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=638735993]
-position = Vector2(1, -17)
+position = Vector2(1, -45)
 shape = SubResource("CapsuleShape2D_3vyb7")
