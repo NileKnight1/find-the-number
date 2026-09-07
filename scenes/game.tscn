@@ -257,6 +257,9 @@ b = Vector2(364, 35)
 a = Vector2(253, 35)
 b = Vector2(357, 35)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u5sy4"]
+size = Vector2(148, 214)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1j6l"]
 bg_color = Color(0.91280335, 0.780789, 0.7870394, 1)
 border_width_left = 3
@@ -278,6 +281,22 @@ bg_color = Color(0.59481364, 0.41463348, 0.18327808, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dinhu"]
 bg_color = Color(0.62198806, 0, 0.10864409, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pl11u"]
+bg_color = Color(0.11486266, 0.03590247, 3.008172e-09, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bhx41"]
+font = ExtResource("5_gee14")
+font_color = Color(0.5132329, 0.5132329, 0.5132329, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qnb83"]
+font = ExtResource("5_gee14")
+font_color = Color(0.5132329, 0.5132329, 0.5132329, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trtic"]
 bg_color = Color(0.99999994, 0.8885254, 0.81520957, 1)
 border_width_left = 1
@@ -296,22 +315,19 @@ font_size = 9
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_p57ef"]
-a = Vector2(659, 17)
-b = Vector2(-1831, 13)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_u5sy4"]
-size = Vector2(148, 214)
+a = Vector2(1948, 14)
+b = Vector2(-6370, 13)
 
 [node name="game" type="Node2D" unique_id=994519513]
 script = ExtResource("1_lbhrr")
 
-[node name="room_1" type="Node2D" parent="." unique_id=1665507269]
+[node name="R-18" type="Node2D" parent="." unique_id=1665507269]
 
-[node name="map_behind" type="Node2D" parent="room_1" unique_id=2008902769]
+[node name="map_behind" type="Node2D" parent="R-18" unique_id=2008902769]
 
-[node name="room" type="Node2D" parent="room_1/map_behind" unique_id=1145307526]
+[node name="room" type="Node2D" parent="R-18/map_behind" unique_id=1145307526]
 
-[node name="wall2" type="Panel" parent="room_1/map_behind/room" unique_id=1314097121]
+[node name="wall2" type="Panel" parent="R-18/map_behind/room" unique_id=1314097121]
 light_mask = 0
 visibility_layer = 2
 layout_direction = 2
@@ -322,7 +338,7 @@ offset_bottom = 238.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_kvpfn")
 
-[node name="wall" type="Panel" parent="room_1/map_behind/room" unique_id=1314548764]
+[node name="wall" type="Panel" parent="R-18/map_behind/room" unique_id=1314548764]
 layout_direction = 2
 offset_left = -457.0
 offset_top = -282.0
@@ -331,7 +347,7 @@ offset_bottom = 89.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_uwrxv")
 
-[node name="floor2" type="Panel" parent="room_1/map_behind/room" unique_id=95648590]
+[node name="floor2" type="Panel" parent="R-18/map_behind/room" unique_id=95648590]
 layout_direction = 2
 offset_left = -457.0
 offset_top = 85.0
@@ -340,7 +356,7 @@ offset_bottom = 229.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_yqjtg")
 
-[node name="door" type="Panel" parent="room_1/map_behind/room" unique_id=2057259471]
+[node name="door" type="Panel" parent="R-18/map_behind/room" unique_id=2057259471]
 layout_direction = 2
 offset_left = -238.0
 offset_top = -107.0
@@ -349,10 +365,10 @@ offset_bottom = 85.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
-[node name="wardrobe" type="Node2D" parent="room_1/map_behind/room" unique_id=1411167080]
+[node name="wardrobe" type="Node2D" parent="R-18/map_behind/room" unique_id=1411167080]
 position = Vector2(-222, 0)
 
-[node name="wardrobe" type="Panel" parent="room_1/map_behind/room/wardrobe" unique_id=2146049518]
+[node name="wardrobe" type="Panel" parent="R-18/map_behind/room/wardrobe" unique_id=2146049518]
 layout_direction = 2
 offset_left = 215.0
 offset_top = -117.0
@@ -361,7 +377,7 @@ offset_bottom = 86.725006
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_iywne")
 
-[node name="wardrobe2" type="Panel" parent="room_1/map_behind/room/wardrobe" unique_id=772663460]
+[node name="wardrobe2" type="Panel" parent="R-18/map_behind/room/wardrobe" unique_id=772663460]
 layout_direction = 2
 offset_left = 215.0
 offset_top = -117.0
@@ -370,10 +386,10 @@ offset_bottom = 86.725006
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_iywne")
 
-[node name="bed" type="Node2D" parent="room_1/map_behind/room" unique_id=2094124517]
+[node name="bed" type="Node2D" parent="R-18/map_behind/room" unique_id=2094124517]
 position = Vector2(0, -11)
 
-[node name="door6" type="Panel" parent="room_1/map_behind/room/bed" unique_id=515564276]
+[node name="door6" type="Panel" parent="R-18/map_behind/room/bed" unique_id=515564276]
 layout_direction = 2
 offset_left = 201.0
 offset_top = 1.0
@@ -382,7 +398,7 @@ offset_bottom = 64.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
-[node name="door7" type="Panel" parent="room_1/map_behind/room/bed" unique_id=1803741992]
+[node name="door7" type="Panel" parent="R-18/map_behind/room/bed" unique_id=1803741992]
 layout_direction = 2
 offset_left = 365.0
 offset_top = 1.0
@@ -391,7 +407,7 @@ offset_bottom = 64.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
-[node name="door3" type="Panel" parent="room_1/map_behind/room/bed" unique_id=11376788]
+[node name="door3" type="Panel" parent="R-18/map_behind/room/bed" unique_id=11376788]
 layout_direction = 2
 offset_left = 209.0
 offset_top = -21.0
@@ -400,7 +416,7 @@ offset_bottom = 26.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_gee14")
 
-[node name="door2" type="Panel" parent="room_1/map_behind/room/bed" unique_id=536526126]
+[node name="door2" type="Panel" parent="R-18/map_behind/room/bed" unique_id=536526126]
 layout_direction = 2
 offset_left = 207.0
 offset_top = 17.0
@@ -409,7 +425,7 @@ offset_bottom = 49.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_p57ef")
 
-[node name="door" type="Panel" parent="room_1/map_behind/room/bed" unique_id=238333703]
+[node name="door" type="Panel" parent="R-18/map_behind/room/bed" unique_id=238333703]
 layout_direction = 2
 offset_left = 199.0
 offset_top = 49.0
@@ -418,7 +434,7 @@ offset_bottom = 96.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lbhrr")
 
-[node name="door4" type="Panel" parent="room_1/map_behind/room/bed" unique_id=277045787]
+[node name="door4" type="Panel" parent="R-18/map_behind/room/bed" unique_id=277045787]
 layout_direction = 2
 offset_left = 199.0
 offset_top = 39.0
@@ -427,7 +443,7 @@ offset_bottom = 96.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
-[node name="door5" type="Panel" parent="room_1/map_behind/room/bed" unique_id=817479282]
+[node name="door5" type="Panel" parent="R-18/map_behind/room/bed" unique_id=817479282]
 layout_direction = 2
 offset_left = 370.0
 offset_top = 39.0
@@ -436,9 +452,9 @@ offset_bottom = 96.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
-[node name="desk" type="Node2D" parent="room_1/map_behind/room" unique_id=863180369]
+[node name="desk" type="Node2D" parent="R-18/map_behind/room" unique_id=863180369]
 
-[node name="door2" type="Panel" parent="room_1/map_behind/room/desk" unique_id=1165357505]
+[node name="door2" type="Panel" parent="R-18/map_behind/room/desk" unique_id=1165357505]
 layout_direction = 2
 offset_left = -406.0
 offset_top = 16.0
@@ -447,7 +463,7 @@ offset_bottom = 85.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_0tnpc")
 
-[node name="door3" type="Panel" parent="room_1/map_behind/room/desk" unique_id=83217325]
+[node name="door3" type="Panel" parent="R-18/map_behind/room/desk" unique_id=83217325]
 layout_direction = 2
 offset_left = -372.0
 offset_top = -3.0
@@ -456,7 +472,7 @@ offset_bottom = 16.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_vtaks")
 
-[node name="Label" type="Label" parent="room_1/map_behind/room/desk" unique_id=643249825]
+[node name="Label" type="Label" parent="R-18/map_behind/room/desk" unique_id=643249825]
 offset_left = -370.0
 offset_top = -5.0
 offset_right = -324.0
@@ -468,71 +484,71 @@ label_settings = SubResource("LabelSettings_gee14")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="lights" type="Node2D" parent="room_1/map_behind" unique_id=410495781]
+[node name="lights" type="Node2D" parent="R-18/map_behind" unique_id=410495781]
 visible = false
 
-[node name="PointLight2D" type="PointLight2D" parent="room_1/map_behind/lights" unique_id=811135468]
+[node name="PointLight2D" type="PointLight2D" parent="R-18/map_behind/lights" unique_id=811135468]
 position = Vector2(0, -19.5)
 scale = Vector2(0.88030887, 1.0815899)
 energy = 0.97
 blend_mode = 1
 texture = ExtResource("1_yqjtg")
 
-[node name="boundaries" type="Node2D" parent="room_1/map_behind" unique_id=234834925]
+[node name="boundaries" type="Node2D" parent="R-18/map_behind" unique_id=234834925]
 
-[node name="walls" type="StaticBody2D" parent="room_1/map_behind/boundaries" unique_id=1671601939]
+[node name="walls" type="StaticBody2D" parent="R-18/map_behind/boundaries" unique_id=1671601939]
 position = Vector2(0, 86)
 
-[node name="down" type="CollisionShape2D" parent="room_1/map_behind/boundaries/walls" unique_id=775119386]
+[node name="down" type="CollisionShape2D" parent="R-18/map_behind/boundaries/walls" unique_id=775119386]
 position = Vector2(224, -12)
 shape = SubResource("SegmentShape2D_dinhu")
 
-[node name="up" type="CollisionShape2D" parent="room_1/map_behind/boundaries/walls" unique_id=281763016]
+[node name="up" type="CollisionShape2D" parent="R-18/map_behind/boundaries/walls" unique_id=281763016]
 position = Vector2(224, -381)
 shape = SubResource("SegmentShape2D_dinhu")
 
-[node name="left" type="CollisionShape2D" parent="room_1/map_behind/boundaries/walls" unique_id=1618782949]
+[node name="left" type="CollisionShape2D" parent="R-18/map_behind/boundaries/walls" unique_id=1618782949]
 position = Vector2(224, -12)
 shape = SubResource("SegmentShape2D_u5sy4")
 
-[node name="right" type="CollisionShape2D" parent="room_1/map_behind/boundaries/walls" unique_id=1832898755]
+[node name="right" type="CollisionShape2D" parent="R-18/map_behind/boundaries/walls" unique_id=1832898755]
 position = Vector2(1137, -6)
 shape = SubResource("SegmentShape2D_gee14")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="room_1/map_behind/boundaries" unique_id=1231443735]
+[node name="StaticBody2D" type="StaticBody2D" parent="R-18/map_behind/boundaries" unique_id=1231443735]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="room_1/map_behind/boundaries/StaticBody2D" unique_id=11462769]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="R-18/map_behind/boundaries/StaticBody2D" unique_id=11462769]
 shape = SubResource("SegmentShape2D_0tnpc")
 one_way_collision = true
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="room_1/map_behind/boundaries/StaticBody2D" unique_id=2034897440]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="R-18/map_behind/boundaries/StaticBody2D" unique_id=2034897440]
 position = Vector2(0, -67)
 shape = SubResource("SegmentShape2D_vtaks")
 one_way_collision = true
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="room_1/map_behind/boundaries/StaticBody2D" unique_id=1731129426]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="R-18/map_behind/boundaries/StaticBody2D" unique_id=1731129426]
 position = Vector2(-242, -150)
 shape = SubResource("SegmentShape2D_ir15t")
 one_way_collision = true
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="room_1/map_behind/boundaries/StaticBody2D" unique_id=799481977]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="R-18/map_behind/boundaries/StaticBody2D" unique_id=799481977]
 position = Vector2(-638, -17)
 shape = SubResource("SegmentShape2D_kvuet")
 one_way_collision = true
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="room_1/map_behind/boundaries/StaticBody2D" unique_id=50413736]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="R-18/map_behind/boundaries/StaticBody2D" unique_id=50413736]
 position = Vector2(-606, -37)
 shape = SubResource("SegmentShape2D_trtic")
 one_way_collision = true
 
-[node name="room_2" type="Node2D" parent="." unique_id=1121293984]
+[node name="room_1" type="Node2D" parent="." unique_id=1121293984]
 position = Vector2(1311, 0)
 
-[node name="map_behind" type="Node2D" parent="room_2" unique_id=1163811101]
+[node name="map_behind" type="Node2D" parent="room_1" unique_id=1163811101]
 
-[node name="room" type="Node2D" parent="room_2/map_behind" unique_id=1864740223]
+[node name="room" type="Node2D" parent="room_1/map_behind" unique_id=1864740223]
 
-[node name="wall2" type="Panel" parent="room_2/map_behind/room" unique_id=409967644]
+[node name="wall2" type="Panel" parent="room_1/map_behind/room" unique_id=409967644]
 light_mask = 0
 visibility_layer = 2
 layout_direction = 2
@@ -543,7 +559,7 @@ offset_bottom = 238.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_kvpfn")
 
-[node name="wall" type="Panel" parent="room_2/map_behind/room" unique_id=331080648]
+[node name="wall" type="Panel" parent="room_1/map_behind/room" unique_id=331080648]
 layout_direction = 2
 offset_left = -457.0
 offset_top = -282.0
@@ -552,7 +568,7 @@ offset_bottom = 89.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_uwrxv")
 
-[node name="floor2" type="Panel" parent="room_2/map_behind/room" unique_id=491336714]
+[node name="floor2" type="Panel" parent="room_1/map_behind/room" unique_id=491336714]
 layout_direction = 2
 offset_left = -457.0
 offset_top = 85.0
@@ -561,7 +577,7 @@ offset_bottom = 229.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_yqjtg")
 
-[node name="door" type="Panel" parent="room_2/map_behind/room" unique_id=1888968098]
+[node name="door" type="Panel" parent="room_1/map_behind/room" unique_id=1888968098]
 layout_direction = 2
 offset_left = -238.0
 offset_top = -107.0
@@ -570,10 +586,10 @@ offset_bottom = 85.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
-[node name="bed" type="Node2D" parent="room_2/map_behind/room" unique_id=934513392]
+[node name="bed" type="Node2D" parent="room_1/map_behind/room" unique_id=934513392]
 position = Vector2(-35, -11)
 
-[node name="door6" type="Panel" parent="room_2/map_behind/room/bed" unique_id=76222206]
+[node name="door6" type="Panel" parent="room_1/map_behind/room/bed" unique_id=76222206]
 layout_direction = 2
 offset_left = 201.0
 offset_top = 1.0
@@ -582,7 +598,7 @@ offset_bottom = 64.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
-[node name="door7" type="Panel" parent="room_2/map_behind/room/bed" unique_id=1031589675]
+[node name="door7" type="Panel" parent="room_1/map_behind/room/bed" unique_id=1031589675]
 layout_direction = 2
 offset_left = 365.0
 offset_top = 1.0
@@ -591,7 +607,7 @@ offset_bottom = 64.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
-[node name="door3" type="Panel" parent="room_2/map_behind/room/bed" unique_id=74448682]
+[node name="door3" type="Panel" parent="room_1/map_behind/room/bed" unique_id=74448682]
 layout_direction = 2
 offset_left = 209.0
 offset_top = -21.0
@@ -600,7 +616,7 @@ offset_bottom = 26.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_gee14")
 
-[node name="door2" type="Panel" parent="room_2/map_behind/room/bed" unique_id=586383664]
+[node name="door2" type="Panel" parent="room_1/map_behind/room/bed" unique_id=586383664]
 layout_direction = 2
 offset_left = 207.0
 offset_top = 17.0
@@ -609,7 +625,7 @@ offset_bottom = 49.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_p57ef")
 
-[node name="door" type="Panel" parent="room_2/map_behind/room/bed" unique_id=1258654634]
+[node name="door" type="Panel" parent="room_1/map_behind/room/bed" unique_id=1258654634]
 layout_direction = 2
 offset_left = 199.0
 offset_top = 49.0
@@ -618,7 +634,7 @@ offset_bottom = 96.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lbhrr")
 
-[node name="door4" type="Panel" parent="room_2/map_behind/room/bed" unique_id=442564927]
+[node name="door4" type="Panel" parent="room_1/map_behind/room/bed" unique_id=442564927]
 layout_direction = 2
 offset_left = 199.0
 offset_top = 39.0
@@ -627,7 +643,7 @@ offset_bottom = 96.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
-[node name="door5" type="Panel" parent="room_2/map_behind/room/bed" unique_id=1429933787]
+[node name="door5" type="Panel" parent="room_1/map_behind/room/bed" unique_id=1429933787]
 layout_direction = 2
 offset_left = 370.0
 offset_top = 39.0
@@ -636,9 +652,9 @@ offset_bottom = 96.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
-[node name="desk" type="Node2D" parent="room_2/map_behind/room" unique_id=883850782]
+[node name="desk" type="Node2D" parent="room_1/map_behind/room" unique_id=883850782]
 
-[node name="door2" type="Panel" parent="room_2/map_behind/room/desk" unique_id=318607827]
+[node name="door2" type="Panel" parent="room_1/map_behind/room/desk" unique_id=318607827]
 layout_direction = 2
 offset_left = -406.0
 offset_top = 16.0
@@ -647,7 +663,7 @@ offset_bottom = 85.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_0tnpc")
 
-[node name="door3" type="Panel" parent="room_2/map_behind/room/desk" unique_id=545435396]
+[node name="door3" type="Panel" parent="room_1/map_behind/room/desk" unique_id=545435396]
 layout_direction = 2
 offset_left = -351.0
 offset_top = -2.0
@@ -656,10 +672,10 @@ offset_bottom = 17.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_bt5mj")
 
-[node name="desk2" type="Node2D" parent="room_2/map_behind/room" unique_id=820193989]
+[node name="desk2" type="Node2D" parent="room_1/map_behind/room" unique_id=820193989]
 position = Vector2(755, 0)
 
-[node name="door2" type="Panel" parent="room_2/map_behind/room/desk2" unique_id=242877030]
+[node name="door2" type="Panel" parent="room_1/map_behind/room/desk2" unique_id=242877030]
 layout_direction = 2
 offset_left = -385.0
 offset_top = 16.0
@@ -668,7 +684,7 @@ offset_bottom = 85.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_0tnpc")
 
-[node name="door3" type="Panel" parent="room_2/map_behind/room/desk2" unique_id=1834540959]
+[node name="door3" type="Panel" parent="room_1/map_behind/room/desk2" unique_id=1834540959]
 layout_direction = 2
 offset_left = -372.0
 offset_top = -3.0
@@ -677,7 +693,7 @@ offset_bottom = 16.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_vtaks")
 
-[node name="Label" type="Label" parent="room_2/map_behind/room/desk2" unique_id=546768924]
+[node name="Label" type="Label" parent="room_1/map_behind/room/desk2" unique_id=546768924]
 offset_left = -370.0
 offset_top = -5.0
 offset_right = -324.0
@@ -689,10 +705,10 @@ label_settings = SubResource("LabelSettings_gee14")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="bookshelf" type="Node2D" parent="room_2/map_behind/room" unique_id=1669703181]
+[node name="bookshelf" type="Node2D" parent="room_1/map_behind/room" unique_id=1669703181]
 position = Vector2(391, 0)
 
-[node name="door2" type="Panel" parent="room_2/map_behind/room/bookshelf" unique_id=524160254]
+[node name="door2" type="Panel" parent="room_1/map_behind/room/bookshelf" unique_id=524160254]
 layout_direction = 2
 offset_left = -415.0
 offset_top = 5.0
@@ -701,7 +717,7 @@ offset_bottom = 85.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_0tnpc")
 
-[node name="door3" type="Panel" parent="room_2/map_behind/room/bookshelf" unique_id=1280136594]
+[node name="door3" type="Panel" parent="room_1/map_behind/room/bookshelf" unique_id=1280136594]
 layout_direction = 2
 offset_left = -405.0
 offset_top = -71.0
@@ -710,7 +726,7 @@ offset_bottom = 8.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ir15t")
 
-[node name="door4" type="Panel" parent="room_2/map_behind/room/bookshelf" unique_id=497430754]
+[node name="door4" type="Panel" parent="room_1/map_behind/room/bookshelf" unique_id=497430754]
 layout_direction = 2
 offset_left = -403.0
 offset_top = -31.0
@@ -719,7 +735,7 @@ offset_bottom = -27.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxLine_ca42v")
 
-[node name="door5" type="Panel" parent="room_2/map_behind/room/bookshelf" unique_id=58883050]
+[node name="door5" type="Panel" parent="room_1/map_behind/room/bookshelf" unique_id=58883050]
 visible = false
 layout_direction = 2
 offset_left = -403.0
@@ -729,9 +745,9 @@ offset_bottom = 10.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxLine_ca42v")
 
-[node name="books" type="Node2D" parent="room_2/map_behind/room/bookshelf" unique_id=1303989389]
+[node name="books" type="Node2D" parent="room_1/map_behind/room/bookshelf" unique_id=1303989389]
 
-[node name="book1" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=170970757]
+[node name="book1" type="Panel" parent="room_1/map_behind/room/bookshelf/books" unique_id=170970757]
 layout_direction = 2
 offset_left = -399.0
 offset_top = -27.0
@@ -740,7 +756,7 @@ offset_bottom = 6.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_rysoc")
 
-[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book1" unique_id=356253792]
+[node name="Label" type="Label" parent="room_1/map_behind/room/bookshelf/books/book1" unique_id=356253792]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -751,7 +767,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book2" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=905049544]
+[node name="book2" type="Panel" parent="room_1/map_behind/room/bookshelf/books" unique_id=905049544]
 layout_direction = 2
 offset_left = -387.0
 offset_top = -27.0
@@ -760,7 +776,7 @@ offset_bottom = 6.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ca42v")
 
-[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book2" unique_id=768835731]
+[node name="Label" type="Label" parent="room_1/map_behind/room/bookshelf/books/book2" unique_id=768835731]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -771,7 +787,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book3" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=980921574]
+[node name="book3" type="Panel" parent="room_1/map_behind/room/bookshelf/books" unique_id=980921574]
 layout_direction = 2
 offset_left = -375.0
 offset_top = -27.0
@@ -780,7 +796,7 @@ offset_bottom = 6.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ssvqc")
 
-[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book3" unique_id=1570119788]
+[node name="Label" type="Label" parent="room_1/map_behind/room/bookshelf/books/book3" unique_id=1570119788]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -791,7 +807,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book4" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=410233663]
+[node name="book4" type="Panel" parent="room_1/map_behind/room/bookshelf/books" unique_id=410233663]
 layout_direction = 2
 offset_left = -363.0
 offset_top = -27.0
@@ -800,7 +816,7 @@ offset_bottom = 6.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_264po")
 
-[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book4" unique_id=2064439644]
+[node name="Label" type="Label" parent="room_1/map_behind/room/bookshelf/books/book4" unique_id=2064439644]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -811,7 +827,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book5" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=788008219]
+[node name="book5" type="Panel" parent="room_1/map_behind/room/bookshelf/books" unique_id=788008219]
 layout_direction = 2
 offset_left = -351.0
 offset_top = -27.0
@@ -820,7 +836,7 @@ offset_bottom = 6.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_1kice")
 
-[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book5" unique_id=458676154]
+[node name="Label" type="Label" parent="room_1/map_behind/room/bookshelf/books/book5" unique_id=458676154]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -831,7 +847,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book6" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=1241206641]
+[node name="book6" type="Panel" parent="room_1/map_behind/room/bookshelf/books" unique_id=1241206641]
 layout_direction = 2
 offset_left = -339.0
 offset_top = -27.0
@@ -840,7 +856,7 @@ offset_bottom = 6.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_5newe")
 
-[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book6" unique_id=1601474506]
+[node name="Label" type="Label" parent="room_1/map_behind/room/bookshelf/books/book6" unique_id=1601474506]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -851,7 +867,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book7" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=925010264]
+[node name="book7" type="Panel" parent="room_1/map_behind/room/bookshelf/books" unique_id=925010264]
 layout_direction = 2
 offset_left = -327.0
 offset_top = -27.0
@@ -860,7 +876,7 @@ offset_bottom = 6.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_rysoc")
 
-[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book7" unique_id=1756836199]
+[node name="Label" type="Label" parent="room_1/map_behind/room/bookshelf/books/book7" unique_id=1756836199]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -871,7 +887,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book13" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=786926203]
+[node name="book13" type="Panel" parent="room_1/map_behind/room/bookshelf/books" unique_id=786926203]
 layout_direction = 2
 offset_left = -279.0
 offset_top = -27.0
@@ -880,7 +896,7 @@ offset_bottom = 6.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ssvqc")
 
-[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book13" unique_id=896096060]
+[node name="Label" type="Label" parent="room_1/map_behind/room/bookshelf/books/book13" unique_id=896096060]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -891,7 +907,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book10" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=491054062]
+[node name="book10" type="Panel" parent="room_1/map_behind/room/bookshelf/books" unique_id=491054062]
 layout_direction = 2
 offset_left = -315.0
 offset_top = -27.0
@@ -900,7 +916,7 @@ offset_bottom = 6.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_264po")
 
-[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book10" unique_id=1284570789]
+[node name="Label" type="Label" parent="room_1/map_behind/room/bookshelf/books/book10" unique_id=1284570789]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -911,7 +927,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book11" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=1578936465]
+[node name="book11" type="Panel" parent="room_1/map_behind/room/bookshelf/books" unique_id=1578936465]
 layout_direction = 2
 offset_left = -291.0
 offset_top = -27.0
@@ -920,7 +936,7 @@ offset_bottom = 6.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_1kice")
 
-[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book11" unique_id=121269019]
+[node name="Label" type="Label" parent="room_1/map_behind/room/bookshelf/books/book11" unique_id=121269019]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -931,7 +947,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book12" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=1307452594]
+[node name="book12" type="Panel" parent="room_1/map_behind/room/bookshelf/books" unique_id=1307452594]
 layout_direction = 2
 offset_left = -303.0
 offset_top = -27.0
@@ -940,7 +956,7 @@ offset_bottom = 6.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_5newe")
 
-[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book12" unique_id=1422887977]
+[node name="Label" type="Label" parent="room_1/map_behind/room/bookshelf/books/book12" unique_id=1422887977]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -951,7 +967,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book22" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=816060044]
+[node name="book22" type="Panel" parent="room_1/map_behind/room/bookshelf/books" unique_id=816060044]
 layout_direction = 2
 offset_left = -279.0
 offset_top = -64.0
@@ -960,7 +976,7 @@ offset_bottom = -31.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_264po")
 
-[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book22" unique_id=1551421837]
+[node name="Label" type="Label" parent="room_1/map_behind/room/bookshelf/books/book22" unique_id=1551421837]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -971,7 +987,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book18" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=1367825254]
+[node name="book18" type="Panel" parent="room_1/map_behind/room/bookshelf/books" unique_id=1367825254]
 layout_direction = 2
 offset_left = -327.0
 offset_top = -64.0
@@ -980,7 +996,7 @@ offset_bottom = -31.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_1kice")
 
-[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book18" unique_id=764435587]
+[node name="Label" type="Label" parent="room_1/map_behind/room/bookshelf/books/book18" unique_id=764435587]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -991,7 +1007,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book19" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=708339259]
+[node name="book19" type="Panel" parent="room_1/map_behind/room/bookshelf/books" unique_id=708339259]
 layout_direction = 2
 offset_left = -315.0
 offset_top = -64.0
@@ -1000,7 +1016,7 @@ offset_bottom = -31.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_rysoc")
 
-[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book19" unique_id=1961445639]
+[node name="Label" type="Label" parent="room_1/map_behind/room/bookshelf/books/book19" unique_id=1961445639]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -1011,7 +1027,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book8" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=563808715]
+[node name="book8" type="Panel" parent="room_1/map_behind/room/bookshelf/books" unique_id=563808715]
 layout_direction = 2
 offset_left = -399.0
 offset_top = -64.0
@@ -1020,7 +1036,7 @@ offset_bottom = -31.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ca42v")
 
-[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book8" unique_id=826034432]
+[node name="Label" type="Label" parent="room_1/map_behind/room/bookshelf/books/book8" unique_id=826034432]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -1031,7 +1047,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book9" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=583593229]
+[node name="book9" type="Panel" parent="room_1/map_behind/room/bookshelf/books" unique_id=583593229]
 layout_direction = 2
 offset_left = -387.0
 offset_top = -64.0
@@ -1040,7 +1056,7 @@ offset_bottom = -31.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ssvqc")
 
-[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book9" unique_id=2043962491]
+[node name="Label" type="Label" parent="room_1/map_behind/room/bookshelf/books/book9" unique_id=2043962491]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -1051,7 +1067,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book17" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=182329088]
+[node name="book17" type="Panel" parent="room_1/map_behind/room/bookshelf/books" unique_id=182329088]
 layout_direction = 2
 offset_left = -339.0
 offset_top = -64.0
@@ -1060,7 +1076,7 @@ offset_bottom = -31.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ssvqc")
 
-[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book17" unique_id=1242411435]
+[node name="Label" type="Label" parent="room_1/map_behind/room/bookshelf/books/book17" unique_id=1242411435]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -1071,7 +1087,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book20" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=1978247288]
+[node name="book20" type="Panel" parent="room_1/map_behind/room/bookshelf/books" unique_id=1978247288]
 layout_direction = 2
 offset_left = -303.0
 offset_top = -64.0
@@ -1080,7 +1096,7 @@ offset_bottom = -31.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_264po")
 
-[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book20" unique_id=367642301]
+[node name="Label" type="Label" parent="room_1/map_behind/room/bookshelf/books/book20" unique_id=367642301]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -1091,7 +1107,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book21" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=1502581873]
+[node name="book21" type="Panel" parent="room_1/map_behind/room/bookshelf/books" unique_id=1502581873]
 layout_direction = 2
 offset_left = -291.0
 offset_top = -64.0
@@ -1100,7 +1116,7 @@ offset_bottom = -31.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_1kice")
 
-[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book21" unique_id=2024390856]
+[node name="Label" type="Label" parent="room_1/map_behind/room/bookshelf/books/book21" unique_id=2024390856]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -1111,7 +1127,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book14" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=1289559489]
+[node name="book14" type="Panel" parent="room_1/map_behind/room/bookshelf/books" unique_id=1289559489]
 layout_direction = 2
 offset_left = -363.0
 offset_top = -64.0
@@ -1120,7 +1136,7 @@ offset_bottom = -31.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_264po")
 
-[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book14" unique_id=1235993939]
+[node name="Label" type="Label" parent="room_1/map_behind/room/bookshelf/books/book14" unique_id=1235993939]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -1131,7 +1147,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book15" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=2116533597]
+[node name="book15" type="Panel" parent="room_1/map_behind/room/bookshelf/books" unique_id=2116533597]
 layout_direction = 2
 offset_left = -375.0
 offset_top = -64.0
@@ -1140,7 +1156,7 @@ offset_bottom = -31.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_rysoc")
 
-[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book15" unique_id=1790806825]
+[node name="Label" type="Label" parent="room_1/map_behind/room/bookshelf/books/book15" unique_id=1790806825]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -1151,7 +1167,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book16" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=490480667]
+[node name="book16" type="Panel" parent="room_1/map_behind/room/bookshelf/books" unique_id=490480667]
 layout_direction = 2
 offset_left = -351.0
 offset_top = -64.0
@@ -1160,7 +1176,7 @@ offset_bottom = -31.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_5newe")
 
-[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book16" unique_id=1317342245]
+[node name="Label" type="Label" parent="room_1/map_behind/room/bookshelf/books/book16" unique_id=1317342245]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -1171,72 +1187,72 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="lights" type="Node2D" parent="room_2/map_behind" unique_id=85212125]
+[node name="lights" type="Node2D" parent="room_1/map_behind" unique_id=85212125]
 visible = false
 
-[node name="PointLight2D" type="PointLight2D" parent="room_2/map_behind/lights" unique_id=1987612652]
+[node name="PointLight2D" type="PointLight2D" parent="room_1/map_behind/lights" unique_id=1987612652]
 position = Vector2(0, -19.5)
 scale = Vector2(0.88030887, 1.0815899)
 energy = 0.97
 blend_mode = 1
 texture = ExtResource("1_yqjtg")
 
-[node name="boundaries" type="Node2D" parent="room_2/map_behind" unique_id=501259787]
+[node name="boundaries" type="Node2D" parent="room_1/map_behind" unique_id=501259787]
 
-[node name="walls" type="StaticBody2D" parent="room_2/map_behind/boundaries" unique_id=1072414736]
+[node name="walls" type="StaticBody2D" parent="room_1/map_behind/boundaries" unique_id=1072414736]
 position = Vector2(0, 86)
 
-[node name="down" type="CollisionShape2D" parent="room_2/map_behind/boundaries/walls" unique_id=1191723216]
+[node name="down" type="CollisionShape2D" parent="room_1/map_behind/boundaries/walls" unique_id=1191723216]
 position = Vector2(224, -12)
 shape = SubResource("SegmentShape2D_dinhu")
 
-[node name="up" type="CollisionShape2D" parent="room_2/map_behind/boundaries/walls" unique_id=1139590613]
+[node name="up" type="CollisionShape2D" parent="room_1/map_behind/boundaries/walls" unique_id=1139590613]
 position = Vector2(224, -381)
 shape = SubResource("SegmentShape2D_dinhu")
 
-[node name="left" type="CollisionShape2D" parent="room_2/map_behind/boundaries/walls" unique_id=1303708006]
+[node name="left" type="CollisionShape2D" parent="room_1/map_behind/boundaries/walls" unique_id=1303708006]
 position = Vector2(224, -12)
 shape = SubResource("SegmentShape2D_u5sy4")
 
-[node name="right" type="CollisionShape2D" parent="room_2/map_behind/boundaries/walls" unique_id=2120465246]
+[node name="right" type="CollisionShape2D" parent="room_1/map_behind/boundaries/walls" unique_id=2120465246]
 position = Vector2(1137, -6)
 shape = SubResource("SegmentShape2D_gee14")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="room_2/map_behind/boundaries" unique_id=911329729]
+[node name="StaticBody2D" type="StaticBody2D" parent="room_1/map_behind/boundaries" unique_id=911329729]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="room_2/map_behind/boundaries/StaticBody2D" unique_id=407865104]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="room_1/map_behind/boundaries/StaticBody2D" unique_id=407865104]
 position = Vector2(-38, 0)
 shape = SubResource("SegmentShape2D_0tnpc")
 one_way_collision = true
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="room_2/map_behind/boundaries/StaticBody2D" unique_id=266545807]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="room_1/map_behind/boundaries/StaticBody2D" unique_id=266545807]
 position = Vector2(-36, -67)
 shape = SubResource("SegmentShape2D_vtaks")
 one_way_collision = true
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="room_2/map_behind/boundaries/StaticBody2D" unique_id=1132429391]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="room_1/map_behind/boundaries/StaticBody2D" unique_id=1132429391]
 position = Vector2(-257, -30)
 shape = SubResource("SegmentShape2D_kvpfn")
 one_way_collision = true
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="room_2/map_behind/boundaries/StaticBody2D" unique_id=830769821]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="room_1/map_behind/boundaries/StaticBody2D" unique_id=830769821]
 position = Vector2(-257, -106)
 shape = SubResource("SegmentShape2D_ssvqc")
 one_way_collision = true
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="room_2/map_behind/boundaries/StaticBody2D" unique_id=1605921587]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="room_1/map_behind/boundaries/StaticBody2D" unique_id=1605921587]
 position = Vector2(-638, -17)
 shape = SubResource("SegmentShape2D_kvuet")
 one_way_collision = true
 
-[node name="room_3" type="Node2D" parent="." unique_id=1780425244]
+[node name="R-17" type="Node2D" parent="." unique_id=1780425244]
 position = Vector2(-1329, 0)
 
-[node name="map_behind" type="Node2D" parent="room_3" unique_id=897290789]
+[node name="map_behind" type="Node2D" parent="R-17" unique_id=897290789]
 
-[node name="room" type="Node2D" parent="room_3/map_behind" unique_id=260301332]
+[node name="room" type="Node2D" parent="R-17/map_behind" unique_id=260301332]
 
-[node name="wall2" type="Panel" parent="room_3/map_behind/room" unique_id=2009939075]
+[node name="wall2" type="Panel" parent="R-17/map_behind/room" unique_id=2009939075]
 light_mask = 0
 visibility_layer = 2
 layout_direction = 2
@@ -1247,7 +1263,7 @@ offset_bottom = 238.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_kvpfn")
 
-[node name="wall" type="Panel" parent="room_3/map_behind/room" unique_id=1355897510]
+[node name="wall" type="Panel" parent="R-17/map_behind/room" unique_id=1355897510]
 layout_direction = 2
 offset_left = -457.0
 offset_top = -282.0
@@ -1256,7 +1272,7 @@ offset_bottom = 89.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_uwrxv")
 
-[node name="pond" type="Panel" parent="room_3/map_behind/room" unique_id=56443473]
+[node name="pond" type="Panel" parent="R-17/map_behind/room" unique_id=56443473]
 layout_direction = 2
 offset_left = -457.0
 offset_top = 85.0
@@ -1265,7 +1281,7 @@ offset_bottom = 229.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_yqjtg")
 
-[node name="door" type="Panel" parent="room_3/map_behind/room" unique_id=1711318001]
+[node name="door" type="Panel" parent="R-17/map_behind/room" unique_id=1711318001]
 layout_direction = 2
 offset_left = -238.0
 offset_top = -107.0
@@ -1274,7 +1290,7 @@ offset_bottom = 85.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
-[node name="pod" type="Panel" parent="room_3/map_behind/room" unique_id=364611071]
+[node name="pod" type="Panel" parent="R-17/map_behind/room" unique_id=364611071]
 layout_direction = 2
 offset_left = -100.0
 offset_top = 85.0
@@ -1283,17 +1299,17 @@ offset_bottom = 134.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_37s47")
 
-[node name="pond_area" type="Area2D" parent="room_3/map_behind/room" unique_id=1163424356]
+[node name="pond_area" type="Area2D" parent="R-17/map_behind/room" unique_id=1163424356]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="room_3/map_behind/room/pond_area" unique_id=723396489]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="R-17/map_behind/room/pond_area" unique_id=723396489]
 position = Vector2(-40, 100)
 rotation = -1.5644543
 shape = SubResource("CapsuleShape2D_gee14")
 
-[node name="wardrobe" type="Node2D" parent="room_3/map_behind/room" unique_id=1068837226]
+[node name="wardrobe" type="Node2D" parent="R-17/map_behind/room" unique_id=1068837226]
 position = Vector2(-222, 0)
 
-[node name="wardrobe" type="Panel" parent="room_3/map_behind/room/wardrobe" unique_id=1647067203]
+[node name="wardrobe" type="Panel" parent="R-17/map_behind/room/wardrobe" unique_id=1647067203]
 layout_direction = 2
 offset_left = 215.0
 offset_top = -117.0
@@ -1302,7 +1318,7 @@ offset_bottom = 86.725006
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_iywne")
 
-[node name="wardrobe2" type="Panel" parent="room_3/map_behind/room/wardrobe" unique_id=569356599]
+[node name="wardrobe2" type="Panel" parent="R-17/map_behind/room/wardrobe" unique_id=569356599]
 layout_direction = 2
 offset_left = 215.0
 offset_top = -117.0
@@ -1311,10 +1327,10 @@ offset_bottom = 86.725006
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_iywne")
 
-[node name="bed" type="Node2D" parent="room_3/map_behind/room" unique_id=439512564]
+[node name="bed" type="Node2D" parent="R-17/map_behind/room" unique_id=439512564]
 position = Vector2(0, -11)
 
-[node name="door6" type="Panel" parent="room_3/map_behind/room/bed" unique_id=1734382053]
+[node name="door6" type="Panel" parent="R-17/map_behind/room/bed" unique_id=1734382053]
 layout_direction = 2
 offset_left = 201.0
 offset_top = 1.0
@@ -1323,7 +1339,7 @@ offset_bottom = 64.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
-[node name="door7" type="Panel" parent="room_3/map_behind/room/bed" unique_id=1840542247]
+[node name="door7" type="Panel" parent="R-17/map_behind/room/bed" unique_id=1840542247]
 layout_direction = 2
 offset_left = 365.0
 offset_top = 1.0
@@ -1332,7 +1348,7 @@ offset_bottom = 64.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
-[node name="door3" type="Panel" parent="room_3/map_behind/room/bed" unique_id=983923516]
+[node name="door3" type="Panel" parent="R-17/map_behind/room/bed" unique_id=983923516]
 layout_direction = 2
 offset_left = 209.0
 offset_top = -21.0
@@ -1341,7 +1357,7 @@ offset_bottom = 26.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_gee14")
 
-[node name="door2" type="Panel" parent="room_3/map_behind/room/bed" unique_id=1284853867]
+[node name="door2" type="Panel" parent="R-17/map_behind/room/bed" unique_id=1284853867]
 layout_direction = 2
 offset_left = 207.0
 offset_top = 17.0
@@ -1350,7 +1366,7 @@ offset_bottom = 49.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_p57ef")
 
-[node name="door" type="Panel" parent="room_3/map_behind/room/bed" unique_id=446944910]
+[node name="door" type="Panel" parent="R-17/map_behind/room/bed" unique_id=446944910]
 layout_direction = 2
 offset_left = 199.0
 offset_top = 49.0
@@ -1359,7 +1375,7 @@ offset_bottom = 96.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lbhrr")
 
-[node name="door4" type="Panel" parent="room_3/map_behind/room/bed" unique_id=1777190970]
+[node name="door4" type="Panel" parent="R-17/map_behind/room/bed" unique_id=1777190970]
 layout_direction = 2
 offset_left = 199.0
 offset_top = 39.0
@@ -1368,7 +1384,7 @@ offset_bottom = 96.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
-[node name="door5" type="Panel" parent="room_3/map_behind/room/bed" unique_id=155031319]
+[node name="door5" type="Panel" parent="R-17/map_behind/room/bed" unique_id=155031319]
 layout_direction = 2
 offset_left = 370.0
 offset_top = 39.0
@@ -1377,9 +1393,9 @@ offset_bottom = 96.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
-[node name="desk" type="Node2D" parent="room_3/map_behind/room" unique_id=506387775]
+[node name="desk" type="Node2D" parent="R-17/map_behind/room" unique_id=506387775]
 
-[node name="door2" type="Panel" parent="room_3/map_behind/room/desk" unique_id=1476257252]
+[node name="door2" type="Panel" parent="R-17/map_behind/room/desk" unique_id=1476257252]
 layout_direction = 2
 offset_left = -406.0
 offset_top = 16.0
@@ -1388,7 +1404,7 @@ offset_bottom = 85.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_0tnpc")
 
-[node name="door3" type="Panel" parent="room_3/map_behind/room/desk" unique_id=760445974]
+[node name="door3" type="Panel" parent="R-17/map_behind/room/desk" unique_id=760445974]
 layout_direction = 2
 offset_left = -372.0
 offset_top = -3.0
@@ -1397,7 +1413,7 @@ offset_bottom = 16.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_vtaks")
 
-[node name="Label" type="Label" parent="room_3/map_behind/room/desk" unique_id=1600002314]
+[node name="Label" type="Label" parent="R-17/map_behind/room/desk" unique_id=1600002314]
 offset_left = -370.0
 offset_top = -5.0
 offset_right = -324.0
@@ -1409,85 +1425,85 @@ label_settings = SubResource("LabelSettings_gee14")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="lights" type="Node2D" parent="room_3/map_behind" unique_id=1152641207]
+[node name="lights" type="Node2D" parent="R-17/map_behind" unique_id=1152641207]
 visible = false
 
-[node name="PointLight2D" type="PointLight2D" parent="room_3/map_behind/lights" unique_id=1782977779]
+[node name="PointLight2D" type="PointLight2D" parent="R-17/map_behind/lights" unique_id=1782977779]
 position = Vector2(0, -19.5)
 scale = Vector2(0.88030887, 1.0815899)
 energy = 0.97
 blend_mode = 1
 texture = ExtResource("1_yqjtg")
 
-[node name="boundaries" type="Node2D" parent="room_3/map_behind" unique_id=682513590]
+[node name="boundaries" type="Node2D" parent="R-17/map_behind" unique_id=682513590]
 
-[node name="walls" type="StaticBody2D" parent="room_3/map_behind/boundaries" unique_id=1753114425]
+[node name="walls" type="StaticBody2D" parent="R-17/map_behind/boundaries" unique_id=1753114425]
 position = Vector2(0, 86)
 
-[node name="down" type="CollisionShape2D" parent="room_3/map_behind/boundaries/walls" unique_id=419575532]
+[node name="down" type="CollisionShape2D" parent="R-17/map_behind/boundaries/walls" unique_id=419575532]
 position = Vector2(224, -12)
 shape = SubResource("SegmentShape2D_rysoc")
 
-[node name="down3" type="CollisionShape2D" parent="room_3/map_behind/boundaries/walls" unique_id=1559883230]
+[node name="down3" type="CollisionShape2D" parent="R-17/map_behind/boundaries/walls" unique_id=1559883230]
 position = Vector2(-98, 14)
 rotation = 1.9353608
 shape = SubResource("SegmentShape2D_264po")
 
-[node name="down4" type="CollisionShape2D" parent="room_3/map_behind/boundaries/walls" unique_id=487357690]
+[node name="down4" type="CollisionShape2D" parent="R-17/map_behind/boundaries/walls" unique_id=487357690]
 position = Vector2(-40, 41)
 rotation = 1.9353608
 shape = SubResource("SegmentShape2D_1kice")
 
-[node name="down2" type="CollisionShape2D" parent="room_3/map_behind/boundaries/walls" unique_id=258711239]
+[node name="down2" type="CollisionShape2D" parent="R-17/map_behind/boundaries/walls" unique_id=258711239]
 position = Vector2(783, -11)
 shape = SubResource("SegmentShape2D_5newe")
 
-[node name="up" type="CollisionShape2D" parent="room_3/map_behind/boundaries/walls" unique_id=790015823]
+[node name="up" type="CollisionShape2D" parent="R-17/map_behind/boundaries/walls" unique_id=790015823]
 position = Vector2(224, -381)
 shape = SubResource("SegmentShape2D_dinhu")
 
-[node name="left" type="CollisionShape2D" parent="room_3/map_behind/boundaries/walls" unique_id=1581160761]
+[node name="left" type="CollisionShape2D" parent="R-17/map_behind/boundaries/walls" unique_id=1581160761]
 position = Vector2(224, -12)
 shape = SubResource("SegmentShape2D_u5sy4")
 
-[node name="right" type="CollisionShape2D" parent="room_3/map_behind/boundaries/walls" unique_id=946308972]
+[node name="right" type="CollisionShape2D" parent="R-17/map_behind/boundaries/walls" unique_id=946308972]
 position = Vector2(1137, -6)
 shape = SubResource("SegmentShape2D_gee14")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="room_3/map_behind/boundaries" unique_id=413401053]
+[node name="StaticBody2D" type="StaticBody2D" parent="R-17/map_behind/boundaries" unique_id=413401053]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="room_3/map_behind/boundaries/StaticBody2D" unique_id=832143531]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="R-17/map_behind/boundaries/StaticBody2D" unique_id=832143531]
 shape = SubResource("SegmentShape2D_0tnpc")
 one_way_collision = true
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="room_3/map_behind/boundaries/StaticBody2D" unique_id=648282593]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="R-17/map_behind/boundaries/StaticBody2D" unique_id=648282593]
 position = Vector2(0, -67)
 shape = SubResource("SegmentShape2D_vtaks")
 one_way_collision = true
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="room_3/map_behind/boundaries/StaticBody2D" unique_id=2146791430]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="R-17/map_behind/boundaries/StaticBody2D" unique_id=2146791430]
 position = Vector2(-242, -150)
 shape = SubResource("SegmentShape2D_ca42v")
 one_way_collision = true
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="room_3/map_behind/boundaries/StaticBody2D" unique_id=1180695695]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="R-17/map_behind/boundaries/StaticBody2D" unique_id=1180695695]
 position = Vector2(-638, -17)
 shape = SubResource("SegmentShape2D_kvuet")
 one_way_collision = true
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="room_3/map_behind/boundaries/StaticBody2D" unique_id=1945049266]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="R-17/map_behind/boundaries/StaticBody2D" unique_id=1945049266]
 position = Vector2(-606, -37)
 shape = SubResource("SegmentShape2D_trtic")
 one_way_collision = true
 
-[node name="room_4" type="Node2D" parent="." unique_id=2101923215]
+[node name="R-16" type="Node2D" parent="." unique_id=2101923215]
 position = Vector2(-2658, 0)
 
-[node name="map_behind" type="Node2D" parent="room_4" unique_id=224645169]
+[node name="map_behind" type="Node2D" parent="R-16" unique_id=224645169]
 
-[node name="room" type="Node2D" parent="room_4/map_behind" unique_id=1695977719]
+[node name="room" type="Node2D" parent="R-16/map_behind" unique_id=1695977719]
 
-[node name="wall2" type="Panel" parent="room_4/map_behind/room" unique_id=1408001516]
+[node name="wall2" type="Panel" parent="R-16/map_behind/room" unique_id=1408001516]
 light_mask = 0
 visibility_layer = 2
 layout_direction = 2
@@ -1498,7 +1514,7 @@ offset_bottom = 238.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_kvpfn")
 
-[node name="wall" type="Panel" parent="room_4/map_behind/room" unique_id=938689190]
+[node name="wall" type="Panel" parent="R-16/map_behind/room" unique_id=938689190]
 layout_direction = 2
 offset_left = -457.0
 offset_top = -282.0
@@ -1507,7 +1523,7 @@ offset_bottom = 89.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_uwrxv")
 
-[node name="pond" type="Panel" parent="room_4/map_behind/room" unique_id=1853597111]
+[node name="pond" type="Panel" parent="R-16/map_behind/room" unique_id=1853597111]
 layout_direction = 2
 offset_left = -457.0
 offset_top = 85.0
@@ -1516,7 +1532,7 @@ offset_bottom = 229.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_yqjtg")
 
-[node name="door" type="Panel" parent="room_4/map_behind/room" unique_id=1992607329]
+[node name="door" type="Panel" parent="R-16/map_behind/room" unique_id=1992607329]
 layout_direction = 2
 offset_left = -238.0
 offset_top = -107.0
@@ -1525,10 +1541,10 @@ offset_bottom = 85.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
-[node name="bed" type="Node2D" parent="room_4/map_behind/room" unique_id=945242407]
+[node name="bed" type="Node2D" parent="R-16/map_behind/room" unique_id=945242407]
 position = Vector2(0, -11)
 
-[node name="door6" type="Panel" parent="room_4/map_behind/room/bed" unique_id=1419092634]
+[node name="door6" type="Panel" parent="R-16/map_behind/room/bed" unique_id=1419092634]
 layout_direction = 2
 offset_left = 201.0
 offset_top = 1.0
@@ -1537,7 +1553,7 @@ offset_bottom = 64.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
-[node name="door7" type="Panel" parent="room_4/map_behind/room/bed" unique_id=68162445]
+[node name="door7" type="Panel" parent="R-16/map_behind/room/bed" unique_id=68162445]
 layout_direction = 2
 offset_left = 365.0
 offset_top = 1.0
@@ -1546,7 +1562,7 @@ offset_bottom = 64.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
-[node name="door3" type="Panel" parent="room_4/map_behind/room/bed" unique_id=1963759925]
+[node name="door3" type="Panel" parent="R-16/map_behind/room/bed" unique_id=1963759925]
 layout_direction = 2
 offset_left = 209.0
 offset_top = -21.0
@@ -1555,7 +1571,7 @@ offset_bottom = 26.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_gee14")
 
-[node name="door2" type="Panel" parent="room_4/map_behind/room/bed" unique_id=362325508]
+[node name="door2" type="Panel" parent="R-16/map_behind/room/bed" unique_id=362325508]
 layout_direction = 2
 offset_left = 207.0
 offset_top = 17.0
@@ -1564,7 +1580,7 @@ offset_bottom = 49.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_p57ef")
 
-[node name="door" type="Panel" parent="room_4/map_behind/room/bed" unique_id=1994526996]
+[node name="door" type="Panel" parent="R-16/map_behind/room/bed" unique_id=1994526996]
 layout_direction = 2
 offset_left = 199.0
 offset_top = 49.0
@@ -1573,7 +1589,7 @@ offset_bottom = 96.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lbhrr")
 
-[node name="door4" type="Panel" parent="room_4/map_behind/room/bed" unique_id=1531329394]
+[node name="door4" type="Panel" parent="R-16/map_behind/room/bed" unique_id=1531329394]
 layout_direction = 2
 offset_left = 199.0
 offset_top = 39.0
@@ -1582,7 +1598,7 @@ offset_bottom = 96.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
-[node name="door5" type="Panel" parent="room_4/map_behind/room/bed" unique_id=617203219]
+[node name="door5" type="Panel" parent="R-16/map_behind/room/bed" unique_id=617203219]
 layout_direction = 2
 offset_left = 370.0
 offset_top = 39.0
@@ -1591,9 +1607,9 @@ offset_bottom = 96.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
-[node name="desk" type="Node2D" parent="room_4/map_behind/room" unique_id=1898135866]
+[node name="desk" type="Node2D" parent="R-16/map_behind/room" unique_id=1898135866]
 
-[node name="door2" type="Panel" parent="room_4/map_behind/room/desk" unique_id=1827841225]
+[node name="door2" type="Panel" parent="R-16/map_behind/room/desk" unique_id=1827841225]
 layout_direction = 2
 offset_left = -406.0
 offset_top = 16.0
@@ -1602,7 +1618,7 @@ offset_bottom = 85.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_0tnpc")
 
-[node name="door3" type="Panel" parent="room_4/map_behind/room/desk" unique_id=731941174]
+[node name="door3" type="Panel" parent="R-16/map_behind/room/desk" unique_id=731941174]
 layout_direction = 2
 offset_left = -390.0
 offset_top = -3.0
@@ -1611,7 +1627,7 @@ offset_bottom = 16.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_vtaks")
 
-[node name="Label" type="Label" parent="room_4/map_behind/room/desk" unique_id=1201549015]
+[node name="Label" type="Label" parent="R-16/map_behind/room/desk" unique_id=1201549015]
 offset_left = -388.0
 offset_top = -5.0
 offset_right = -342.0
@@ -1623,7 +1639,7 @@ label_settings = SubResource("LabelSettings_gee14")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="door4" type="Panel" parent="room_4/map_behind/room/desk" unique_id=1095089856]
+[node name="door4" type="Panel" parent="R-16/map_behind/room/desk" unique_id=1095089856]
 layout_direction = 2
 offset_left = -309.0
 offset_top = -2.0
@@ -1632,10 +1648,10 @@ offset_bottom = 17.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_bt5mj")
 
-[node name="bookshelf" type="Node2D" parent="room_4/map_behind/room" unique_id=1778814734]
+[node name="bookshelf" type="Node2D" parent="R-16/map_behind/room" unique_id=1778814734]
 position = Vector2(391, 0)
 
-[node name="door2" type="Panel" parent="room_4/map_behind/room/bookshelf" unique_id=1375395802]
+[node name="door2" type="Panel" parent="R-16/map_behind/room/bookshelf" unique_id=1375395802]
 layout_direction = 2
 offset_left = -415.0
 offset_top = 5.0
@@ -1644,7 +1660,7 @@ offset_bottom = 85.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_0tnpc")
 
-[node name="door3" type="Panel" parent="room_4/map_behind/room/bookshelf" unique_id=692679683]
+[node name="door3" type="Panel" parent="R-16/map_behind/room/bookshelf" unique_id=692679683]
 layout_direction = 2
 offset_left = -405.0
 offset_top = -71.0
@@ -1653,7 +1669,7 @@ offset_bottom = 8.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ir15t")
 
-[node name="door4" type="Panel" parent="room_4/map_behind/room/bookshelf" unique_id=422009711]
+[node name="door4" type="Panel" parent="R-16/map_behind/room/bookshelf" unique_id=422009711]
 layout_direction = 2
 offset_left = -403.0
 offset_top = -31.0
@@ -1662,7 +1678,7 @@ offset_bottom = -27.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxLine_ca42v")
 
-[node name="door5" type="Panel" parent="room_4/map_behind/room/bookshelf" unique_id=1559983155]
+[node name="door5" type="Panel" parent="R-16/map_behind/room/bookshelf" unique_id=1559983155]
 visible = false
 layout_direction = 2
 offset_left = -403.0
@@ -1672,9 +1688,9 @@ offset_bottom = 10.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxLine_ca42v")
 
-[node name="books" type="Node2D" parent="room_4/map_behind/room/bookshelf" unique_id=1663334063]
+[node name="books" type="Node2D" parent="R-16/map_behind/room/bookshelf" unique_id=1663334063]
 
-[node name="book1" type="Panel" parent="room_4/map_behind/room/bookshelf/books" unique_id=1023999160]
+[node name="book1" type="Panel" parent="R-16/map_behind/room/bookshelf/books" unique_id=1023999160]
 layout_direction = 2
 offset_left = -399.0
 offset_top = -27.0
@@ -1683,7 +1699,7 @@ offset_bottom = 6.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_rysoc")
 
-[node name="Label" type="Label" parent="room_4/map_behind/room/bookshelf/books/book1" unique_id=1909737023]
+[node name="Label" type="Label" parent="R-16/map_behind/room/bookshelf/books/book1" unique_id=1909737023]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -1694,7 +1710,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book2" type="Panel" parent="room_4/map_behind/room/bookshelf/books" unique_id=25807347]
+[node name="book2" type="Panel" parent="R-16/map_behind/room/bookshelf/books" unique_id=25807347]
 layout_direction = 2
 offset_left = -387.0
 offset_top = -27.0
@@ -1703,7 +1719,7 @@ offset_bottom = 6.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ca42v")
 
-[node name="Label" type="Label" parent="room_4/map_behind/room/bookshelf/books/book2" unique_id=87776386]
+[node name="Label" type="Label" parent="R-16/map_behind/room/bookshelf/books/book2" unique_id=87776386]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -1714,7 +1730,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book3" type="Panel" parent="room_4/map_behind/room/bookshelf/books" unique_id=1131511051]
+[node name="book3" type="Panel" parent="R-16/map_behind/room/bookshelf/books" unique_id=1131511051]
 layout_direction = 2
 offset_left = -375.0
 offset_top = -27.0
@@ -1723,7 +1739,7 @@ offset_bottom = 6.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ssvqc")
 
-[node name="Label" type="Label" parent="room_4/map_behind/room/bookshelf/books/book3" unique_id=1495684371]
+[node name="Label" type="Label" parent="R-16/map_behind/room/bookshelf/books/book3" unique_id=1495684371]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -1734,7 +1750,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book4" type="Panel" parent="room_4/map_behind/room/bookshelf/books" unique_id=1515341109]
+[node name="book4" type="Panel" parent="R-16/map_behind/room/bookshelf/books" unique_id=1515341109]
 layout_direction = 2
 offset_left = -363.0
 offset_top = -27.0
@@ -1743,7 +1759,7 @@ offset_bottom = 6.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_264po")
 
-[node name="Label" type="Label" parent="room_4/map_behind/room/bookshelf/books/book4" unique_id=2099153926]
+[node name="Label" type="Label" parent="R-16/map_behind/room/bookshelf/books/book4" unique_id=2099153926]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -1754,7 +1770,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book5" type="Panel" parent="room_4/map_behind/room/bookshelf/books" unique_id=1939216122]
+[node name="book5" type="Panel" parent="R-16/map_behind/room/bookshelf/books" unique_id=1939216122]
 layout_direction = 2
 offset_left = -351.0
 offset_top = -27.0
@@ -1763,7 +1779,7 @@ offset_bottom = 6.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_1kice")
 
-[node name="Label" type="Label" parent="room_4/map_behind/room/bookshelf/books/book5" unique_id=302114338]
+[node name="Label" type="Label" parent="R-16/map_behind/room/bookshelf/books/book5" unique_id=302114338]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -1774,7 +1790,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book6" type="Panel" parent="room_4/map_behind/room/bookshelf/books" unique_id=2033806803]
+[node name="book6" type="Panel" parent="R-16/map_behind/room/bookshelf/books" unique_id=2033806803]
 layout_direction = 2
 offset_left = -339.0
 offset_top = -27.0
@@ -1783,7 +1799,7 @@ offset_bottom = 6.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_5newe")
 
-[node name="Label" type="Label" parent="room_4/map_behind/room/bookshelf/books/book6" unique_id=1157204100]
+[node name="Label" type="Label" parent="R-16/map_behind/room/bookshelf/books/book6" unique_id=1157204100]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -1794,7 +1810,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book7" type="Panel" parent="room_4/map_behind/room/bookshelf/books" unique_id=1996451246]
+[node name="book7" type="Panel" parent="R-16/map_behind/room/bookshelf/books" unique_id=1996451246]
 layout_direction = 2
 offset_left = -327.0
 offset_top = -27.0
@@ -1803,7 +1819,7 @@ offset_bottom = 6.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_rysoc")
 
-[node name="Label" type="Label" parent="room_4/map_behind/room/bookshelf/books/book7" unique_id=1613120015]
+[node name="Label" type="Label" parent="R-16/map_behind/room/bookshelf/books/book7" unique_id=1613120015]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -1814,7 +1830,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book13" type="Panel" parent="room_4/map_behind/room/bookshelf/books" unique_id=423356292]
+[node name="book13" type="Panel" parent="R-16/map_behind/room/bookshelf/books" unique_id=423356292]
 layout_direction = 2
 offset_left = -279.0
 offset_top = -27.0
@@ -1823,7 +1839,7 @@ offset_bottom = 6.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ssvqc")
 
-[node name="Label" type="Label" parent="room_4/map_behind/room/bookshelf/books/book13" unique_id=2007206171]
+[node name="Label" type="Label" parent="R-16/map_behind/room/bookshelf/books/book13" unique_id=2007206171]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -1834,7 +1850,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book10" type="Panel" parent="room_4/map_behind/room/bookshelf/books" unique_id=1426500689]
+[node name="book10" type="Panel" parent="R-16/map_behind/room/bookshelf/books" unique_id=1426500689]
 layout_direction = 2
 offset_left = -315.0
 offset_top = -27.0
@@ -1843,7 +1859,7 @@ offset_bottom = 6.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_264po")
 
-[node name="Label" type="Label" parent="room_4/map_behind/room/bookshelf/books/book10" unique_id=1660949487]
+[node name="Label" type="Label" parent="R-16/map_behind/room/bookshelf/books/book10" unique_id=1660949487]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -1854,7 +1870,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book11" type="Panel" parent="room_4/map_behind/room/bookshelf/books" unique_id=1538153454]
+[node name="book11" type="Panel" parent="R-16/map_behind/room/bookshelf/books" unique_id=1538153454]
 layout_direction = 2
 offset_left = -291.0
 offset_top = -27.0
@@ -1863,7 +1879,7 @@ offset_bottom = 6.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_1kice")
 
-[node name="Label" type="Label" parent="room_4/map_behind/room/bookshelf/books/book11" unique_id=786082260]
+[node name="Label" type="Label" parent="R-16/map_behind/room/bookshelf/books/book11" unique_id=786082260]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -1874,7 +1890,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book12" type="Panel" parent="room_4/map_behind/room/bookshelf/books" unique_id=837722357]
+[node name="book12" type="Panel" parent="R-16/map_behind/room/bookshelf/books" unique_id=837722357]
 layout_direction = 2
 offset_left = -303.0
 offset_top = -27.0
@@ -1883,7 +1899,7 @@ offset_bottom = 6.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_5newe")
 
-[node name="Label" type="Label" parent="room_4/map_behind/room/bookshelf/books/book12" unique_id=639186886]
+[node name="Label" type="Label" parent="R-16/map_behind/room/bookshelf/books/book12" unique_id=639186886]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -1894,7 +1910,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book22" type="Panel" parent="room_4/map_behind/room/bookshelf/books" unique_id=1872391726]
+[node name="book22" type="Panel" parent="R-16/map_behind/room/bookshelf/books" unique_id=1872391726]
 layout_direction = 2
 offset_left = -279.0
 offset_top = -64.0
@@ -1903,7 +1919,7 @@ offset_bottom = -31.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_264po")
 
-[node name="Label" type="Label" parent="room_4/map_behind/room/bookshelf/books/book22" unique_id=1182909312]
+[node name="Label" type="Label" parent="R-16/map_behind/room/bookshelf/books/book22" unique_id=1182909312]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -1914,7 +1930,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book18" type="Panel" parent="room_4/map_behind/room/bookshelf/books" unique_id=128557359]
+[node name="book18" type="Panel" parent="R-16/map_behind/room/bookshelf/books" unique_id=128557359]
 layout_direction = 2
 offset_left = -327.0
 offset_top = -64.0
@@ -1923,7 +1939,7 @@ offset_bottom = -31.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_1kice")
 
-[node name="Label" type="Label" parent="room_4/map_behind/room/bookshelf/books/book18" unique_id=1545100345]
+[node name="Label" type="Label" parent="R-16/map_behind/room/bookshelf/books/book18" unique_id=1545100345]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -1934,7 +1950,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book19" type="Panel" parent="room_4/map_behind/room/bookshelf/books" unique_id=117595258]
+[node name="book19" type="Panel" parent="R-16/map_behind/room/bookshelf/books" unique_id=117595258]
 layout_direction = 2
 offset_left = -315.0
 offset_top = -64.0
@@ -1943,7 +1959,7 @@ offset_bottom = -31.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_rysoc")
 
-[node name="Label" type="Label" parent="room_4/map_behind/room/bookshelf/books/book19" unique_id=854891137]
+[node name="Label" type="Label" parent="R-16/map_behind/room/bookshelf/books/book19" unique_id=854891137]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -1954,7 +1970,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book8" type="Panel" parent="room_4/map_behind/room/bookshelf/books" unique_id=1344510209]
+[node name="book8" type="Panel" parent="R-16/map_behind/room/bookshelf/books" unique_id=1344510209]
 layout_direction = 2
 offset_left = -399.0
 offset_top = -64.0
@@ -1963,7 +1979,7 @@ offset_bottom = -31.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ca42v")
 
-[node name="Label" type="Label" parent="room_4/map_behind/room/bookshelf/books/book8" unique_id=644718062]
+[node name="Label" type="Label" parent="R-16/map_behind/room/bookshelf/books/book8" unique_id=644718062]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -1974,7 +1990,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book9" type="Panel" parent="room_4/map_behind/room/bookshelf/books" unique_id=630572769]
+[node name="book9" type="Panel" parent="R-16/map_behind/room/bookshelf/books" unique_id=630572769]
 layout_direction = 2
 offset_left = -387.0
 offset_top = -64.0
@@ -1983,7 +1999,7 @@ offset_bottom = -31.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ssvqc")
 
-[node name="Label" type="Label" parent="room_4/map_behind/room/bookshelf/books/book9" unique_id=1243021713]
+[node name="Label" type="Label" parent="R-16/map_behind/room/bookshelf/books/book9" unique_id=1243021713]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -1994,7 +2010,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book17" type="Panel" parent="room_4/map_behind/room/bookshelf/books" unique_id=1638908787]
+[node name="book17" type="Panel" parent="R-16/map_behind/room/bookshelf/books" unique_id=1638908787]
 layout_direction = 2
 offset_left = -339.0
 offset_top = -64.0
@@ -2003,7 +2019,7 @@ offset_bottom = -31.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ssvqc")
 
-[node name="Label" type="Label" parent="room_4/map_behind/room/bookshelf/books/book17" unique_id=597975266]
+[node name="Label" type="Label" parent="R-16/map_behind/room/bookshelf/books/book17" unique_id=597975266]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -2014,7 +2030,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book20" type="Panel" parent="room_4/map_behind/room/bookshelf/books" unique_id=485678190]
+[node name="book20" type="Panel" parent="R-16/map_behind/room/bookshelf/books" unique_id=485678190]
 layout_direction = 2
 offset_left = -303.0
 offset_top = -64.0
@@ -2023,7 +2039,7 @@ offset_bottom = -31.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_264po")
 
-[node name="Label" type="Label" parent="room_4/map_behind/room/bookshelf/books/book20" unique_id=1423515131]
+[node name="Label" type="Label" parent="R-16/map_behind/room/bookshelf/books/book20" unique_id=1423515131]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -2034,7 +2050,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book21" type="Panel" parent="room_4/map_behind/room/bookshelf/books" unique_id=1030404657]
+[node name="book21" type="Panel" parent="R-16/map_behind/room/bookshelf/books" unique_id=1030404657]
 layout_direction = 2
 offset_left = -291.0
 offset_top = -64.0
@@ -2043,7 +2059,7 @@ offset_bottom = -31.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_1kice")
 
-[node name="Label" type="Label" parent="room_4/map_behind/room/bookshelf/books/book21" unique_id=1202732085]
+[node name="Label" type="Label" parent="R-16/map_behind/room/bookshelf/books/book21" unique_id=1202732085]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -2054,7 +2070,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book14" type="Panel" parent="room_4/map_behind/room/bookshelf/books" unique_id=671226709]
+[node name="book14" type="Panel" parent="R-16/map_behind/room/bookshelf/books" unique_id=671226709]
 layout_direction = 2
 offset_left = -363.0
 offset_top = -64.0
@@ -2063,7 +2079,7 @@ offset_bottom = -31.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_264po")
 
-[node name="Label" type="Label" parent="room_4/map_behind/room/bookshelf/books/book14" unique_id=1016835665]
+[node name="Label" type="Label" parent="R-16/map_behind/room/bookshelf/books/book14" unique_id=1016835665]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -2074,7 +2090,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book15" type="Panel" parent="room_4/map_behind/room/bookshelf/books" unique_id=537863714]
+[node name="book15" type="Panel" parent="R-16/map_behind/room/bookshelf/books" unique_id=537863714]
 layout_direction = 2
 offset_left = -375.0
 offset_top = -64.0
@@ -2083,7 +2099,7 @@ offset_bottom = -31.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_rysoc")
 
-[node name="Label" type="Label" parent="room_4/map_behind/room/bookshelf/books/book15" unique_id=2029254792]
+[node name="Label" type="Label" parent="R-16/map_behind/room/bookshelf/books/book15" unique_id=2029254792]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -2094,7 +2110,7 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="book16" type="Panel" parent="room_4/map_behind/room/bookshelf/books" unique_id=933763228]
+[node name="book16" type="Panel" parent="R-16/map_behind/room/bookshelf/books" unique_id=933763228]
 layout_direction = 2
 offset_left = -351.0
 offset_top = -64.0
@@ -2103,7 +2119,7 @@ offset_bottom = -31.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_5newe")
 
-[node name="Label" type="Label" parent="room_4/map_behind/room/bookshelf/books/book16" unique_id=985335841]
+[node name="Label" type="Label" parent="R-16/map_behind/room/bookshelf/books/book16" unique_id=985335841]
 layout_mode = 0
 offset_top = 25.0
 offset_right = 17.0
@@ -2114,80 +2130,94 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="lights" type="Node2D" parent="room_4/map_behind" unique_id=184223721]
+[node name="lights" type="Node2D" parent="R-16/map_behind" unique_id=184223721]
 visible = false
 
-[node name="PointLight2D" type="PointLight2D" parent="room_4/map_behind/lights" unique_id=1095612709]
+[node name="PointLight2D" type="PointLight2D" parent="R-16/map_behind/lights" unique_id=1095612709]
 position = Vector2(0, -19.5)
 scale = Vector2(0.88030887, 1.0815899)
 energy = 0.97
 blend_mode = 1
 texture = ExtResource("1_yqjtg")
 
-[node name="boundaries" type="Node2D" parent="room_4/map_behind" unique_id=1575621995]
+[node name="boundaries" type="Node2D" parent="R-16/map_behind" unique_id=1575621995]
 
-[node name="walls" type="StaticBody2D" parent="room_4/map_behind/boundaries" unique_id=731618947]
+[node name="walls" type="StaticBody2D" parent="R-16/map_behind/boundaries" unique_id=731618947]
 position = Vector2(0, 86)
 
-[node name="down" type="CollisionShape2D" parent="room_4/map_behind/boundaries/walls" unique_id=589990829]
+[node name="down" type="CollisionShape2D" parent="R-16/map_behind/boundaries/walls" unique_id=589990829]
 position = Vector2(224, -12)
 shape = SubResource("SegmentShape2D_rysoc")
 
-[node name="down2" type="CollisionShape2D" parent="room_4/map_behind/boundaries/walls" unique_id=217775549]
+[node name="down2" type="CollisionShape2D" parent="R-16/map_behind/boundaries/walls" unique_id=217775549]
 position = Vector2(783, -11)
 shape = SubResource("SegmentShape2D_5newe")
 
-[node name="up" type="CollisionShape2D" parent="room_4/map_behind/boundaries/walls" unique_id=1446439953]
+[node name="up" type="CollisionShape2D" parent="R-16/map_behind/boundaries/walls" unique_id=1446439953]
 position = Vector2(224, -381)
 shape = SubResource("SegmentShape2D_dinhu")
 
-[node name="left" type="CollisionShape2D" parent="room_4/map_behind/boundaries/walls" unique_id=316285663]
+[node name="left" type="CollisionShape2D" parent="R-16/map_behind/boundaries/walls" unique_id=316285663]
 position = Vector2(224, -12)
 shape = SubResource("SegmentShape2D_u5sy4")
 
-[node name="right" type="CollisionShape2D" parent="room_4/map_behind/boundaries/walls" unique_id=1473868880]
+[node name="right" type="CollisionShape2D" parent="R-16/map_behind/boundaries/walls" unique_id=1473868880]
 position = Vector2(1137, -6)
 shape = SubResource("SegmentShape2D_gee14")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="room_4/map_behind/boundaries" unique_id=1679189922]
+[node name="StaticBody2D" type="StaticBody2D" parent="R-16/map_behind/boundaries" unique_id=1679189922]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="room_4/map_behind/boundaries/StaticBody2D" unique_id=1348382869]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="R-16/map_behind/boundaries/StaticBody2D" unique_id=1348382869]
 shape = SubResource("SegmentShape2D_0tnpc")
 one_way_collision = true
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="room_4/map_behind/boundaries/StaticBody2D" unique_id=1751863834]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="R-16/map_behind/boundaries/StaticBody2D" unique_id=1751863834]
 position = Vector2(-229, -29)
 shape = SubResource("SegmentShape2D_37s47")
 one_way_collision = true
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="room_4/map_behind/boundaries/StaticBody2D" unique_id=296204874]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="R-16/map_behind/boundaries/StaticBody2D" unique_id=296204874]
 position = Vector2(-229, -104)
 shape = SubResource("SegmentShape2D_bt5mj")
 one_way_collision = true
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="room_4/map_behind/boundaries/StaticBody2D" unique_id=1372934522]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="R-16/map_behind/boundaries/StaticBody2D" unique_id=1372934522]
 position = Vector2(0, -67)
 shape = SubResource("SegmentShape2D_vtaks")
 one_way_collision = true
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="room_4/map_behind/boundaries/StaticBody2D" unique_id=1979128130]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="R-16/map_behind/boundaries/StaticBody2D" unique_id=1979128130]
 position = Vector2(-638, -17)
 shape = SubResource("SegmentShape2D_kvuet")
 one_way_collision = true
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="room_4/map_behind/boundaries/StaticBody2D" unique_id=779557544]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="R-16/map_behind/boundaries/StaticBody2D" unique_id=779557544]
 position = Vector2(-624, -37)
 shape = SubResource("SegmentShape2D_trtic")
 one_way_collision = true
 
-[node name="room_5" type="Node2D" parent="." unique_id=457490565]
+[node name="door_1" type="Area2D" parent="R-16/map_behind/boundaries" unique_id=310450963]
+position = Vector2(-1310, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="R-16/map_behind/boundaries/door_1" unique_id=1375545463]
+position = Vector2(1134, -10)
+shape = SubResource("RectangleShape2D_u5sy4")
+
+[node name="door_2" type="Area2D" parent="R-16/map_behind/boundaries" unique_id=1766745456]
+position = Vector2(-580, 739)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="R-16/map_behind/boundaries/door_2" unique_id=745548038]
+position = Vector2(1134, -10)
+shape = SubResource("RectangleShape2D_u5sy4")
+
+[node name="R-15" type="Node2D" parent="." unique_id=457490565]
 position = Vector2(-3995, 0)
 
-[node name="map_behind" type="Node2D" parent="room_5" unique_id=1012561800]
+[node name="map_behind" type="Node2D" parent="R-15" unique_id=1012561800]
 
-[node name="room" type="Node2D" parent="room_5/map_behind" unique_id=1672812212]
+[node name="room" type="Node2D" parent="R-15/map_behind" unique_id=1672812212]
 
-[node name="wall2" type="Panel" parent="room_5/map_behind/room" unique_id=897157062]
+[node name="wall2" type="Panel" parent="R-15/map_behind/room" unique_id=897157062]
 light_mask = 0
 visibility_layer = 2
 layout_direction = 2
@@ -2198,7 +2228,7 @@ offset_bottom = 238.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_kvpfn")
 
-[node name="wall" type="Panel" parent="room_5/map_behind/room" unique_id=535059527]
+[node name="wall" type="Panel" parent="R-15/map_behind/room" unique_id=535059527]
 layout_direction = 2
 offset_left = -457.0
 offset_top = -282.0
@@ -2207,7 +2237,7 @@ offset_bottom = 89.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_uwrxv")
 
-[node name="pond" type="Panel" parent="room_5/map_behind/room" unique_id=1600119847]
+[node name="pond" type="Panel" parent="R-15/map_behind/room" unique_id=1600119847]
 layout_direction = 2
 offset_left = -457.0
 offset_top = 85.0
@@ -2216,7 +2246,7 @@ offset_bottom = 229.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_yqjtg")
 
-[node name="door" type="Panel" parent="room_5/map_behind/room" unique_id=377903231]
+[node name="door" type="Panel" parent="R-15/map_behind/room" unique_id=377903231]
 layout_direction = 2
 offset_left = -198.0
 offset_top = -107.0
@@ -2225,10 +2255,10 @@ offset_bottom = 85.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
-[node name="bed" type="Node2D" parent="room_5/map_behind/room" unique_id=2097555566]
+[node name="bed" type="Node2D" parent="R-15/map_behind/room" unique_id=2097555566]
 position = Vector2(-140, -11)
 
-[node name="door6" type="Panel" parent="room_5/map_behind/room/bed" unique_id=832478253]
+[node name="door6" type="Panel" parent="R-15/map_behind/room/bed" unique_id=832478253]
 layout_direction = 2
 offset_left = 201.0
 offset_top = 1.0
@@ -2237,7 +2267,7 @@ offset_bottom = 64.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
-[node name="door7" type="Panel" parent="room_5/map_behind/room/bed" unique_id=25181787]
+[node name="door7" type="Panel" parent="R-15/map_behind/room/bed" unique_id=25181787]
 layout_direction = 2
 offset_left = 365.0
 offset_top = 1.0
@@ -2246,7 +2276,7 @@ offset_bottom = 64.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
-[node name="door3" type="Panel" parent="room_5/map_behind/room/bed" unique_id=155253487]
+[node name="door3" type="Panel" parent="R-15/map_behind/room/bed" unique_id=155253487]
 layout_direction = 2
 offset_left = 209.0
 offset_top = -21.0
@@ -2255,7 +2285,7 @@ offset_bottom = 26.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_gee14")
 
-[node name="door2" type="Panel" parent="room_5/map_behind/room/bed" unique_id=1580745097]
+[node name="door2" type="Panel" parent="R-15/map_behind/room/bed" unique_id=1580745097]
 layout_direction = 2
 offset_left = 207.0
 offset_top = 17.0
@@ -2264,7 +2294,7 @@ offset_bottom = 49.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_p57ef")
 
-[node name="door" type="Panel" parent="room_5/map_behind/room/bed" unique_id=1727494778]
+[node name="door" type="Panel" parent="R-15/map_behind/room/bed" unique_id=1727494778]
 layout_direction = 2
 offset_left = 199.0
 offset_top = 49.0
@@ -2273,7 +2303,7 @@ offset_bottom = 96.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lbhrr")
 
-[node name="door4" type="Panel" parent="room_5/map_behind/room/bed" unique_id=1718772841]
+[node name="door4" type="Panel" parent="R-15/map_behind/room/bed" unique_id=1718772841]
 layout_direction = 2
 offset_left = 199.0
 offset_top = 39.0
@@ -2282,7 +2312,7 @@ offset_bottom = 96.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
-[node name="door5" type="Panel" parent="room_5/map_behind/room/bed" unique_id=310710702]
+[node name="door5" type="Panel" parent="R-15/map_behind/room/bed" unique_id=310710702]
 layout_direction = 2
 offset_left = 370.0
 offset_top = 39.0
@@ -2291,9 +2321,9 @@ offset_bottom = 96.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
-[node name="desk" type="Node2D" parent="room_5/map_behind/room" unique_id=1000830769]
+[node name="desk" type="Node2D" parent="R-15/map_behind/room" unique_id=1000830769]
 
-[node name="door2" type="Panel" parent="room_5/map_behind/room/desk" unique_id=484661523]
+[node name="door2" type="Panel" parent="R-15/map_behind/room/desk" unique_id=484661523]
 layout_direction = 2
 offset_left = -406.0
 offset_top = 16.0
@@ -2302,7 +2332,7 @@ offset_bottom = 85.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_0tnpc")
 
-[node name="door4" type="Panel" parent="room_5/map_behind/room/desk" unique_id=1125192316]
+[node name="door4" type="Panel" parent="R-15/map_behind/room/desk" unique_id=1125192316]
 layout_direction = 2
 offset_left = -348.0
 offset_top = -2.0
@@ -2311,9 +2341,9 @@ offset_bottom = 17.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_bt5mj")
 
-[node name="paint" type="Node2D" parent="room_5/map_behind/room" unique_id=132569715]
+[node name="paint" type="Node2D" parent="R-15/map_behind/room" unique_id=132569715]
 
-[node name="door4" type="Panel" parent="room_5/map_behind/room/paint" unique_id=1734073725]
+[node name="door4" type="Panel" parent="R-15/map_behind/room/paint" unique_id=1734073725]
 layout_direction = 2
 offset_left = -31.0
 offset_top = -110.0
@@ -2322,10 +2352,10 @@ offset_bottom = -45.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_e1j6l")
 
-[node name="wardrobe" type="Node2D" parent="room_5/map_behind/room" unique_id=2075862397]
+[node name="wardrobe" type="Node2D" parent="R-15/map_behind/room" unique_id=2075862397]
 position = Vector2(82, 0)
 
-[node name="wardrobe" type="Panel" parent="room_5/map_behind/room/wardrobe" unique_id=529105086]
+[node name="wardrobe" type="Panel" parent="R-15/map_behind/room/wardrobe" unique_id=529105086]
 layout_direction = 2
 offset_left = 215.0
 offset_top = -117.0
@@ -2334,7 +2364,7 @@ offset_bottom = 86.725006
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_iywne")
 
-[node name="wardrobe2" type="Panel" parent="room_5/map_behind/room/wardrobe" unique_id=1825077507]
+[node name="wardrobe2" type="Panel" parent="R-15/map_behind/room/wardrobe" unique_id=1825077507]
 layout_direction = 2
 offset_left = 215.0
 offset_top = -117.0
@@ -2343,71 +2373,85 @@ offset_bottom = 86.725006
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_iywne")
 
-[node name="lights" type="Node2D" parent="room_5/map_behind" unique_id=2022004602]
+[node name="lights" type="Node2D" parent="R-15/map_behind" unique_id=2022004602]
 visible = false
 
-[node name="PointLight2D" type="PointLight2D" parent="room_5/map_behind/lights" unique_id=1748910705]
+[node name="PointLight2D" type="PointLight2D" parent="R-15/map_behind/lights" unique_id=1748910705]
 position = Vector2(0, -19.5)
 scale = Vector2(0.88030887, 1.0815899)
 energy = 0.97
 blend_mode = 1
 texture = ExtResource("1_yqjtg")
 
-[node name="boundaries" type="Node2D" parent="room_5/map_behind" unique_id=977362995]
+[node name="boundaries" type="Node2D" parent="R-15/map_behind" unique_id=977362995]
 
-[node name="walls" type="StaticBody2D" parent="room_5/map_behind/boundaries" unique_id=200251731]
+[node name="walls" type="StaticBody2D" parent="R-15/map_behind/boundaries" unique_id=200251731]
 position = Vector2(0, 86)
 
-[node name="down" type="CollisionShape2D" parent="room_5/map_behind/boundaries/walls" unique_id=1740198673]
+[node name="down" type="CollisionShape2D" parent="R-15/map_behind/boundaries/walls" unique_id=1740198673]
 position = Vector2(224, -12)
 shape = SubResource("SegmentShape2D_rysoc")
 
-[node name="down2" type="CollisionShape2D" parent="room_5/map_behind/boundaries/walls" unique_id=884974157]
+[node name="down2" type="CollisionShape2D" parent="R-15/map_behind/boundaries/walls" unique_id=884974157]
 position = Vector2(783, -11)
 shape = SubResource("SegmentShape2D_5newe")
 
-[node name="up" type="CollisionShape2D" parent="room_5/map_behind/boundaries/walls" unique_id=745246270]
+[node name="up" type="CollisionShape2D" parent="R-15/map_behind/boundaries/walls" unique_id=745246270]
 position = Vector2(224, -381)
 shape = SubResource("SegmentShape2D_dinhu")
 
-[node name="left" type="CollisionShape2D" parent="room_5/map_behind/boundaries/walls" unique_id=356594985]
+[node name="left" type="CollisionShape2D" parent="R-15/map_behind/boundaries/walls" unique_id=356594985]
 position = Vector2(224, -12)
 shape = SubResource("SegmentShape2D_u5sy4")
 
-[node name="right" type="CollisionShape2D" parent="room_5/map_behind/boundaries/walls" unique_id=1560618162]
+[node name="right" type="CollisionShape2D" parent="R-15/map_behind/boundaries/walls" unique_id=1560618162]
 position = Vector2(1137, -6)
 shape = SubResource("SegmentShape2D_gee14")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="room_5/map_behind/boundaries" unique_id=2103697384]
+[node name="StaticBody2D" type="StaticBody2D" parent="R-15/map_behind/boundaries" unique_id=2103697384]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="room_5/map_behind/boundaries/StaticBody2D" unique_id=39449147]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="R-15/map_behind/boundaries/StaticBody2D" unique_id=39449147]
 position = Vector2(-143, 0)
 shape = SubResource("SegmentShape2D_0tnpc")
 one_way_collision = true
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="room_5/map_behind/boundaries/StaticBody2D" unique_id=1576414254]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="R-15/map_behind/boundaries/StaticBody2D" unique_id=1576414254]
 position = Vector2(46, -151)
 shape = SubResource("SegmentShape2D_bt5mj")
 one_way_collision = true
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="room_5/map_behind/boundaries/StaticBody2D" unique_id=978364413]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="R-15/map_behind/boundaries/StaticBody2D" unique_id=978364413]
 position = Vector2(-139, -67)
 shape = SubResource("SegmentShape2D_vtaks")
 one_way_collision = true
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="room_5/map_behind/boundaries/StaticBody2D" unique_id=970316344]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="R-15/map_behind/boundaries/StaticBody2D" unique_id=970316344]
 position = Vector2(-638, -17)
 shape = SubResource("SegmentShape2D_kvuet")
 one_way_collision = true
 
-[node name="room_6" type="Node2D" parent="." unique_id=2114235317]
+[node name="door_1" type="Area2D" parent="R-15/map_behind/boundaries" unique_id=1505396862]
+position = Vector2(-1310, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="R-15/map_behind/boundaries/door_1" unique_id=455783115]
+position = Vector2(1173, -10)
+shape = SubResource("RectangleShape2D_u5sy4")
+
+[node name="door_2" type="Area2D" parent="R-15/map_behind/boundaries" unique_id=1616910955]
+position = Vector2(-580, 739)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="R-15/map_behind/boundaries/door_2" unique_id=686143906]
+position = Vector2(1483, -10)
+shape = SubResource("RectangleShape2D_u5sy4")
+
+[node name="R-14" type="Node2D" parent="." unique_id=2114235317]
 position = Vector2(-5322, 0)
 
-[node name="map_behind" type="Node2D" parent="room_6" unique_id=765483598]
+[node name="map_behind" type="Node2D" parent="R-14" unique_id=765483598]
 
-[node name="room" type="Node2D" parent="room_6/map_behind" unique_id=438008548]
+[node name="room" type="Node2D" parent="R-14/map_behind" unique_id=438008548]
 
-[node name="wall2" type="Panel" parent="room_6/map_behind/room" unique_id=1748449977]
+[node name="wall2" type="Panel" parent="R-14/map_behind/room" unique_id=1748449977]
 light_mask = 0
 visibility_layer = 2
 layout_direction = 2
@@ -2418,7 +2462,7 @@ offset_bottom = 238.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_kvpfn")
 
-[node name="wall" type="Panel" parent="room_6/map_behind/room" unique_id=1954650282]
+[node name="wall" type="Panel" parent="R-14/map_behind/room" unique_id=1954650282]
 layout_direction = 2
 offset_left = -457.0
 offset_top = -282.0
@@ -2427,7 +2471,7 @@ offset_bottom = 89.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_uwrxv")
 
-[node name="pond" type="Panel" parent="room_6/map_behind/room" unique_id=1110576758]
+[node name="pond" type="Panel" parent="R-14/map_behind/room" unique_id=1110576758]
 layout_direction = 2
 offset_left = -457.0
 offset_top = 85.0
@@ -2436,7 +2480,7 @@ offset_bottom = 229.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_yqjtg")
 
-[node name="door" type="Panel" parent="room_6/map_behind/room" unique_id=2031938847]
+[node name="door" type="Panel" parent="R-14/map_behind/room" unique_id=2031938847]
 layout_direction = 2
 offset_left = -198.0
 offset_top = -107.0
@@ -2445,10 +2489,10 @@ offset_bottom = 85.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
-[node name="bed" type="Node2D" parent="room_6/map_behind/room" unique_id=498352062]
+[node name="bed" type="Node2D" parent="R-14/map_behind/room" unique_id=498352062]
 position = Vector2(-140, -11)
 
-[node name="door6" type="Panel" parent="room_6/map_behind/room/bed" unique_id=1788870898]
+[node name="door6" type="Panel" parent="R-14/map_behind/room/bed" unique_id=1788870898]
 layout_direction = 2
 offset_left = 201.0
 offset_top = 1.0
@@ -2457,7 +2501,7 @@ offset_bottom = 64.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
-[node name="door7" type="Panel" parent="room_6/map_behind/room/bed" unique_id=1651160559]
+[node name="door7" type="Panel" parent="R-14/map_behind/room/bed" unique_id=1651160559]
 layout_direction = 2
 offset_left = 365.0
 offset_top = 1.0
@@ -2466,7 +2510,7 @@ offset_bottom = 64.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
-[node name="door3" type="Panel" parent="room_6/map_behind/room/bed" unique_id=1505404097]
+[node name="door3" type="Panel" parent="R-14/map_behind/room/bed" unique_id=1505404097]
 layout_direction = 2
 offset_left = 209.0
 offset_top = -21.0
@@ -2475,7 +2519,7 @@ offset_bottom = 26.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_gee14")
 
-[node name="door2" type="Panel" parent="room_6/map_behind/room/bed" unique_id=604778480]
+[node name="door2" type="Panel" parent="R-14/map_behind/room/bed" unique_id=604778480]
 layout_direction = 2
 offset_left = 207.0
 offset_top = 17.0
@@ -2484,7 +2528,7 @@ offset_bottom = 49.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_p57ef")
 
-[node name="door" type="Panel" parent="room_6/map_behind/room/bed" unique_id=686094462]
+[node name="door" type="Panel" parent="R-14/map_behind/room/bed" unique_id=686094462]
 layout_direction = 2
 offset_left = 199.0
 offset_top = 49.0
@@ -2493,7 +2537,7 @@ offset_bottom = 96.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lbhrr")
 
-[node name="door4" type="Panel" parent="room_6/map_behind/room/bed" unique_id=558359813]
+[node name="door4" type="Panel" parent="R-14/map_behind/room/bed" unique_id=558359813]
 layout_direction = 2
 offset_left = 199.0
 offset_top = 39.0
@@ -2502,7 +2546,7 @@ offset_bottom = 96.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
-[node name="door5" type="Panel" parent="room_6/map_behind/room/bed" unique_id=404872883]
+[node name="door5" type="Panel" parent="R-14/map_behind/room/bed" unique_id=404872883]
 layout_direction = 2
 offset_left = 370.0
 offset_top = 39.0
@@ -2511,13 +2555,13 @@ offset_bottom = 96.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
-[node name="desk" type="Node2D" parent="room_6/map_behind/room" unique_id=693253952]
+[node name="desk" type="Node2D" parent="R-14/map_behind/room" unique_id=693253952]
 position = Vector2(0, -4)
 
-[node name="RigidBody2D" type="CharacterBody2D" parent="room_6/map_behind/room/desk" unique_id=959476872]
+[node name="RigidBody2D" type="CharacterBody2D" parent="R-14/map_behind/room/desk" unique_id=959476872]
 position = Vector2(0, 6)
 
-[node name="door2" type="Panel" parent="room_6/map_behind/room/desk/RigidBody2D" unique_id=1886668475]
+[node name="door2" type="Panel" parent="R-14/map_behind/room/desk/RigidBody2D" unique_id=1886668475]
 layout_direction = 2
 offset_left = -406.0
 offset_top = 16.0
@@ -2526,26 +2570,26 @@ offset_bottom = 85.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_0tnpc")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="room_6/map_behind/room/desk/RigidBody2D" unique_id=808981373]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="R-14/map_behind/room/desk/RigidBody2D" unique_id=808981373]
 position = Vector2(-637, -17)
 shape = SubResource("SegmentShape2D_kvuet")
 one_way_collision = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="room_6/map_behind/room/desk/RigidBody2D" unique_id=1931593525]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="R-14/map_behind/room/desk/RigidBody2D" unique_id=1931593525]
 position = Vector2(-472, 74)
 rotation = -1.5707964
 shape = SubResource("SegmentShape2D_e1j6l")
 one_way_collision = true
 
-[node name="desk_push" type="Area2D" parent="room_6/map_behind/room/desk" unique_id=194562157]
+[node name="desk_push" type="Area2D" parent="R-14/map_behind/room/desk" unique_id=194562157]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="room_6/map_behind/room/desk/desk_push" unique_id=631135328]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="R-14/map_behind/room/desk/desk_push" unique_id=631135328]
 position = Vector2(-404.5, 64)
 shape = SubResource("RectangleShape2D_gee14")
 
-[node name="paint" type="Node2D" parent="room_6/map_behind/room" unique_id=1250849493]
+[node name="paint" type="Node2D" parent="R-14/map_behind/room" unique_id=1250849493]
 
-[node name="door4" type="Panel" parent="room_6/map_behind/room/paint" unique_id=1059489311]
+[node name="door4" type="Panel" parent="R-14/map_behind/room/paint" unique_id=1059489311]
 layout_direction = 2
 offset_left = -31.0
 offset_top = -110.0
@@ -2554,10 +2598,10 @@ offset_bottom = -45.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_e1j6l")
 
-[node name="wardrobe" type="Node2D" parent="room_6/map_behind/room" unique_id=380320158]
+[node name="wardrobe" type="Node2D" parent="R-14/map_behind/room" unique_id=380320158]
 position = Vector2(82, 0)
 
-[node name="wardrobe" type="Panel" parent="room_6/map_behind/room/wardrobe" unique_id=1174057421]
+[node name="wardrobe" type="Panel" parent="R-14/map_behind/room/wardrobe" unique_id=1174057421]
 layout_direction = 2
 offset_left = 215.0
 offset_top = -117.0
@@ -2566,7 +2610,7 @@ offset_bottom = 86.725006
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_iywne")
 
-[node name="wardrobe2" type="Panel" parent="room_6/map_behind/room/wardrobe" unique_id=109540528]
+[node name="wardrobe2" type="Panel" parent="R-14/map_behind/room/wardrobe" unique_id=109540528]
 layout_direction = 2
 offset_left = 215.0
 offset_top = -117.0
@@ -2575,57 +2619,71 @@ offset_bottom = 86.725006
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_iywne")
 
-[node name="lights" type="Node2D" parent="room_6/map_behind" unique_id=1619556010]
+[node name="lights" type="Node2D" parent="R-14/map_behind" unique_id=1619556010]
 visible = false
 
-[node name="PointLight2D" type="PointLight2D" parent="room_6/map_behind/lights" unique_id=2068530002]
+[node name="PointLight2D" type="PointLight2D" parent="R-14/map_behind/lights" unique_id=2068530002]
 position = Vector2(0, -19.5)
 scale = Vector2(0.88030887, 1.0815899)
 energy = 0.97
 blend_mode = 1
 texture = ExtResource("1_yqjtg")
 
-[node name="boundaries" type="Node2D" parent="room_6/map_behind" unique_id=1114277377]
+[node name="boundaries" type="Node2D" parent="R-14/map_behind" unique_id=1114277377]
 
-[node name="walls" type="StaticBody2D" parent="room_6/map_behind/boundaries" unique_id=8460194]
+[node name="walls" type="StaticBody2D" parent="R-14/map_behind/boundaries" unique_id=8460194]
 position = Vector2(0, 86)
 
-[node name="down" type="CollisionShape2D" parent="room_6/map_behind/boundaries/walls" unique_id=385094074]
+[node name="down" type="CollisionShape2D" parent="R-14/map_behind/boundaries/walls" unique_id=385094074]
 position = Vector2(224, -12)
 shape = SubResource("SegmentShape2D_rysoc")
 
-[node name="down2" type="CollisionShape2D" parent="room_6/map_behind/boundaries/walls" unique_id=1491390868]
+[node name="down2" type="CollisionShape2D" parent="R-14/map_behind/boundaries/walls" unique_id=1491390868]
 position = Vector2(783, -11)
 shape = SubResource("SegmentShape2D_5newe")
 
-[node name="up" type="CollisionShape2D" parent="room_6/map_behind/boundaries/walls" unique_id=161307064]
+[node name="up" type="CollisionShape2D" parent="R-14/map_behind/boundaries/walls" unique_id=161307064]
 position = Vector2(224, -381)
 shape = SubResource("SegmentShape2D_dinhu")
 
-[node name="left" type="CollisionShape2D" parent="room_6/map_behind/boundaries/walls" unique_id=857725891]
+[node name="left" type="CollisionShape2D" parent="R-14/map_behind/boundaries/walls" unique_id=857725891]
 position = Vector2(224, -12)
 shape = SubResource("SegmentShape2D_u5sy4")
 
-[node name="right" type="CollisionShape2D" parent="room_6/map_behind/boundaries/walls" unique_id=543456840]
+[node name="right" type="CollisionShape2D" parent="R-14/map_behind/boundaries/walls" unique_id=543456840]
 position = Vector2(1137, -6)
 shape = SubResource("SegmentShape2D_gee14")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="room_6/map_behind/boundaries" unique_id=1976339604]
+[node name="StaticBody2D" type="StaticBody2D" parent="R-14/map_behind/boundaries" unique_id=1976339604]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="room_6/map_behind/boundaries/StaticBody2D" unique_id=589425709]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="R-14/map_behind/boundaries/StaticBody2D" unique_id=589425709]
 position = Vector2(-143, 0)
 shape = SubResource("SegmentShape2D_0tnpc")
 one_way_collision = true
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="room_6/map_behind/boundaries/StaticBody2D" unique_id=1599747608]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="R-14/map_behind/boundaries/StaticBody2D" unique_id=1599747608]
 position = Vector2(46, -151)
 shape = SubResource("SegmentShape2D_bt5mj")
 one_way_collision = true
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="room_6/map_behind/boundaries/StaticBody2D" unique_id=1096833003]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="R-14/map_behind/boundaries/StaticBody2D" unique_id=1096833003]
 position = Vector2(-139, -67)
 shape = SubResource("SegmentShape2D_vtaks")
 one_way_collision = true
+
+[node name="door_1" type="Area2D" parent="R-14/map_behind/boundaries" unique_id=1769637932]
+position = Vector2(-1310, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="R-14/map_behind/boundaries/door_1" unique_id=475104263]
+position = Vector2(1174, -10)
+shape = SubResource("RectangleShape2D_u5sy4")
+
+[node name="door_2" type="Area2D" parent="R-14/map_behind/boundaries" unique_id=1870585198]
+position = Vector2(-580, 739)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="R-14/map_behind/boundaries/door_2" unique_id=926380425]
+position = Vector2(1865, -10)
+shape = SubResource("RectangleShape2D_u5sy4")
 
 [node name="hallway" type="Node2D" parent="." unique_id=131513912]
 
@@ -2633,7 +2691,7 @@ one_way_collision = true
 
 [node name="wall" type="Panel" parent="hallway/map" unique_id=479889919]
 layout_direction = 2
-offset_left = -1652.0
+offset_left = -6144.0
 offset_top = 458.0
 offset_right = 2175.0
 offset_bottom = 829.0
@@ -2642,7 +2700,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_kvuet")
 
 [node name="floor2" type="Panel" parent="hallway/map" unique_id=396282768]
 layout_direction = 2
-offset_left = -1648.0
+offset_left = -6147.0
 offset_top = 825.0
 offset_right = 2178.0
 offset_bottom = 969.0
@@ -2651,14 +2709,14 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_yqjtg")
 
 [node name="floor3" type="Panel" parent="hallway/map" unique_id=1282165388]
 layout_direction = 2
-offset_left = -1609.0
+offset_left = -6148.0
 offset_top = 825.0
 offset_right = 2168.0
 offset_bottom = 872.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_dinhu")
 
-[node name="door2" type="Panel" parent="hallway/map" unique_id=512268165]
+[node name="R-18" type="Panel" parent="hallway/map" unique_id=512268165]
 layout_direction = 2
 offset_left = -230.0
 offset_top = 633.0
@@ -2667,7 +2725,29 @@ offset_bottom = 825.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
-[node name="door3" type="Panel" parent="hallway/map" unique_id=1536788159]
+[node name="frame" type="Panel" parent="hallway/map/R-18" unique_id=251705069]
+layout_direction = 2
+layout_mode = 0
+offset_left = 32.0
+offset_top = 22.0
+offset_right = 92.0
+offset_bottom = 41.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pl11u")
+
+[node name="Label" type="Label" parent="hallway/map/R-18" unique_id=412714938]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 20.0
+offset_right = 82.0
+offset_bottom = 45.333336
+text = "R-18"
+label_settings = SubResource("LabelSettings_bhx41")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="R-19" type="Panel" parent="hallway/map" unique_id=1536788159]
+visible = false
 layout_direction = 2
 offset_left = 759.0
 offset_top = 633.0
@@ -2676,7 +2756,28 @@ offset_bottom = 825.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
-[node name="door4" type="Panel" parent="hallway/map" unique_id=1237685079]
+[node name="frame" type="Panel" parent="hallway/map/R-19" unique_id=2010168792]
+layout_direction = 2
+layout_mode = 0
+offset_left = 32.0
+offset_top = 22.0
+offset_right = 92.0
+offset_bottom = 41.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pl11u")
+
+[node name="Label" type="Label" parent="hallway/map/R-19" unique_id=529515385]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 20.0
+offset_right = 82.0
+offset_bottom = 45.333336
+text = "R-19"
+label_settings = SubResource("LabelSettings_qnb83")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="R-17" type="Panel" parent="hallway/map" unique_id=1237685079]
 layout_direction = 2
 offset_left = -1175.0
 offset_top = 633.0
@@ -2685,34 +2786,88 @@ offset_bottom = 825.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
-[node name="door5" type="Panel" parent="hallway/map" unique_id=1946662753]
+[node name="frame" type="Panel" parent="hallway/map/R-17" unique_id=322776469]
 layout_direction = 2
-offset_left = 2649.0
+layout_mode = 0
+offset_left = 32.0
+offset_top = 22.0
+offset_right = 92.0
+offset_bottom = 41.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pl11u")
+
+[node name="Label" type="Label" parent="hallway/map/R-17" unique_id=1096680305]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 20.0
+offset_right = 82.0
+offset_bottom = 45.333336
+text = "R-17"
+label_settings = SubResource("LabelSettings_qnb83")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="R-12" type="Panel" parent="hallway/map" unique_id=1946662753]
+layout_direction = 2
+offset_left = -6075.0
 offset_top = 633.0
-offset_right = 2773.0
+offset_right = -5951.0
 offset_bottom = 825.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
-[node name="door6" type="Panel" parent="hallway/map" unique_id=1107769710]
+[node name="frame" type="Panel" parent="hallway/map/R-12" unique_id=1952890742]
 layout_direction = 2
-offset_left = 3638.0
+layout_mode = 0
+offset_left = 32.0
+offset_top = 22.0
+offset_right = 92.0
+offset_bottom = 41.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pl11u")
+
+[node name="Label" type="Label" parent="hallway/map/R-12" unique_id=1693556121]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 20.0
+offset_right = 82.0
+offset_bottom = 45.333336
+text = "R-12"
+label_settings = SubResource("LabelSettings_qnb83")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="R-13" type="Panel" parent="hallway/map" unique_id=1107769710]
+layout_direction = 2
+offset_left = -5086.0
 offset_top = 633.0
-offset_right = 3762.0
+offset_right = -4962.0
 offset_bottom = 825.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
-[node name="door7" type="Panel" parent="hallway/map" unique_id=1611958709]
+[node name="frame" type="Panel" parent="hallway/map/R-13" unique_id=1260528728]
 layout_direction = 2
-offset_left = 1704.0
-offset_top = 633.0
-offset_right = 1828.0
-offset_bottom = 825.0
+layout_mode = 0
+offset_left = 32.0
+offset_top = 22.0
+offset_right = 92.0
+offset_bottom = 41.0
 mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
+theme_override_styles/panel = SubResource("StyleBoxFlat_pl11u")
 
-[node name="door8" type="Panel" parent="hallway/map" unique_id=663292078]
+[node name="Label" type="Label" parent="hallway/map/R-13" unique_id=1431627118]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 20.0
+offset_right = 82.0
+offset_bottom = 45.333336
+text = "R-13"
+label_settings = SubResource("LabelSettings_qnb83")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="R-15" type="Panel" parent="hallway/map" unique_id=663292078]
 layout_direction = 2
 offset_left = -3154.0
 offset_top = 633.0
@@ -2721,7 +2876,28 @@ offset_bottom = 825.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
-[node name="door9" type="Panel" parent="hallway/map" unique_id=686374180]
+[node name="frame" type="Panel" parent="hallway/map/R-15" unique_id=1014266510]
+layout_direction = 2
+layout_mode = 0
+offset_left = 32.0
+offset_top = 22.0
+offset_right = 92.0
+offset_bottom = 41.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pl11u")
+
+[node name="Label" type="Label" parent="hallway/map/R-15" unique_id=1058915771]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 20.0
+offset_right = 82.0
+offset_bottom = 45.333336
+text = "R-15"
+label_settings = SubResource("LabelSettings_qnb83")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="R-16" type="Panel" parent="hallway/map" unique_id=686374180]
 layout_direction = 2
 offset_left = -2165.0
 offset_top = 633.0
@@ -2730,7 +2906,28 @@ offset_bottom = 825.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
-[node name="door10" type="Panel" parent="hallway/map" unique_id=1361050792]
+[node name="frame" type="Panel" parent="hallway/map/R-16" unique_id=1870972032]
+layout_direction = 2
+layout_mode = 0
+offset_left = 32.0
+offset_top = 22.0
+offset_right = 92.0
+offset_bottom = 41.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pl11u")
+
+[node name="Label" type="Label" parent="hallway/map/R-16" unique_id=700972107]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 20.0
+offset_right = 82.0
+offset_bottom = 45.333336
+text = "R-16"
+label_settings = SubResource("LabelSettings_qnb83")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="R-14" type="Panel" parent="hallway/map" unique_id=1361050792]
 layout_direction = 2
 offset_left = -4099.0
 offset_top = 633.0
@@ -2738,6 +2935,27 @@ offset_right = -3975.0
 offset_bottom = 825.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
+
+[node name="frame" type="Panel" parent="hallway/map/R-14" unique_id=2119203945]
+layout_direction = 2
+layout_mode = 0
+offset_left = 32.0
+offset_top = 22.0
+offset_right = 92.0
+offset_bottom = 41.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pl11u")
+
+[node name="Label" type="Label" parent="hallway/map/R-14" unique_id=663659712]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 20.0
+offset_right = 82.0
+offset_bottom = 45.333336
+text = "R-14"
+label_settings = SubResource("LabelSettings_qnb83")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="clock" type="Node2D" parent="hallway/map" unique_id=1067096502]
 position = Vector2(0, -57)
@@ -2785,7 +3003,7 @@ position = Vector2(224, 821)
 shape = SubResource("SegmentShape2D_p57ef")
 
 [node name="player" parent="." unique_id=1089869233 instance=ExtResource("1_uwrxv")]
-position = Vector2(-5372, 75)
+position = Vector2(-1113, 814)
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=870738312]
 position = Vector2(0, -84)
@@ -2827,23 +3045,35 @@ shape = SubResource("RectangleShape2D_u5sy4")
 position = Vector2(1134, -10)
 shape = SubResource("RectangleShape2D_u5sy4")
 
-[node name="room_2_door_1" type="Area2D" parent="areas" unique_id=158805262]
+[node name="r-17_door_down" type="Area2D" parent="areas" unique_id=158805262]
 position = Vector2(-1928, 735)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="areas/room_2_door_1" unique_id=1315329427]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="areas/r-17_door_down" unique_id=1315329427]
 position = Vector2(814, -10)
 shape = SubResource("RectangleShape2D_u5sy4")
 
-[node name="room_2_door_2" type="Area2D" parent="areas" unique_id=658316299]
+[node name="r-17_door_up" type="Area2D" parent="areas" unique_id=658316299]
 position = Vector2(-2639, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="areas/room_2_door_2" unique_id=883211143]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="areas/r-17_door_up" unique_id=883211143]
 position = Vector2(1134, -10)
 shape = SubResource("RectangleShape2D_u5sy4")
 
-[connection signal="body_entered" from="room_3/map_behind/room/pond_area" to="." method="_on_pond_area_body_entered"]
-[connection signal="body_exited" from="room_3/map_behind/room/pond_area" to="." method="_on_pond_area_body_exited"]
-[connection signal="body_entered" from="room_6/map_behind/room/desk/desk_push" to="." method="_on_desk_push_body_entered"]
+[connection signal="body_entered" from="R-17/map_behind/room/pond_area" to="." method="_on_pond_area_body_entered"]
+[connection signal="body_exited" from="R-17/map_behind/room/pond_area" to="." method="_on_pond_area_body_exited"]
+[connection signal="body_entered" from="R-16/map_behind/boundaries/door_1" to="." method="_on_room_4_door_1_body_entered"]
+[connection signal="body_exited" from="R-16/map_behind/boundaries/door_1" to="." method="_on_room_4_door_1_body_exited"]
+[connection signal="body_entered" from="R-16/map_behind/boundaries/door_2" to="." method="_on_room_4_door_2_body_entered"]
+[connection signal="body_exited" from="R-16/map_behind/boundaries/door_2" to="." method="_on_room_4_door_2_body_exited"]
+[connection signal="body_entered" from="R-15/map_behind/boundaries/door_1" to="." method="_on_room_5_door_1_body_entered"]
+[connection signal="body_exited" from="R-15/map_behind/boundaries/door_1" to="." method="_on_room_5_door_1_body_exited"]
+[connection signal="body_entered" from="R-15/map_behind/boundaries/door_2" to="." method="_on_room_5_door_2_body_entered"]
+[connection signal="body_exited" from="R-15/map_behind/boundaries/door_2" to="." method="_on_room_5_door_2_body_exited"]
+[connection signal="body_entered" from="R-14/map_behind/room/desk/desk_push" to="." method="_on_desk_push_body_entered"]
+[connection signal="body_entered" from="R-14/map_behind/boundaries/door_1" to="." method="_on_room_6_door_1_body_entered"]
+[connection signal="body_exited" from="R-14/map_behind/boundaries/door_1" to="." method="_on_room_6_door_1_body_exited"]
+[connection signal="body_entered" from="R-14/map_behind/boundaries/door_2" to="." method="_on_room_6_door_2_body_entered"]
+[connection signal="body_exited" from="R-14/map_behind/boundaries/door_2" to="." method="_on_room_6_door_2_body_exited"]
 [connection signal="body_entered" from="areas/main_room_door_1" to="." method="_on_main_room_door_1_body_entered"]
 [connection signal="body_exited" from="areas/main_room_door_1" to="." method="_on_main_room_door_1_body_exited"]
 [connection signal="body_entered" from="areas/main_room_door_2" to="." method="_on_main_room_door_2_body_entered"]
@@ -2852,7 +3082,7 @@ shape = SubResource("RectangleShape2D_u5sy4")
 [connection signal="body_exited" from="areas/room_1_door_1" to="." method="_on_room_1_door_1_body_exited"]
 [connection signal="body_entered" from="areas/room_1_door_2" to="." method="_on_room_1_door_2_body_entered"]
 [connection signal="body_exited" from="areas/room_1_door_2" to="." method="_on_room_1_door_2_body_exited"]
-[connection signal="body_entered" from="areas/room_2_door_1" to="." method="_on_room_1_door_1_body_entered"]
-[connection signal="body_exited" from="areas/room_2_door_1" to="." method="_on_room_1_door_1_body_exited"]
-[connection signal="body_entered" from="areas/room_2_door_2" to="." method="_on_room_1_door_2_body_entered"]
-[connection signal="body_exited" from="areas/room_2_door_2" to="." method="_on_room_1_door_2_body_exited"]
+[connection signal="body_entered" from="areas/r-17_door_down" to="." method="_on_r17_door_down_body_entered"]
+[connection signal="body_exited" from="areas/r-17_door_down" to="." method="_onr17_door_down_body_exited"]
+[connection signal="body_entered" from="areas/r-17_door_up" to="." method="_on_r17_door_up_body_entered"]
+[connection signal="body_exited" from="areas/r-17_door_up" to="." method="_on_r17_door_up_body_exited"]

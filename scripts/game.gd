@@ -5,6 +5,7 @@ func init_game():
 	init_lights()
 
 func init_lights():
+	$main_room/map_behind/lights.visible = 1
 	$room_1/map_behind/lights.visible = 1
 	$room_2/map_behind/lights.visible = 1
 	$room_3/map_behind/lights.visible = 1
@@ -18,12 +19,13 @@ func init_lights():
 	$hallway/lights.visible = 1
 	
 func _ready() -> void:
-	init_game()
+	#init_game()
+	
+	pass
 
 var main_room_door_1 = 0
 var main_room_door_2 = 0
-var room_1_door_1 = 0
-var room_1_door_2 = 0
+
 
 func _on_main_room_door_1_body_entered(body: Node2D) -> void:
 	if body == $player:
@@ -46,24 +48,17 @@ func _process(delta: float) -> void:
 		elif main_room_door_2:
 			$player.position = Vector2(-169.0, 821.0)
 		
-		if room_1_door_1:
+		if r17_door_down:
 			$player.position = Vector2(1135.0, 74)
-		elif room_1_door_2:
-			$player.position = Vector2(820.0, 821.0)
+		elif r17_door_up:
+			$player.position = Vector2(-1113.0, 821.0)
 		
-
-func _on_room_1_door_1_body_entered(body: Node2D) -> void:
-	if body == $player:
-		room_1_door_1 = 1
-func _on_room_1_door_1_body_exited(body: Node2D) -> void:
-	if body == $player:
-		room_1_door_1 = 0
-func _on_room_1_door_2_body_entered(body: Node2D) -> void:
-	if body == $player:
-		room_1_door_2 = 1
-func _on_room_1_door_2_body_exited(body: Node2D) -> void:
-	if body == $player:
-		room_1_door_2 = 0
+		if room_4_door_1:
+			$player.position = Vector2(-28340.0, 74)
+		elif room_4_door_2:
+			$player.position = Vector2(-2103.0, 821)
+		
+		
 
 
 func _on_pond_area_body_entered(body: Node2D) -> void:
@@ -82,4 +77,61 @@ func _on_pond_area_body_exited(body: Node2D) -> void:
 func _on_desk_push_body_entered(body: Node2D) -> void:
 	if body == $player:
 		var tween = create_tween()
-		tween.tween_property($room_6/map_behind/room/desk, "position:x", 50, 2.5)
+		tween.tween_property($room_6/map_behind/room/desk, "position:x", 30, 1)
+
+var r17_door_down = 0
+var r17_door_up = 0
+var room_4_door_1 = 0
+var room_4_door_2 = 0
+var room_5_door_1 = 0
+var room_5_door_2 = 0
+var room_6_door_1 = 0
+var room_6_door_2 = 0
+
+
+func _on_room_4_door_1_body_entered(body: Node2D) -> void:
+	if body == $player:
+		room_4_door_1 = 1
+func _on_room_4_door_1_body_exited(body: Node2D) -> void:
+	if body == $player:
+		room_4_door_1 = 0
+func _on_room_4_door_2_body_entered(body: Node2D) -> void:
+	if body == $player:
+		room_4_door_2 = 1
+func _on_room_4_door_2_body_exited(body: Node2D) -> void:
+	if body == $player:
+		room_4_door_2 = 0
+func _on_room_5_door_1_body_entered(body: Node2D) -> void:
+	if body == $player:
+		room_5_door_1 = 1
+func _on_room_5_door_1_body_exited(body: Node2D) -> void:
+	if body == $player:
+		room_5_door_1 = 0
+func _on_room_5_door_2_body_entered(body: Node2D) -> void:
+	if body == $player:
+		room_5_door_2 = 1
+func _on_room_5_door_2_body_exited(body: Node2D) -> void:
+	if body == $player:
+		room_5_door_2 = 0
+func _on_room_6_door_1_body_entered(body: Node2D) -> void:
+	if body == $player:
+		room_6_door_1 = 1
+func _on_room_6_door_1_body_exited(body: Node2D) -> void:
+	if body == $player:
+		room_6_door_1 = 0
+func _on_room_6_door_2_body_entered(body: Node2D) -> void:
+	if body == $player:
+		room_6_door_2 = 1
+func _on_room_6_door_2_body_exited(body: Node2D) -> void:
+	if body == $player:
+		room_6_door_2 = 0
+
+
+func _on_r17_door_down_body_entered(body: Node2D) -> void:
+	r17_door_down = 1
+func _onr17_door_down_body_exited(body: Node2D) -> void:
+	r17_door_down = 0
+func _on_r17_door_up_body_entered(body: Node2D) -> void:
+	r17_door_up = 1
+func _on_r17_door_up_body_exited(body: Node2D) -> void:
+	r17_door_up = 0
