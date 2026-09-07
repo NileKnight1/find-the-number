@@ -6,6 +6,8 @@ func init_game():
 
 func init_lights():
 	$room_1/map_behind/lights.visible = 1
+	$room_2/map_behind/lights.visible = 1
+	
 	$player/flash.visible = 1
 	$hallway/lights.visible = 1
 	

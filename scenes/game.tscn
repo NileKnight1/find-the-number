@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://dlgw2j47t5btj" path="res://assets/digital-7.ttf" id="2_p57ef"]
 [ext_resource type="Texture2D" uid="uid://b1uduvye332ew" path="res://assets/image.png" id="3_lnu2h"]
 [ext_resource type="FontFile" uid="uid://81dpg3hbtjeg" path="res://assets/digital-7 (mono).ttf" id="3_u5sy4"]
+[ext_resource type="FontFile" uid="uid://cuqyrw2hhre2p" path="res://assets/HoldMoney-Regular.ttf" id="5_gee14"]
 [ext_resource type="Texture2D" uid="uid://blohtwdyxv1ok" path="res://assets/cone.png" id="5_u5sy4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kvpfn"]
@@ -106,7 +107,7 @@ b = Vector2(343, 36)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_kvpfn"]
 a = Vector2(235, 36)
-b = Vector2(343, 36)
+b = Vector2(393, 36)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_kvuet"]
 a = Vector2(235, 36)
@@ -115,6 +116,96 @@ b = Vector2(349, 36)
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_trtic"]
 a = Vector2(235, 36)
 b = Vector2(280, 35)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ir15t"]
+bg_color = Color(0.19877154, 0.057533078, 1.2032688e-08, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_ca42v"]
+thickness = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rysoc"]
+bg_color = Color(0.10114869, 0.075733535, 0.24161506, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_0tnpc"]
+font = ExtResource("5_gee14")
+font_size = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ca42v"]
+bg_color = Color(0.07325078, 0.11880957, 0.11582675, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ssvqc"]
+bg_color = Color(0.29411766, 0.11764706, 0.11764706, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_264po"]
+bg_color = Color(0.02551671, 0.12822574, 0.114502676, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1kice"]
+bg_color = Color(0.13851184, 0.1034501, 0.014023736, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5newe"]
+bg_color = Color(0.15400025, 0.19338873, 0.15170711, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ssvqc"]
+a = Vector2(245, 36)
+b = Vector2(382, 36)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kvuet"]
 bg_color = Color(0.59481364, 0.41463348, 0.18327808, 1)
@@ -414,27 +505,6 @@ offset_bottom = 85.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
-[node name="wardrobe" type="Node2D" parent="room_2/map_behind/room" unique_id=1109407889]
-position = Vector2(-222, 0)
-
-[node name="wardrobe" type="Panel" parent="room_2/map_behind/room/wardrobe" unique_id=861858531]
-layout_direction = 2
-offset_left = 215.0
-offset_top = -117.0
-offset_right = 322.0
-offset_bottom = 86.725006
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_iywne")
-
-[node name="wardrobe2" type="Panel" parent="room_2/map_behind/room/wardrobe" unique_id=282697506]
-layout_direction = 2
-offset_left = 215.0
-offset_top = -117.0
-offset_right = 271.0
-offset_bottom = 86.725006
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_iywne")
-
 [node name="bed" type="Node2D" parent="room_2/map_behind/room" unique_id=934513392]
 position = Vector2(0, -11)
 
@@ -533,6 +603,488 @@ label_settings = SubResource("LabelSettings_gee14")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="bookshelf" type="Node2D" parent="room_2/map_behind/room" unique_id=1669703181]
+position = Vector2(391, 0)
+
+[node name="door2" type="Panel" parent="room_2/map_behind/room/bookshelf" unique_id=524160254]
+layout_direction = 2
+offset_left = -415.0
+offset_top = 5.0
+offset_right = -253.0
+offset_bottom = 85.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0tnpc")
+
+[node name="door3" type="Panel" parent="room_2/map_behind/room/bookshelf" unique_id=1280136594]
+layout_direction = 2
+offset_left = -405.0
+offset_top = -71.0
+offset_right = -263.0
+offset_bottom = 8.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ir15t")
+
+[node name="door4" type="Panel" parent="room_2/map_behind/room/bookshelf" unique_id=497430754]
+layout_direction = 2
+offset_left = -403.0
+offset_top = -31.0
+offset_right = -264.0
+offset_bottom = -27.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxLine_ca42v")
+
+[node name="door5" type="Panel" parent="room_2/map_behind/room/bookshelf" unique_id=58883050]
+visible = false
+layout_direction = 2
+offset_left = -403.0
+offset_top = 6.0
+offset_right = -264.0
+offset_bottom = 10.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxLine_ca42v")
+
+[node name="books" type="Node2D" parent="room_2/map_behind/room/bookshelf" unique_id=1303989389]
+
+[node name="book1" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=170970757]
+layout_direction = 2
+offset_left = -399.0
+offset_top = -27.0
+offset_right = -389.0
+offset_bottom = 6.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rysoc")
+
+[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book1" unique_id=356253792]
+layout_mode = 0
+offset_top = 25.0
+offset_right = 17.0
+offset_bottom = 34.5
+rotation = -1.5707964
+text = "13  / 9"
+label_settings = SubResource("LabelSettings_0tnpc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="book2" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=905049544]
+layout_direction = 2
+offset_left = -387.0
+offset_top = -27.0
+offset_right = -377.0
+offset_bottom = 6.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ca42v")
+
+[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book2" unique_id=768835731]
+layout_mode = 0
+offset_top = 25.0
+offset_right = 17.0
+offset_bottom = 34.5
+rotation = -1.5707964
+text = "13  / 9"
+label_settings = SubResource("LabelSettings_0tnpc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="book3" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=980921574]
+layout_direction = 2
+offset_left = -375.0
+offset_top = -27.0
+offset_right = -365.0
+offset_bottom = 6.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ssvqc")
+
+[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book3" unique_id=1570119788]
+layout_mode = 0
+offset_top = 25.0
+offset_right = 17.0
+offset_bottom = 34.5
+rotation = -1.5707964
+text = "13  / 9"
+label_settings = SubResource("LabelSettings_0tnpc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="book4" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=410233663]
+layout_direction = 2
+offset_left = -363.0
+offset_top = -27.0
+offset_right = -353.0
+offset_bottom = 6.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_264po")
+
+[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book4" unique_id=2064439644]
+layout_mode = 0
+offset_top = 25.0
+offset_right = 17.0
+offset_bottom = 34.5
+rotation = -1.5707964
+text = "13  / 9"
+label_settings = SubResource("LabelSettings_0tnpc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="book5" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=788008219]
+layout_direction = 2
+offset_left = -351.0
+offset_top = -27.0
+offset_right = -341.0
+offset_bottom = 6.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1kice")
+
+[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book5" unique_id=458676154]
+layout_mode = 0
+offset_top = 25.0
+offset_right = 17.0
+offset_bottom = 34.5
+rotation = -1.5707964
+text = "13  / 9"
+label_settings = SubResource("LabelSettings_0tnpc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="book6" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=1241206641]
+layout_direction = 2
+offset_left = -339.0
+offset_top = -27.0
+offset_right = -329.0
+offset_bottom = 6.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5newe")
+
+[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book6" unique_id=1601474506]
+layout_mode = 0
+offset_top = 25.0
+offset_right = 17.0
+offset_bottom = 34.5
+rotation = -1.5707964
+text = "13  / 9"
+label_settings = SubResource("LabelSettings_0tnpc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="book7" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=925010264]
+layout_direction = 2
+offset_left = -327.0
+offset_top = -27.0
+offset_right = -317.0
+offset_bottom = 6.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rysoc")
+
+[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book7" unique_id=1756836199]
+layout_mode = 0
+offset_top = 25.0
+offset_right = 17.0
+offset_bottom = 34.5
+rotation = -1.5707964
+text = "13  / 9"
+label_settings = SubResource("LabelSettings_0tnpc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="book13" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=786926203]
+layout_direction = 2
+offset_left = -279.0
+offset_top = -27.0
+offset_right = -269.0
+offset_bottom = 6.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ssvqc")
+
+[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book13" unique_id=896096060]
+layout_mode = 0
+offset_top = 25.0
+offset_right = 17.0
+offset_bottom = 34.5
+rotation = -1.5707964
+text = "13  / 9"
+label_settings = SubResource("LabelSettings_0tnpc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="book10" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=491054062]
+layout_direction = 2
+offset_left = -315.0
+offset_top = -27.0
+offset_right = -305.0
+offset_bottom = 6.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_264po")
+
+[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book10" unique_id=1284570789]
+layout_mode = 0
+offset_top = 25.0
+offset_right = 17.0
+offset_bottom = 34.5
+rotation = -1.5707964
+text = "13  / 9"
+label_settings = SubResource("LabelSettings_0tnpc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="book11" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=1578936465]
+layout_direction = 2
+offset_left = -291.0
+offset_top = -27.0
+offset_right = -281.0
+offset_bottom = 6.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1kice")
+
+[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book11" unique_id=121269019]
+layout_mode = 0
+offset_top = 25.0
+offset_right = 17.0
+offset_bottom = 34.5
+rotation = -1.5707964
+text = "13  / 9"
+label_settings = SubResource("LabelSettings_0tnpc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="book12" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=1307452594]
+layout_direction = 2
+offset_left = -303.0
+offset_top = -27.0
+offset_right = -293.0
+offset_bottom = 6.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5newe")
+
+[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book12" unique_id=1422887977]
+layout_mode = 0
+offset_top = 25.0
+offset_right = 17.0
+offset_bottom = 34.5
+rotation = -1.5707964
+text = "13  / 9"
+label_settings = SubResource("LabelSettings_0tnpc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="book22" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=816060044]
+layout_direction = 2
+offset_left = -279.0
+offset_top = -64.0
+offset_right = -269.0
+offset_bottom = -31.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_264po")
+
+[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book22" unique_id=1551421837]
+layout_mode = 0
+offset_top = 25.0
+offset_right = 17.0
+offset_bottom = 34.5
+rotation = -1.5707964
+text = "13  / 9"
+label_settings = SubResource("LabelSettings_0tnpc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="book18" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=1367825254]
+layout_direction = 2
+offset_left = -327.0
+offset_top = -64.0
+offset_right = -317.0
+offset_bottom = -31.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1kice")
+
+[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book18" unique_id=764435587]
+layout_mode = 0
+offset_top = 25.0
+offset_right = 17.0
+offset_bottom = 34.5
+rotation = -1.5707964
+text = "13  / 9"
+label_settings = SubResource("LabelSettings_0tnpc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="book19" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=708339259]
+layout_direction = 2
+offset_left = -315.0
+offset_top = -64.0
+offset_right = -305.0
+offset_bottom = -31.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rysoc")
+
+[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book19" unique_id=1961445639]
+layout_mode = 0
+offset_top = 25.0
+offset_right = 17.0
+offset_bottom = 34.5
+rotation = -1.5707964
+text = "13  / 9"
+label_settings = SubResource("LabelSettings_0tnpc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="book8" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=563808715]
+layout_direction = 2
+offset_left = -399.0
+offset_top = -64.0
+offset_right = -389.0
+offset_bottom = -31.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ca42v")
+
+[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book8" unique_id=826034432]
+layout_mode = 0
+offset_top = 25.0
+offset_right = 17.0
+offset_bottom = 34.5
+rotation = -1.5707964
+text = "13  / 9"
+label_settings = SubResource("LabelSettings_0tnpc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="book9" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=583593229]
+layout_direction = 2
+offset_left = -387.0
+offset_top = -64.0
+offset_right = -377.0
+offset_bottom = -31.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ssvqc")
+
+[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book9" unique_id=2043962491]
+layout_mode = 0
+offset_top = 25.0
+offset_right = 17.0
+offset_bottom = 34.5
+rotation = -1.5707964
+text = "13  / 9"
+label_settings = SubResource("LabelSettings_0tnpc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="book17" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=182329088]
+layout_direction = 2
+offset_left = -339.0
+offset_top = -64.0
+offset_right = -329.0
+offset_bottom = -31.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ssvqc")
+
+[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book17" unique_id=1242411435]
+layout_mode = 0
+offset_top = 25.0
+offset_right = 17.0
+offset_bottom = 34.5
+rotation = -1.5707964
+text = "13  / 9"
+label_settings = SubResource("LabelSettings_0tnpc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="book20" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=1978247288]
+layout_direction = 2
+offset_left = -303.0
+offset_top = -64.0
+offset_right = -293.0
+offset_bottom = -31.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_264po")
+
+[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book20" unique_id=367642301]
+layout_mode = 0
+offset_top = 25.0
+offset_right = 17.0
+offset_bottom = 34.5
+rotation = -1.5707964
+text = "13  / 9"
+label_settings = SubResource("LabelSettings_0tnpc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="book21" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=1502581873]
+layout_direction = 2
+offset_left = -291.0
+offset_top = -64.0
+offset_right = -281.0
+offset_bottom = -31.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1kice")
+
+[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book21" unique_id=2024390856]
+layout_mode = 0
+offset_top = 25.0
+offset_right = 17.0
+offset_bottom = 34.5
+rotation = -1.5707964
+text = "13  / 9"
+label_settings = SubResource("LabelSettings_0tnpc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="book14" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=1289559489]
+layout_direction = 2
+offset_left = -363.0
+offset_top = -64.0
+offset_right = -353.0
+offset_bottom = -31.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_264po")
+
+[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book14" unique_id=1235993939]
+layout_mode = 0
+offset_top = 25.0
+offset_right = 17.0
+offset_bottom = 34.5
+rotation = -1.5707964
+text = "13  / 9"
+label_settings = SubResource("LabelSettings_0tnpc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="book15" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=2116533597]
+layout_direction = 2
+offset_left = -375.0
+offset_top = -64.0
+offset_right = -365.0
+offset_bottom = -31.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rysoc")
+
+[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book15" unique_id=1790806825]
+layout_mode = 0
+offset_top = 25.0
+offset_right = 17.0
+offset_bottom = 34.5
+rotation = -1.5707964
+text = "13  / 9"
+label_settings = SubResource("LabelSettings_0tnpc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="book16" type="Panel" parent="room_2/map_behind/room/bookshelf/books" unique_id=490480667]
+layout_direction = 2
+offset_left = -351.0
+offset_top = -64.0
+offset_right = -341.0
+offset_bottom = -31.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5newe")
+
+[node name="Label" type="Label" parent="room_2/map_behind/room/bookshelf/books/book16" unique_id=1317342245]
+layout_mode = 0
+offset_top = 25.0
+offset_right = 17.0
+offset_bottom = 34.5
+rotation = -1.5707964
+text = "13  / 9"
+label_settings = SubResource("LabelSettings_0tnpc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="lights" type="Node2D" parent="room_2/map_behind" unique_id=85212125]
 visible = false
 
@@ -576,8 +1128,13 @@ shape = SubResource("SegmentShape2D_vtaks")
 one_way_collision = true
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="room_2/map_behind/boundaries/StaticBody2D" unique_id=1132429391]
-position = Vector2(-242, -150)
+position = Vector2(-257, -30)
 shape = SubResource("SegmentShape2D_kvpfn")
+one_way_collision = true
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="room_2/map_behind/boundaries/StaticBody2D" unique_id=830769821]
+position = Vector2(-257, -106)
+shape = SubResource("SegmentShape2D_ssvqc")
 one_way_collision = true
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="room_2/map_behind/boundaries/StaticBody2D" unique_id=1605921587]
@@ -694,7 +1251,7 @@ position = Vector2(224, 821)
 shape = SubResource("SegmentShape2D_p57ef")
 
 [node name="player" parent="." unique_id=1089869233 instance=ExtResource("1_uwrxv")]
-position = Vector2(-169, 51)
+position = Vector2(1265, 63)
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=870738312]
 position = Vector2(0, -84)
