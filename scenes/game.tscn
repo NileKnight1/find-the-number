@@ -2199,15 +2199,15 @@ one_way_collision = true
 [node name="door_1" type="Area2D" parent="R-16/map_behind/boundaries" unique_id=310450963]
 position = Vector2(-1310, -1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="R-16/map_behind/boundaries/door_1" unique_id=1375545463]
-position = Vector2(1134, -10)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="R-16/map_behind/boundaries/door_1" unique_id=745548038]
+position = Vector2(1864, 730)
 shape = SubResource("RectangleShape2D_u5sy4")
 
 [node name="door_2" type="Area2D" parent="R-16/map_behind/boundaries" unique_id=1766745456]
 position = Vector2(-580, 739)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="R-16/map_behind/boundaries/door_2" unique_id=745548038]
-position = Vector2(1134, -10)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="R-16/map_behind/boundaries/door_2" unique_id=1375545463]
+position = Vector2(404, -750)
 shape = SubResource("RectangleShape2D_u5sy4")
 
 [node name="R-15" type="Node2D" parent="." unique_id=457490565]
@@ -2690,6 +2690,8 @@ shape = SubResource("RectangleShape2D_u5sy4")
 [node name="map" type="Node2D" parent="hallway" unique_id=1312918689]
 
 [node name="wall" type="Panel" parent="hallway/map" unique_id=479889919]
+visible = false
+self_modulate = Color(1, 1, 1, 0.45490196)
 layout_direction = 2
 offset_left = -6144.0
 offset_top = 458.0
@@ -3003,7 +3005,7 @@ position = Vector2(224, 821)
 shape = SubResource("SegmentShape2D_p57ef")
 
 [node name="player" parent="." unique_id=1089869233 instance=ExtResource("1_uwrxv")]
-position = Vector2(-1113, 814)
+position = Vector2(-2834, 711)
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=870738312]
 position = Vector2(0, -84)
@@ -3061,10 +3063,10 @@ shape = SubResource("RectangleShape2D_u5sy4")
 
 [connection signal="body_entered" from="R-17/map_behind/room/pond_area" to="." method="_on_pond_area_body_entered"]
 [connection signal="body_exited" from="R-17/map_behind/room/pond_area" to="." method="_on_pond_area_body_exited"]
-[connection signal="body_entered" from="R-16/map_behind/boundaries/door_1" to="." method="_on_room_4_door_1_body_entered"]
-[connection signal="body_exited" from="R-16/map_behind/boundaries/door_1" to="." method="_on_room_4_door_1_body_exited"]
-[connection signal="body_entered" from="R-16/map_behind/boundaries/door_2" to="." method="_on_room_4_door_2_body_entered"]
-[connection signal="body_exited" from="R-16/map_behind/boundaries/door_2" to="." method="_on_room_4_door_2_body_exited"]
+[connection signal="body_entered" from="R-16/map_behind/boundaries/door_1" to="." method="_on_r16_door_down_body_entered"]
+[connection signal="body_exited" from="R-16/map_behind/boundaries/door_1" to="." method="_on_r16_door_down_body_exited"]
+[connection signal="body_entered" from="R-16/map_behind/boundaries/door_2" to="." method="_on_r16_door_up_body_entered"]
+[connection signal="body_exited" from="R-16/map_behind/boundaries/door_2" to="." method="_on_r16_door_up_body_exited"]
 [connection signal="body_entered" from="R-15/map_behind/boundaries/door_1" to="." method="_on_room_5_door_1_body_entered"]
 [connection signal="body_exited" from="R-15/map_behind/boundaries/door_1" to="." method="_on_room_5_door_1_body_exited"]
 [connection signal="body_entered" from="R-15/map_behind/boundaries/door_2" to="." method="_on_room_5_door_2_body_entered"]
