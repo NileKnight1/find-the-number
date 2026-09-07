@@ -8,6 +8,10 @@ func init_lights():
 	$room_1/map_behind/lights.visible = 1
 	$room_2/map_behind/lights.visible = 1
 	$room_3/map_behind/lights.visible = 1
+	$room_4/map_behind/lights.visible = 1
+	$room_5/map_behind/lights.visible = 1
+	
+	
 	
 	
 	$player/flash.visible = 1
@@ -75,3 +79,7 @@ func _on_pond_area_body_exited(body: Node2D) -> void:
 		body.def_jump = -350.0
 		body.def_sprint_jump = -400
 		
+func _on_desk_push_body_entered(body: Node2D) -> void:
+	if body == $player:
+		var tween = create_tween()
+		tween.tween_property($room_6/map_behind/room/desk, "position:x", 50, 2.5)
