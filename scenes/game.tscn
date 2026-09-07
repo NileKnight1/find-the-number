@@ -1,3 +1,81 @@
 [gd_scene format=3 uid="uid://cvc4mkrw3c7n"]
 
+[ext_resource type="PackedScene" uid="uid://bif0y7ngld6ch" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="Texture2D" uid="uid://okb7hnr57f6n" path="res://assets/rect.png" id="1_yqjtg"]
+[ext_resource type="Texture2D" uid="uid://b1uduvye332ew" path="res://assets/image.png" id="3_lnu2h"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yqjtg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uwrxv"]
+bg_color = Color(0.45620194, 0.45620194, 0.4629261, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yqjtg"]
+bg_color = Color(0.40166503, 0.2870361, 0.23113844, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lnu2h"]
+bg_color = Color(0.24750742, 0.1078592, 0, 1)
+
 [node name="game" type="Node2D" unique_id=994519513]
+
+[node name="map behind" type="Node2D" parent="." unique_id=2008902769]
+
+[node name="boundaries" type="Node2D" parent="map behind" unique_id=234834925]
+
+[node name="under" type="StaticBody2D" parent="map behind/boundaries" unique_id=1671601939]
+position = Vector2(0, 86)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="map behind/boundaries/under" unique_id=775119386]
+shape = SubResource("WorldBoundaryShape2D_yqjtg")
+
+[node name="room" type="Node2D" parent="map behind" unique_id=1145307526]
+
+[node name="wall" type="Panel" parent="map behind/room" unique_id=1314548764]
+layout_direction = 2
+offset_left = -457.0
+offset_top = -282.0
+offset_right = 458.0
+offset_bottom = 89.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_uwrxv")
+
+[node name="floor2" type="Panel" parent="map behind/room" unique_id=95648590]
+layout_direction = 2
+offset_left = -457.0
+offset_top = 85.0
+offset_right = 458.0
+offset_bottom = 229.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yqjtg")
+
+[node name="door" type="Panel" parent="map behind/room" unique_id=2057259471]
+layout_direction = 2
+offset_left = -249.0
+offset_top = -107.0
+offset_right = -125.0
+offset_bottom = 85.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
+
+[node name="lights" type="Node2D" parent="map behind" unique_id=410495781]
+
+[node name="PointLight2D" type="PointLight2D" parent="map behind/lights" unique_id=811135468]
+position = Vector2(0, -19.5)
+scale = Vector2(0.88030887, 1.0815899)
+energy = 0.94
+blend_mode = 1
+texture = ExtResource("1_yqjtg")
+
+[node name="player" parent="." unique_id=1089869233 instance=ExtResource("1_uwrxv")]
+position = Vector2(2, 72)
+
+[node name="Camera2D" type="Camera2D" parent="player" unique_id=870738312]
+position = Vector2(0, -84)
+zoom = Vector2(1.7, 1.7)
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+
+[node name="PointLight2D" type="PointLight2D" parent="player" unique_id=493230440]
+position = Vector2(0, -60.999996)
+scale = Vector2(0.515625, 0.515625)
+energy = 0.3
+texture = ExtResource("3_lnu2h")
