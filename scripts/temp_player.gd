@@ -1,5 +1,10 @@
 extends CharacterBody2D
 
+var def_speed = 300.0
+var def_sprint = 400.0
+var def_jump = -350.0
+var def_sprint_jump = -400
+
 var SPEED = 300.0
 var JUMP_VELOCITY = -250.0
 var sprint = 0
@@ -29,13 +34,13 @@ func _physics_process(delta: float) -> void:
 		#$sprite.play("idle")
 		
 	if Input.is_action_pressed("sprint"):
-		SPEED = 600
-		JUMP_VELOCITY = -400.0
+		SPEED = def_sprint
+		JUMP_VELOCITY = def_sprint_jump
 		sprint = 1
 	else:
 		sprint = 0
-		SPEED = 300 
-		JUMP_VELOCITY = -350.0
+		SPEED = def_speed
+		JUMP_VELOCITY = def_jump
 		
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
