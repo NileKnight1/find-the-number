@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var def_speed = 300.0
+var def_speed = 700.0
 var def_sprint = 400.0
 var def_jump = -350.0
 var def_sprint_jump = -400
