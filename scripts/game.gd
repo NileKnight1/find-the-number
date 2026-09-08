@@ -5,21 +5,19 @@ func init_game():
 	init_lights()
 
 func init_lights():
-	$main_room/map_behind/lights.visible = 1
-	$room_1/map_behind/lights.visible = 1
-	$room_2/map_behind/lights.visible = 1
-	$room_3/map_behind/lights.visible = 1
-	$room_4/map_behind/lights.visible = 1
-	$room_5/map_behind/lights.visible = 1
-	
-	
-	
+	$r18/lights.visible = 1
+	$r17/lights.visible = 1
+	$r16/lights.visible = 1
+	$r15/lights.visible = 1
+	$r14/lights.visible = 1
+	$r13/lights.visible = 1
 	
 	$player/flash.visible = 1
 	$hallway/lights.visible = 1
 	
 func _ready() -> void:
 	#init_game()
+	shine($r18/collect/num)
 	
 	pass
 
@@ -191,3 +189,17 @@ func _on_r13_door_up_body_exited(body: Node2D) -> void:
 	if body == $player:
 		r13_door_up = 0
 		print("r13_door_up",r13_door_up)
+
+var style = StyleBoxFlat.new()
+
+func shine(node) -> void:
+	
+	var styl = node.get_theme_stylebox("panel")
+	style = StyleBoxFlat.new()
+	node.add_theme_stylebox_override("panel", style)
+	
+	style.bg_color = Color(1, 1, 1, 1)
+	var tween = create_tween().set_loops()
+	
+	tween.tween_property(style, "bg_color", Color(1.7, 1.7, 1.1, 1.0), 1.3)
+	tween.tween_property(style, "bg_color", Color(1.0, 1.0, 1.0, 1.0), 0.7)
