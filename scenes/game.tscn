@@ -86,8 +86,16 @@ outline_size = 1
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bhx41"]
-bg_color = Color(0.13562012, 0.1578703, 0.39453125, 1)
+bg_color = Color(1, 1, 1, 1)
 border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0tnpc"]
+radius = 5.0
+height = 36.000008
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_dinhu"]
 a = Vector2(236, 14)
@@ -110,7 +118,7 @@ a = Vector2(235, 36)
 b = Vector2(343, 36)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ir15t"]
-a = Vector2(235, 36)
+a = Vector2(235, 34)
 b = Vector2(342, 34)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_kvuet"]
@@ -491,17 +499,38 @@ vertical_alignment = 1
 [node name="num" type="Panel" parent="r18/collect" unique_id=641963778]
 modulate = Color(1.0000322, 1.0000322, 1.0039686, 1)
 layout_direction = 2
-offset_left = 34.0
-offset_top = -119.0
-offset_right = 47.0
-offset_bottom = -117.0
+offset_left = 54.0
+offset_top = -120.0
+offset_right = 58.0
+offset_bottom = -116.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_bhx41")
+
+[node name="Label" type="Label" parent="r18/collect/num" unique_id=1851322736]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 4.0
+offset_bottom = 6.1698303
+scale = Vector2(0.6483166, 0.6483166)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_gee14")
+theme_override_font_sizes/font_size = 3
+text = "I"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="num1" type="Area2D" parent="r18/collect" unique_id=2136047156]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="r18/collect/num1" unique_id=1163543778]
+position = Vector2(56, -120)
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_0tnpc")
 
 [node name="lights" type="Node2D" parent="r18" unique_id=410495781]
 visible = false
 
 [node name="PointLight2D" type="PointLight2D" parent="r18/lights" unique_id=811135468]
+z_index = 2
 position = Vector2(0, -19.5)
 scale = Vector2(0.88030887, 1.0815899)
 energy = 0.97
@@ -750,6 +779,7 @@ vertical_alignment = 1
 visible = false
 
 [node name="PointLight2D" type="PointLight2D" parent="r17/lights" unique_id=1782977779]
+z_index = 2
 position = Vector2(0, -19.5)
 scale = Vector2(0.88030887, 1.0815899)
 energy = 0.97
@@ -1467,6 +1497,7 @@ vertical_alignment = 1
 visible = false
 
 [node name="PointLight2D" type="PointLight2D" parent="r16/lights" unique_id=1095612709]
+z_index = 2
 position = Vector2(0, -19.5)
 scale = Vector2(0.88030887, 1.0815899)
 energy = 0.97
@@ -1708,6 +1739,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_iywne")
 visible = false
 
 [node name="PointLight2D" type="PointLight2D" parent="r15/lights" unique_id=1748910705]
+z_index = 2
 position = Vector2(0, -19.5)
 scale = Vector2(0.88030887, 1.0815899)
 energy = 0.97
@@ -1952,6 +1984,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_iywne")
 visible = false
 
 [node name="PointLight2D" type="PointLight2D" parent="r14/lights" unique_id=2068530002]
+z_index = 2
 position = Vector2(0, -19.5)
 scale = Vector2(0.88030887, 1.0815899)
 energy = 0.97
@@ -2662,6 +2695,7 @@ vertical_alignment = 1
 visible = false
 
 [node name="PointLight2D" type="PointLight2D" parent="r13/lights" unique_id=1987612652]
+z_index = 2
 position = Vector2(0, -19.5)
 scale = Vector2(0.88030887, 1.0815899)
 energy = 0.97
@@ -3030,6 +3064,7 @@ vertical_alignment = 1
 visible = false
 
 [node name="PointLight2D" type="PointLight2D" parent="hallway/lights" unique_id=75544695]
+z_index = 2
 position = Vector2(-380.50003, 736.99994)
 scale = Vector2(2.0812142, 1.0815899)
 energy = 0.97
@@ -3037,6 +3072,7 @@ blend_mode = 1
 texture = ExtResource("1_yqjtg")
 
 [node name="PointLight2D2" type="PointLight2D" parent="hallway/lights" unique_id=1952745877]
+z_index = 2
 position = Vector2(-169, 694)
 scale = Vector2(0.7304687, 0.78125006)
 texture = ExtResource("5_u5sy4")
@@ -3050,7 +3086,7 @@ position = Vector2(224, 821)
 shape = SubResource("SegmentShape2D_p57ef")
 
 [node name="player" parent="." unique_id=1089869233 instance=ExtResource("1_uwrxv")]
-position = Vector2(-191, 33)
+position = Vector2(297, -70)
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=870738312]
 position = Vector2(0, -84)
@@ -3066,6 +3102,45 @@ texture = ExtResource("3_lnu2h")
 
 [node name="areas" type="Node2D" parent="." unique_id=1193393466]
 
+[node name="canvas" type="CanvasLayer" parent="." unique_id=1209985598]
+
+[node name="nums" type="Node2D" parent="canvas" unique_id=1964192417]
+
+[node name="num1" type="Node2D" parent="canvas/nums" unique_id=1144744235]
+visible = false
+
+[node name="num1" type="Panel" parent="canvas/nums/num1" unique_id=2092677175]
+modulate = Color(1.0000322, 1.0000322, 1.0039686, 1)
+layout_direction = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 440.0
+offset_top = 197.99998
+offset_right = 444.0
+offset_bottom = 201.99998
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(100, 100)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bhx41")
+
+[node name="Label" type="Label" parent="canvas/nums/num1/num1" unique_id=1277339814]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 4.0
+offset_bottom = 6.1698303
+scale = Vector2(0.6483166, 0.6483166)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_gee14")
+theme_override_font_sizes/font_size = 3
+text = "I"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[connection signal="body_entered" from="r18/collect/num1" to="." method="_on_num_1_body_entered"]
 [connection signal="body_entered" from="r18/boundaries/main_room_door_1" to="." method="_on_main_room_door_1_body_entered"]
 [connection signal="body_exited" from="r18/boundaries/main_room_door_1" to="." method="_on_main_room_door_1_body_exited"]
 [connection signal="body_entered" from="r18/boundaries/main_room_door_2" to="." method="_on_main_room_door_2_body_entered"]

@@ -3,6 +3,11 @@ extends Node2D
 
 func init_game():
 	init_lights()
+	init_shine()
+
+func init_shine():
+	shine($r18/collect/num)
+	shine($canvas/nums/num1/num1)
 
 func init_lights():
 	$r18/lights.visible = 1
@@ -16,8 +21,7 @@ func init_lights():
 	$hallway/lights.visible = 1
 	
 func _ready() -> void:
-	#init_game()
-	shine($r18/collect/num)
+	init_game()
 	
 	pass
 
@@ -194,12 +198,38 @@ var style = StyleBoxFlat.new()
 
 func shine(node) -> void:
 	
-	var styl = node.get_theme_stylebox("panel")
+	var style = node.get_theme_stylebox("panel")
 	style = StyleBoxFlat.new()
 	node.add_theme_stylebox_override("panel", style)
-	
+
 	style.bg_color = Color(1, 1, 1, 1)
+	style.corner_radius_top_left = 10
+	style.corner_radius_top_right = 10
+	style.corner_radius_bottom_left = 10
+	style.corner_radius_bottom_right = 10
+
 	var tween = create_tween().set_loops()
-	
 	tween.tween_property(style, "bg_color", Color(1.7, 1.7, 1.1, 1.0), 1.3)
 	tween.tween_property(style, "bg_color", Color(1.0, 1.0, 1.0, 1.0), 0.7)
+
+
+func _on_num_1_body_entered(body: Node2D) -> void:
+	if body == $player:
+		collect_num($r18/collect/num, $canvas/nums/num1)
+
+func collect_num(node1, node2):
+	#play_sound()
+	if !node1.visible: return
+	node1.visible = 0
+	#node.scale = Vector2(2, 2)
+	#node2.position.x -= 300
+	node2.visible = 1
+	node2.modulate.a = 0
+	var tween = create_tween()
+	#await tween.tween_property(node2, "position:x", node2.position.x +300, 1)
+	#await tween.tween_property(node2, "position:x", node2.position.x +300, 1)
+	
+	await tween.tween_property(node2, "modulate:a", 1.0, 0.4)
+	
+	await get_tree().create_timer(1).timeout
+	node2.visible = 0
