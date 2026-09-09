@@ -261,6 +261,7 @@ func _on_mob_mouse_exited() -> void:
 	$r15/room/mob/outline.visible = 0
 
 var mob_equipped = 1
+var lighter_equipped = 1
 
 func _on_mob_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
@@ -274,3 +275,26 @@ func _on_pond_clean_input_event(viewport: Node, event: InputEvent, shape_idx: in
 			$r17/room/pond2.visible = 0
 			$r17/boundaries/walls/pond_clear.set_deferred("disabled", 0)
 			$r17/room/pond_area/CollisionShape2D.set_deferred("disabled", 1)
+
+func _on_lighter_area_mouse_entered() -> void:
+	$r18/room/lighter/outline.visible = 1
+func _on_lighter_area_mouse_exited() -> void:
+	$r18/room/lighter/outline.visible = 0
+func _on_lighter_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		$r18/room/lighter.visible = 0
+		lighter_equipped = 1
+func _on_candle_r16_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		if lighter_equipped:
+			$r16/room/candle.visible = 1
+func _on_candle_r15_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		if lighter_equipped:
+			$r15/room/collect.visible = 1
+			$r15/room/candle.visible = 1
+			$r15/room/collect/num15/CollisionShape2D.set_deferred("disabled", 0)
+func _on_num_r15_body_entered(body: Node2D) -> void:
+	if body == $player:
+		print('r15_coin')
+		collect_num($r15/room/collect/num, "V")

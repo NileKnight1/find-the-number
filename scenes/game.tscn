@@ -8,6 +8,7 @@
 [ext_resource type="FontFile" uid="uid://81dpg3hbtjeg" path="res://assets/digital-7 (mono).ttf" id="3_u5sy4"]
 [ext_resource type="FontFile" uid="uid://cuqyrw2hhre2p" path="res://assets/HoldMoney-Regular.ttf" id="5_gee14"]
 [ext_resource type="Texture2D" uid="uid://blohtwdyxv1ok" path="res://assets/cone.png" id="5_u5sy4"]
+[ext_resource type="Texture2D" uid="uid://nn47kxs437y6" path="res://assets/pngtree-a-close-up-isolated-image-of-single-candle-flame-burning-brightly-png-image_17770140.png" id="6_0tnpc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kvpfn"]
 bg_color = Color(0, 0, 0, 1)
@@ -85,6 +86,37 @@ font = ExtResource("3_u5sy4")
 outline_size = 1
 outline_color = Color(0, 0, 0, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wljb1"]
+bg_color = Color(0.58203125, 0.5527592, 0.11367798, 1)
+skew = Vector2(0.725, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+shadow_color = Color(1, 0.15686275, 0.21568628, 0.78431374)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qouja"]
+bg_color = Color(0.58203125, 0.5527592, 0.11367798, 1)
+skew = Vector2(0.725, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v2yb1"]
+size = Vector2(26.053192, 12.865475)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bhx41"]
 bg_color = Color(1, 1, 1, 1)
 border_color = Color(0, 0, 0, 1)
@@ -155,7 +187,7 @@ a = Vector2(-5.595642, -56.7334)
 b = Vector2(-10.141724, 7.081421)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_1kice"]
-a = Vector2(-62.193787, -47.978516)
+a = Vector2(-61.25952, -48.335083)
 b = Vector2(-10.141724, 7.081421)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_bhx41"]
@@ -263,6 +295,9 @@ corner_radius_top_left = 1
 corner_radius_top_right = 1
 corner_radius_bottom_right = 1
 corner_radius_bottom_left = 1
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kvpfn"]
+size = Vector2(20, 24)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_5newe"]
 a = Vector2(-325, 12)
@@ -545,6 +580,39 @@ text = "11:59 "
 label_settings = SubResource("LabelSettings_gee14")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="lighter" type="Node2D" parent="r18/room" unique_id=1587169903]
+
+[node name="outline" type="Node2D" parent="r18/room/lighter" unique_id=1258576530]
+visible = false
+
+[node name="lighter" type="Panel" parent="r18/room/lighter/outline" unique_id=971001394]
+layout_direction = 2
+offset_left = -298.00003
+offset_top = 7.9999943
+offset_right = -290.5592
+offset_bottom = 25.456003
+rotation = 0.7853982
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wljb1")
+
+[node name="lighter" type="Panel" parent="r18/room/lighter" unique_id=17446811]
+layout_direction = 2
+offset_left = -298.00003
+offset_top = 7.9999943
+offset_right = -290.5592
+offset_bottom = 25.456003
+rotation = 0.7853982
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qouja")
+
+[node name="lighter_area" type="Area2D" parent="r18/room" unique_id=1059151405]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="r18/room/lighter_area" unique_id=526634503]
+position = Vector2(-302.65594, 15.719891)
+scale = Vector2(1, 0.99999994)
+skew = -0.747001
+shape = SubResource("RectangleShape2D_v2yb1")
 
 [node name="collect" type="Node2D" parent="r18" unique_id=560330631]
 
@@ -996,6 +1064,15 @@ offset_bottom = 229.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_yqjtg")
 
+[node name="candle2" type="Panel" parent="r16/room" unique_id=1349002389]
+layout_direction = 2
+offset_left = -309.0
+offset_top = -2.0
+offset_right = -301.0
+offset_bottom = 17.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bt5mj")
+
 [node name="door" type="Panel" parent="r16/room" unique_id=1992607329]
 layout_direction = 2
 offset_left = -238.0
@@ -1102,15 +1179,6 @@ text = "11:59 "
 label_settings = SubResource("LabelSettings_gee14")
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="door4" type="Panel" parent="r16/room/desk" unique_id=1095089856]
-layout_direction = 2
-offset_left = -309.0
-offset_top = -2.0
-offset_right = -301.0
-offset_bottom = 17.0
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_bt5mj")
 
 [node name="bookshelf" type="Node2D" parent="r16/room" unique_id=1778814734]
 position = Vector2(391, 0)
@@ -1594,6 +1662,27 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="candle" type="Node2D" parent="r16/room" unique_id=1795155192]
+visible = false
+
+[node name="candle_flame" type="Sprite2D" parent="r16/room/candle" unique_id=366241250]
+position = Vector2(-304.9999, -10)
+scale = Vector2(0.050000314, 0.049999993)
+texture = ExtResource("6_0tnpc")
+
+[node name="flash" type="PointLight2D" parent="r16/room/candle" unique_id=1730895103]
+position = Vector2(-305, -73.5)
+scale = Vector2(0.38671866, 0.5214844)
+color = Color(0.9296875, 0.48464727, 0.010894775, 1)
+energy = 0.16
+texture = ExtResource("3_lnu2h")
+
+[node name="candle_area" type="Area2D" parent="r16/room" unique_id=979335699]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="r16/room/candle_area" unique_id=1380964866]
+position = Vector2(-305, 6)
+shape = SubResource("RectangleShape2D_kvpfn")
+
 [node name="lights" type="Node2D" parent="r16" unique_id=184223721]
 visible = false
 
@@ -1894,6 +1983,65 @@ offset_right = 271.0
 offset_bottom = 86.725006
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_iywne")
+
+[node name="candle" type="Node2D" parent="r15/room" unique_id=536074864]
+visible = false
+position = Vector2(-39, 0)
+
+[node name="candle_flame" type="Sprite2D" parent="r15/room/candle" unique_id=983294303]
+position = Vector2(-304.9999, -10)
+scale = Vector2(0.050000314, 0.049999993)
+texture = ExtResource("6_0tnpc")
+
+[node name="flash" type="PointLight2D" parent="r15/room/candle" unique_id=105188459]
+position = Vector2(-305, -73.5)
+scale = Vector2(0.38671866, 0.5214844)
+color = Color(0.9296875, 0.48464727, 0.010894775, 1)
+energy = 0.16
+texture = ExtResource("3_lnu2h")
+
+[node name="candle_area" type="Area2D" parent="r15/room" unique_id=1389464636]
+position = Vector2(-39, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="r15/room/candle_area" unique_id=1973178270]
+position = Vector2(-305, 6)
+shape = SubResource("RectangleShape2D_kvpfn")
+
+[node name="collect" type="Node2D" parent="r15/room" unique_id=1784538204]
+visible = false
+position = Vector2(-297, -223)
+
+[node name="num" type="Panel" parent="r15/room/collect" unique_id=1815835486]
+modulate = Color(1.0000322, 1.0000322, 1.0039686, 1)
+layout_direction = 2
+offset_left = -46.0
+offset_top = 109.0
+offset_right = -42.0
+offset_bottom = 113.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bhx41")
+
+[node name="Label" type="Label" parent="r15/room/collect/num" unique_id=1672164031]
+layout_mode = 0
+offset_left = -2.0003638
+offset_right = 11.882448
+offset_bottom = 6.1698303
+scale = Vector2(0.6483166, 0.6483166)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_gee14")
+theme_override_font_sizes/font_size = 3
+text = "III"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="num15" type="Area2D" parent="r15/room/collect" unique_id=2102927919]
+position = Vector2(-100, 229)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="r15/room/collect/num15" unique_id=1593807576]
+position = Vector2(56, -120)
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_0tnpc")
+disabled = true
 
 [node name="lights" type="Node2D" parent="r15" unique_id=2022004602]
 visible = false
@@ -3281,7 +3429,7 @@ position = Vector2(224, 821)
 shape = SubResource("SegmentShape2D_p57ef")
 
 [node name="player" parent="." unique_id=1089869233 instance=ExtResource("1_uwrxv")]
-position = Vector2(-1453, 109)
+position = Vector2(-4185, 108)
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=870738312]
 position = Vector2(0, -84)
@@ -3335,6 +3483,9 @@ text = "I"
 horizontal_alignment = 1
 vertical_alignment = 2
 
+[connection signal="input_event" from="r18/room/lighter_area" to="." method="_on_lighter_area_input_event"]
+[connection signal="mouse_entered" from="r18/room/lighter_area" to="." method="_on_lighter_area_mouse_entered"]
+[connection signal="mouse_exited" from="r18/room/lighter_area" to="." method="_on_lighter_area_mouse_exited"]
 [connection signal="body_entered" from="r18/collect/num1" to="." method="_on_num_1_body_entered"]
 [connection signal="body_entered" from="r18/boundaries/main_room_door_1" to="." method="_on_main_room_door_1_body_entered"]
 [connection signal="body_exited" from="r18/boundaries/main_room_door_1" to="." method="_on_main_room_door_1_body_exited"]
@@ -3348,6 +3499,7 @@ vertical_alignment = 2
 [connection signal="body_entered" from="r17/boundaries/r-17_door_up" to="." method="_on_r17_door_up_body_entered"]
 [connection signal="body_exited" from="r17/boundaries/r-17_door_up" to="." method="_on_r17_door_up_body_exited"]
 [connection signal="body_entered" from="r17/collect/num2" to="." method="_on_num_2_body_entered"]
+[connection signal="input_event" from="r16/room/candle_area" to="." method="_on_candle_r16_input_event"]
 [connection signal="body_entered" from="r16/boundaries/door_1" to="." method="_on_r16_door_down_body_entered"]
 [connection signal="body_exited" from="r16/boundaries/door_1" to="." method="_on_r16_door_down_body_exited"]
 [connection signal="body_entered" from="r16/boundaries/door_2" to="." method="_on_r16_door_up_body_entered"]
@@ -3355,6 +3507,8 @@ vertical_alignment = 2
 [connection signal="input_event" from="r15/room/mob/Area2D" to="." method="_on_mob_input_event"]
 [connection signal="mouse_entered" from="r15/room/mob/Area2D" to="." method="_on_mob_mouse_entered"]
 [connection signal="mouse_exited" from="r15/room/mob/Area2D" to="." method="_on_mob_mouse_exited"]
+[connection signal="input_event" from="r15/room/candle_area" to="." method="_on_candle_r15_input_event"]
+[connection signal="body_entered" from="r15/room/collect/num15" to="." method="_on_num_r15_body_entered"]
 [connection signal="body_entered" from="r15/boundaries/door_1" to="." method="_on_r15_door_up_body_entered"]
 [connection signal="body_exited" from="r15/boundaries/door_1" to="." method="_on_r15_door_up_body_exited"]
 [connection signal="body_entered" from="r15/boundaries/door_2" to="." method="_on_r15_door_down_body_entered"]
