@@ -298,3 +298,33 @@ func _on_num_r15_body_entered(body: Node2D) -> void:
 	if body == $player:
 		print('r15_coin')
 		collect_num($r15/room/collect/num, "V")
+
+func _on_candle_r13_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		if lighter_equipped:
+			$r13/room/candle.visible = 1
+
+func _on_book_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		print('book opened')
+		$canvas/book.visible = 1
+func _on_book_coin_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		print('special opened')
+		$canvas/book.visible = 1
+		$canvas/book/close.visible = 0
+		$canvas/book/Label.visible = 0
+		$canvas/book/collect/num/Label.visible = 1
+		$canvas/book/collect.visible = 1
+		await get_tree().create_timer(2).timeout
+		collect_num($canvas/book/collect/num, "VI")
+		await get_tree().create_timer(2).timeout
+		
+		$canvas/book/close.visible = 1
+		$canvas/book/Label.visible = 1
+		
+		
+		
+func _on_close_book_pressed() -> void:
+	$canvas/book.visible =0
+	

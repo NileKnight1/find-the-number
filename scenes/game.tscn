@@ -9,6 +9,7 @@
 [ext_resource type="FontFile" uid="uid://cuqyrw2hhre2p" path="res://assets/HoldMoney-Regular.ttf" id="5_gee14"]
 [ext_resource type="Texture2D" uid="uid://blohtwdyxv1ok" path="res://assets/cone.png" id="5_u5sy4"]
 [ext_resource type="Texture2D" uid="uid://nn47kxs437y6" path="res://assets/pngtree-a-close-up-isolated-image-of-single-candle-flame-burning-brightly-png-image_17770140.png" id="6_0tnpc"]
+[ext_resource type="Texture2D" uid="uid://bc68g84isq4p2" path="res://assets/831c95ad2d399bf5ed9acffaa956d824-removebg-preview.png" id="10_vtaks"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kvpfn"]
 bg_color = Color(0, 0, 0, 1)
@@ -219,6 +220,9 @@ border_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_ca42v"]
 thickness = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dinhu"]
+size = Vector2(10, 32)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rysoc"]
 bg_color = Color(0.10114869, 0.075733535, 0.24161506, 1)
@@ -1222,6 +1226,93 @@ theme_override_styles/panel = SubResource("StyleBoxLine_ca42v")
 
 [node name="books" type="Node2D" parent="r16/room/bookshelf" unique_id=1663334063]
 
+[node name="areas" type="Area2D" parent="r16/room/bookshelf/books" unique_id=269064424]
+position = Vector2(-399, -27)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="r16/room/bookshelf/books/areas" unique_id=1382449820]
+position = Vector2(5, -21)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="r16/room/bookshelf/books/areas" unique_id=1317603437]
+position = Vector2(17, -21)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="r16/room/bookshelf/books/areas" unique_id=1674911424]
+position = Vector2(29, -21)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="r16/room/bookshelf/books/areas" unique_id=1597518969]
+position = Vector2(41, -21)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="r16/room/bookshelf/books/areas" unique_id=1753037684]
+position = Vector2(53, -21)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="r16/room/bookshelf/books/areas" unique_id=430605024]
+position = Vector2(65, -21)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="r16/room/bookshelf/books/areas" unique_id=1467838205]
+position = Vector2(77, -21)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="r16/room/bookshelf/books/areas" unique_id=1503778627]
+position = Vector2(89, -21)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="r16/room/bookshelf/books/areas" unique_id=831442901]
+position = Vector2(101, -21)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="r16/room/bookshelf/books/areas" unique_id=1575814908]
+position = Vector2(113, -21)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="r16/room/bookshelf/books/areas" unique_id=2074043962]
+position = Vector2(125, -21)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="r16/room/bookshelf/books/areas" unique_id=78612106]
+position = Vector2(5, 16)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="r16/room/bookshelf/books/areas" unique_id=1272091612]
+position = Vector2(17, 16)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="r16/room/bookshelf/books/areas" unique_id=1857711527]
+position = Vector2(29, 16)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="r16/room/bookshelf/books/areas" unique_id=1401912246]
+position = Vector2(53, 16)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="r16/room/bookshelf/books/areas" unique_id=710243330]
+position = Vector2(65, 16)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="r16/room/bookshelf/books/areas" unique_id=2007803710]
+position = Vector2(77, 16)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="r16/room/bookshelf/books/areas" unique_id=1816499727]
+position = Vector2(89, 16)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="r16/room/bookshelf/books/areas" unique_id=1311059925]
+position = Vector2(101, 16)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="r16/room/bookshelf/books/areas" unique_id=1867351457]
+position = Vector2(113, 16)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="r16/room/bookshelf/books/areas" unique_id=1171983949]
+position = Vector2(125, 16)
+shape = SubResource("RectangleShape2D_dinhu")
+
 [node name="book1" type="Panel" parent="r16/room/bookshelf/books" unique_id=1023999160]
 layout_direction = 2
 offset_left = -399.0
@@ -1301,6 +1392,12 @@ text = "13  / 9"
 label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="book" type="Area2D" parent="r16/room/bookshelf/books/book4" unique_id=164052892]
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="r16/room/bookshelf/books/book4/book" unique_id=892619280]
+position = Vector2(5, 16)
+shape = SubResource("RectangleShape2D_dinhu")
 
 [node name="book5" type="Panel" parent="r16/room/bookshelf/books" unique_id=1939216122]
 layout_direction = 2
@@ -2594,6 +2691,97 @@ theme_override_styles/panel = SubResource("StyleBoxLine_ca42v")
 
 [node name="books" type="Node2D" parent="r13/room/bookshelf" unique_id=1303989389]
 
+[node name="areas" type="Area2D" parent="r13/room/bookshelf/books" unique_id=1875585355]
+position = Vector2(-399, -27)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="r13/room/bookshelf/books/areas" unique_id=1575755322]
+position = Vector2(5, -21)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="r13/room/bookshelf/books/areas" unique_id=574317842]
+position = Vector2(17, -21)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="r13/room/bookshelf/books/areas" unique_id=1587229205]
+position = Vector2(29, -21)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="r13/room/bookshelf/books/areas" unique_id=673300122]
+position = Vector2(41, -21)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="r13/room/bookshelf/books/areas" unique_id=1453605434]
+position = Vector2(53, -21)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="r13/room/bookshelf/books/areas" unique_id=1619231659]
+position = Vector2(65, -21)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="r13/room/bookshelf/books/areas" unique_id=1398335120]
+position = Vector2(77, -21)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="r13/room/bookshelf/books/areas" unique_id=208563329]
+position = Vector2(89, -21)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="r13/room/bookshelf/books/areas" unique_id=1469689530]
+position = Vector2(101, -21)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="r13/room/bookshelf/books/areas" unique_id=1786375936]
+position = Vector2(113, -21)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="r13/room/bookshelf/books/areas" unique_id=1242759865]
+position = Vector2(125, -21)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="r13/room/bookshelf/books/areas" unique_id=2117273635]
+position = Vector2(5, 16)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="r13/room/bookshelf/books/areas" unique_id=819188104]
+position = Vector2(17, 16)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="r13/room/bookshelf/books/areas" unique_id=661681275]
+position = Vector2(29, 16)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="r13/room/bookshelf/books/areas" unique_id=1290696828]
+position = Vector2(41, 16)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="r13/room/bookshelf/books/areas" unique_id=519869371]
+position = Vector2(53, 16)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="r13/room/bookshelf/books/areas" unique_id=1034535363]
+position = Vector2(65, 16)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="r13/room/bookshelf/books/areas" unique_id=1803251918]
+position = Vector2(77, 16)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="r13/room/bookshelf/books/areas" unique_id=236395862]
+position = Vector2(89, 16)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="r13/room/bookshelf/books/areas" unique_id=645780077]
+position = Vector2(101, 16)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="r13/room/bookshelf/books/areas" unique_id=1718614487]
+position = Vector2(113, 16)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="r13/room/bookshelf/books/areas" unique_id=1296353432]
+position = Vector2(125, 16)
+shape = SubResource("RectangleShape2D_dinhu")
+
 [node name="book1" type="Panel" parent="r13/room/bookshelf/books" unique_id=170970757]
 layout_direction = 2
 offset_left = -399.0
@@ -3034,6 +3222,29 @@ label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="candle" type="Node2D" parent="r13/room" unique_id=1965795572]
+visible = false
+position = Vector2(-42, 0)
+
+[node name="candle_flame" type="Sprite2D" parent="r13/room/candle" unique_id=1550792933]
+position = Vector2(-304.9999, -10)
+scale = Vector2(0.050000314, 0.049999993)
+texture = ExtResource("6_0tnpc")
+
+[node name="flash" type="PointLight2D" parent="r13/room/candle" unique_id=1879499962]
+position = Vector2(-305, -73.5)
+scale = Vector2(0.38671866, 0.5214844)
+color = Color(0.9296875, 0.48464727, 0.010894775, 1)
+energy = 0.16
+texture = ExtResource("3_lnu2h")
+
+[node name="candle_area" type="Area2D" parent="r13/room" unique_id=140075699]
+position = Vector2(-42, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="r13/room/candle_area" unique_id=1334113622]
+position = Vector2(-305, 6)
+shape = SubResource("RectangleShape2D_kvpfn")
+
 [node name="lights" type="Node2D" parent="r13" unique_id=85212125]
 visible = false
 
@@ -3429,7 +3640,7 @@ position = Vector2(224, 821)
 shape = SubResource("SegmentShape2D_p57ef")
 
 [node name="player" parent="." unique_id=1089869233 instance=ExtResource("1_uwrxv")]
-position = Vector2(-4185, 108)
+position = Vector2(-2751, 53)
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=870738312]
 position = Vector2(0, -84)
@@ -3446,6 +3657,59 @@ texture = ExtResource("3_lnu2h")
 [node name="areas" type="Node2D" parent="." unique_id=1193393466]
 
 [node name="canvas" type="CanvasLayer" parent="." unique_id=1209985598]
+
+[node name="book" type="Node2D" parent="canvas" unique_id=1042996452]
+
+[node name="book" type="Sprite2D" parent="canvas/book" unique_id=1608269786]
+position = Vector2(639.00006, 389.00003)
+scale = Vector2(0.8340079, 0.834008)
+texture = ExtResource("10_vtaks")
+
+[node name="close" type="Button" parent="canvas/book" unique_id=942329435]
+offset_left = 836.0
+offset_top = 230.0
+offset_right = 874.0
+offset_bottom = 268.0
+
+[node name="Label" type="Label" parent="canvas/book" unique_id=1682117048]
+offset_left = 845.0
+offset_top = 224.0
+offset_right = 865.0
+offset_bottom = 281.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_gee14")
+theme_override_font_sizes/font_size = 36
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="collect" type="Node2D" parent="canvas/book" unique_id=1896768189]
+visible = false
+position = Vector2(665, 378)
+
+[node name="num" type="Panel" parent="canvas/book/collect" unique_id=817102482]
+modulate = Color(1.0000322, 1.0000322, 1.0039686, 1)
+layout_direction = 2
+offset_left = 33.0
+offset_top = -50.000004
+offset_right = 37.0
+offset_bottom = -46.000004
+scale = Vector2(11.225244, 11.225244)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bhx41")
+
+[node name="Label" type="Label" parent="canvas/book/collect/num" unique_id=1741422671]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 4.0
+offset_bottom = 6.1698303
+scale = Vector2(0.6483166, 0.6483166)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_gee14")
+theme_override_font_sizes/font_size = 3
+text = "VI"
+horizontal_alignment = 1
+vertical_alignment = 2
 
 [node name="nums" type="Node2D" parent="canvas" unique_id=1964192417]
 
@@ -3499,6 +3763,8 @@ vertical_alignment = 2
 [connection signal="body_entered" from="r17/boundaries/r-17_door_up" to="." method="_on_r17_door_up_body_entered"]
 [connection signal="body_exited" from="r17/boundaries/r-17_door_up" to="." method="_on_r17_door_up_body_exited"]
 [connection signal="body_entered" from="r17/collect/num2" to="." method="_on_num_2_body_entered"]
+[connection signal="input_event" from="r16/room/bookshelf/books/areas" to="." method="_on_book_input_event"]
+[connection signal="input_event" from="r16/room/bookshelf/books/book4/book" to="." method="_on_book_coin_input_event"]
 [connection signal="input_event" from="r16/room/candle_area" to="." method="_on_candle_r16_input_event"]
 [connection signal="body_entered" from="r16/boundaries/door_1" to="." method="_on_r16_door_down_body_entered"]
 [connection signal="body_exited" from="r16/boundaries/door_1" to="." method="_on_r16_door_down_body_exited"]
@@ -3519,7 +3785,10 @@ vertical_alignment = 2
 [connection signal="body_exited" from="r14/boundaries/door_1" to="." method="_on_r14_door_up_body_exited"]
 [connection signal="body_entered" from="r14/boundaries/door_2" to="." method="_on_r14_door_down_body_entered"]
 [connection signal="body_exited" from="r14/boundaries/door_2" to="." method="_on_r14_door_down_body_exited"]
+[connection signal="input_event" from="r13/room/bookshelf/books/areas" to="." method="_on_book_input_event"]
+[connection signal="input_event" from="r13/room/candle_area" to="." method="_on_candle_r13_input_event"]
 [connection signal="body_entered" from="r13/boundaries/room_1_door_2" to="." method="_on_r13_door_up_body_entered"]
 [connection signal="body_exited" from="r13/boundaries/room_1_door_2" to="." method="_on_r13_door_up_body_exited"]
 [connection signal="body_entered" from="r13/boundaries/room_1_door_3" to="." method="_on_r13_door_down_body_entered"]
 [connection signal="body_exited" from="r13/boundaries/room_1_door_3" to="." method="_on_r13_door_down_body_exited"]
+[connection signal="pressed" from="canvas/book/close" to="." method="_on_close_book_pressed"]
