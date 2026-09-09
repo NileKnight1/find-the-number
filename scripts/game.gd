@@ -94,8 +94,11 @@ func _on_pond_area_body_exited(body: Node2D) -> void:
 		
 func _on_desk_push_body_entered(body: Node2D) -> void:
 	if body == $player:
+		print("pushed")
 		var tween = create_tween()
-		tween.tween_property($room_6/map_behind/room/desk, "position:x", 30, 1)
+		tween.tween_property($r14/room/desk, "position:x", 30, 1)
+		await get_tree().create_timer(1.0).timeout
+		$r14/room/collect/num2/CollisionShape2D.set_deferred("disabled", 0)
 
 var r17_door_down = 0
 var r17_door_up = 0
@@ -215,21 +218,38 @@ func shine(node) -> void:
 
 func _on_num_1_body_entered(body: Node2D) -> void:
 	if body == $player:
-		collect_num($r18/collect/num, $canvas/nums/num1)
+		collect_num($r18/collect/num, "I")
 
-func collect_num(node1, node2):
+func collect_num(node1, tex):
 	#play_sound()
 	if !node1.visible: return
 	node1.visible = 0
+	var node2 = $canvas/nums/num1
 	#node.scale = Vector2(2, 2)
 	#node2.position.x -= 300
+	node2.get_node('num1').get_node('Label').text = tex
 	node2.visible = 1
 	node2.modulate.a = 0
 	var tween = create_tween()
+	#$canvas/nums
 	#await tween.tween_property(node2, "position:x", node2.position.x +300, 1)
 	#await tween.tween_property(node2, "position:x", node2.position.x +300, 1)
 	
-	await tween.tween_property(node2, "modulate:a", 1.0, 0.4)
+	tween.tween_property(node2, "modulate:a", 1.0, 0.4)
+	await get_tree().create_timer(1).timeout
+	
+	var tween2 = create_tween()
+	tween2.tween_property(node2, "modulate:a", 0.0, 0.2)
 	
 	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(1).timeout
 	node2.visible = 0
+
+func _on_num_2_body_entered(body: Node2D) -> void:
+	if body == $player:
+		collect_num($r18/collect/num, "II")
+
+func _on_num_r14_body_entered(body: Node2D) -> void:
+	if body == $player:
+		print('r14_coin')
+		collect_num($r14/room/collect/num, "IV")
