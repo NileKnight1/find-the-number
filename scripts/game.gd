@@ -253,3 +253,24 @@ func _on_num_r14_body_entered(body: Node2D) -> void:
 	if body == $player:
 		print('r14_coin')
 		collect_num($r14/room/collect/num, "IV")
+
+
+func _on_mob_mouse_entered() -> void:
+	$r15/room/mob/outline.visible = 1
+func _on_mob_mouse_exited() -> void:
+	$r15/room/mob/outline.visible = 0
+
+var mob_equipped = 1
+
+func _on_mob_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		$r15/room/mob.visible = 0
+		mob_equipped = 1
+		print("mob taken")
+
+func _on_pond_clean_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		if mob_equipped:
+			$r17/room/pond2.visible = 0
+			$r17/boundaries/walls/pond_clear.set_deferred("disabled", 0)
+			$r17/room/pond_area/CollisionShape2D.set_deferred("disabled", 1)

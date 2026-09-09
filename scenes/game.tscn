@@ -142,6 +142,10 @@ corner_radius_bottom_left = 80
 radius = 15.0123825
 height = 125.99756
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vtaks"]
+radius = 33.005684
+height = 149.99707
+
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_rysoc"]
 a = Vector2(-325, 12)
 b = Vector2(-682, 12)
@@ -153,6 +157,10 @@ b = Vector2(-10.141724, 7.081421)
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_1kice"]
 a = Vector2(-62.193787, -47.978516)
 b = Vector2(-10.141724, 7.081421)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_bhx41"]
+a = Vector2(-61.61609, -49.269287)
+b = Vector2(-16.556335, 71.60925)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_pl11u"]
 a = Vector2(-325, 12)
@@ -267,6 +275,46 @@ b = Vector2(364, 35)
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_bt5mj"]
 a = Vector2(253, 35)
 b = Vector2(357, 35)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_suyxu"]
+bg_color = Color(0.24750742, 0.1078592, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_color = Color(0, 0, 0, 1)
+shadow_color = Color(1, 0.15686275, 0.21568628, 0.78431374)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sww3w"]
+bg_color = Color(0.2890625, 0.13775635, 0.15548754, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+shadow_color = Color(1, 0.15686275, 0.21568628, 0.78431374)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sgl2t"]
+bg_color = Color(0.2890625, 0.13775635, 0.15548754, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qnb83"]
+bg_color = Color(0.24750742, 0.1078592, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0tnpc"]
+size = Vector2(17.747559, 90.508575)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vtaks"]
+size = Vector2(48.995544, 18.081543)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1j6l"]
 bg_color = Color(0.91280335, 0.780789, 0.7870394, 1)
@@ -644,7 +692,7 @@ offset_bottom = 85.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
-[node name="pod" type="Panel" parent="r17/room" unique_id=364611071]
+[node name="pond2" type="Panel" parent="r17/room" unique_id=364611071]
 layout_direction = 2
 offset_left = -100.0
 offset_top = 85.0
@@ -659,6 +707,13 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_37s47")
 position = Vector2(-40, 100)
 rotation = -1.5644543
 shape = SubResource("CapsuleShape2D_gee14")
+
+[node name="pond_clean" type="Area2D" parent="r17/room" unique_id=402129189]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="r17/room/pond_clean" unique_id=1895516150]
+position = Vector2(-40, 102)
+rotation = -1.5644543
+shape = SubResource("CapsuleShape2D_vtaks")
 
 [node name="wardrobe" type="Node2D" parent="r17/room" unique_id=1068837226]
 position = Vector2(-222, 0)
@@ -822,6 +877,12 @@ shape = SubResource("SegmentShape2D_264po")
 position = Vector2(-40, 41)
 rotation = 1.9353608
 shape = SubResource("SegmentShape2D_1kice")
+
+[node name="pond_clear" type="CollisionShape2D" parent="r17/boundaries/walls" unique_id=135314349]
+position = Vector2(-40, 41)
+rotation = 1.9353608
+shape = SubResource("SegmentShape2D_bhx41")
+disabled = true
 
 [node name="down2" type="CollisionShape2D" parent="r17/boundaries/walls" unique_id=258711239]
 position = Vector2(783, -11)
@@ -1656,6 +1717,65 @@ offset_right = -74.0
 offset_bottom = 85.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
+
+[node name="mob" type="Node2D" parent="r15/room" unique_id=1454015420]
+
+[node name="outline" type="Node2D" parent="r15/room/mob" unique_id=1346583462]
+visible = false
+
+[node name="rod4" type="Panel" parent="r15/room/mob/outline" unique_id=676149253]
+layout_direction = 2
+offset_left = 406.0
+offset_top = -18.0
+offset_right = 412.5415
+offset_bottom = 73.6264
+rotation = -0.16929694
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_suyxu")
+
+[node name="rod3" type="Panel" parent="r15/room/mob/outline" unique_id=220652673]
+layout_direction = 2
+offset_left = 400.0
+offset_top = 75.0
+offset_right = 449.59985
+offset_bottom = 84.43536
+rotation = -0.18325958
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sww3w")
+
+[node name="rod2" type="Panel" parent="r15/room/mob" unique_id=1629818181]
+layout_direction = 2
+offset_left = 400.0
+offset_top = 75.0
+offset_right = 449.59985
+offset_bottom = 84.43536
+rotation = -0.18325958
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sgl2t")
+
+[node name="rod" type="Panel" parent="r15/room/mob" unique_id=1303987254]
+layout_direction = 2
+offset_left = 406.00012
+offset_top = -18.0
+offset_right = 412.54163
+offset_bottom = 73.6264
+rotation = -0.16929694
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qnb83")
+
+[node name="Area2D" type="Area2D" parent="r15/room/mob" unique_id=1632400367]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="r15/room/mob/Area2D" unique_id=337032567]
+position = Vector2(417.23975, 26.415554)
+rotation = -0.16755164
+scale = Vector2(0.99999964, 0.99999964)
+shape = SubResource("RectangleShape2D_0tnpc")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="r15/room/mob/Area2D" unique_id=1974812506]
+position = Vector2(425.6433, 74.89124)
+rotation = -0.16755165
+scale = Vector2(0.99999934, 0.99999934)
+shape = SubResource("RectangleShape2D_vtaks")
 
 [node name="bed" type="Node2D" parent="r15/room" unique_id=2097555566]
 position = Vector2(-140, -11)
@@ -3161,7 +3281,7 @@ position = Vector2(224, 821)
 shape = SubResource("SegmentShape2D_p57ef")
 
 [node name="player" parent="." unique_id=1089869233 instance=ExtResource("1_uwrxv")]
-position = Vector2(-3282, 821)
+position = Vector2(-1453, 109)
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=870738312]
 position = Vector2(0, -84)
@@ -3222,6 +3342,7 @@ vertical_alignment = 2
 [connection signal="body_exited" from="r18/boundaries/main_room_door_2" to="." method="_on_main_room_door_2_body_exited"]
 [connection signal="body_entered" from="r17/room/pond_area" to="." method="_on_pond_area_body_entered"]
 [connection signal="body_exited" from="r17/room/pond_area" to="." method="_on_pond_area_body_exited"]
+[connection signal="input_event" from="r17/room/pond_clean" to="." method="_on_pond_clean_input_event"]
 [connection signal="body_entered" from="r17/boundaries/r-17_door_down" to="." method="_on_r17_door_down_body_entered"]
 [connection signal="body_exited" from="r17/boundaries/r-17_door_down" to="." method="_onr17_door_down_body_exited"]
 [connection signal="body_entered" from="r17/boundaries/r-17_door_up" to="." method="_on_r17_door_up_body_entered"]
@@ -3231,6 +3352,9 @@ vertical_alignment = 2
 [connection signal="body_exited" from="r16/boundaries/door_1" to="." method="_on_r16_door_down_body_exited"]
 [connection signal="body_entered" from="r16/boundaries/door_2" to="." method="_on_r16_door_up_body_entered"]
 [connection signal="body_exited" from="r16/boundaries/door_2" to="." method="_on_r16_door_up_body_exited"]
+[connection signal="input_event" from="r15/room/mob/Area2D" to="." method="_on_mob_input_event"]
+[connection signal="mouse_entered" from="r15/room/mob/Area2D" to="." method="_on_mob_mouse_entered"]
+[connection signal="mouse_exited" from="r15/room/mob/Area2D" to="." method="_on_mob_mouse_exited"]
 [connection signal="body_entered" from="r15/boundaries/door_1" to="." method="_on_r15_door_up_body_entered"]
 [connection signal="body_exited" from="r15/boundaries/door_1" to="." method="_on_r15_door_up_body_exited"]
 [connection signal="body_entered" from="r15/boundaries/door_2" to="." method="_on_r15_door_down_body_entered"]
