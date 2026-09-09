@@ -127,8 +127,8 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0tnpc"]
-radius = 5.0
-height = 36.000008
+radius = 9.0
+height = 18.0
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_dinhu"]
 a = Vector2(236, 14)
@@ -363,6 +363,9 @@ border_width_right = 3
 border_width_bottom = 3
 border_color = Color(0.6082709, 0.49339628, 7.70092e-07, 1)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kvuet"]
+size = Vector2(62, 69)
+
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_e1j6l"]
 a = Vector2(57, 67)
 b = Vector2(-7, 67)
@@ -418,8 +421,12 @@ font_size = 9
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_p57ef"]
-a = Vector2(1948, 14)
-b = Vector2(-6370, 13)
+a = Vector2(1944, 8)
+b = Vector2(-7002, 8)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_qnb83"]
+a = Vector2(2, 558)
+b = Vector2(5, -14)
 
 [node name="game" type="Node2D" unique_id=994519513]
 script = ExtResource("1_lbhrr")
@@ -2051,7 +2058,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_bt5mj")
 
 [node name="paint" type="Node2D" parent="r15/room" unique_id=132569715]
 
-[node name="door4" type="Panel" parent="r15/room/paint" unique_id=1734073725]
+[node name="paint" type="Panel" parent="r15/room/paint" unique_id=1734073725]
 layout_direction = 2
 offset_left = -31.0
 offset_top = -110.0
@@ -2059,6 +2066,12 @@ offset_right = 25.0
 offset_bottom = -45.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_e1j6l")
+
+[node name="painting" type="Area2D" parent="r15/room/paint" unique_id=1200838818]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="r15/room/paint/painting" unique_id=455386477]
+position = Vector2(-3, -77.5)
+shape = SubResource("RectangleShape2D_kvuet")
 
 [node name="wardrobe" type="Node2D" parent="r15/room" unique_id=2075862397]
 position = Vector2(82, 0)
@@ -2320,6 +2333,12 @@ offset_right = 381.0
 offset_bottom = 96.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
+
+[node name="painting" type="Area2D" parent="r14/room" unique_id=1473543379]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="r14/room/painting" unique_id=621643195]
+position = Vector2(-3, -77.5)
+shape = SubResource("RectangleShape2D_kvuet")
 
 [node name="collect" type="Node2D" parent="r14/room" unique_id=588826066]
 position = Vector2(-341, -27)
@@ -3245,6 +3264,59 @@ position = Vector2(-42, 0)
 position = Vector2(-305, 6)
 shape = SubResource("RectangleShape2D_kvpfn")
 
+[node name="collect" type="Node2D" parent="r13/room" unique_id=731277566]
+position = Vector2(-274, -216)
+
+[node name="num" type="Panel" parent="r13/room/collect" unique_id=322651907]
+modulate = Color(1.0000322, 1.0000322, 1.0039686, 1)
+layout_direction = 2
+offset_left = -46.0
+offset_top = 109.0
+offset_right = -42.0
+offset_bottom = 113.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bhx41")
+
+[node name="Label" type="Label" parent="r13/room/collect/num" unique_id=1065478309]
+layout_mode = 0
+offset_left = -2.0003638
+offset_right = 11.882448
+offset_bottom = 6.1698303
+scale = Vector2(0.6483166, 0.6483166)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_gee14")
+theme_override_font_sizes/font_size = 3
+text = "II"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="num2" type="Area2D" parent="r13/room/collect" unique_id=706839762]
+position = Vector2(-100, 229)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="r13/room/collect/num2" unique_id=1072747606]
+position = Vector2(58, -119)
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_0tnpc")
+disabled = true
+
+[node name="paint" type="Node2D" parent="r13/room" unique_id=2016965322]
+position = Vector2(-338, 0)
+
+[node name="paint" type="Panel" parent="r13/room/paint" unique_id=2140303355]
+layout_direction = 2
+offset_left = -31.0
+offset_top = -110.0
+offset_right = 25.0
+offset_bottom = -45.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_e1j6l")
+
+[node name="painting" type="Area2D" parent="r13/room/paint" unique_id=1847175048]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="r13/room/paint/painting" unique_id=923791359]
+position = Vector2(-3, -77.5)
+shape = SubResource("RectangleShape2D_kvuet")
+
 [node name="lights" type="Node2D" parent="r13" unique_id=85212125]
 visible = false
 
@@ -3323,10 +3395,9 @@ one_way_collision = true
 [node name="map" type="Node2D" parent="hallway" unique_id=1312918689]
 
 [node name="wall" type="Panel" parent="hallway/map" unique_id=479889919]
-visible = false
 self_modulate = Color(1, 1, 1, 0.45490196)
 layout_direction = 2
-offset_left = -6144.0
+offset_left = -6776.0
 offset_top = 458.0
 offset_right = 2175.0
 offset_bottom = 829.0
@@ -3335,7 +3406,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_kvuet")
 
 [node name="floor2" type="Panel" parent="hallway/map" unique_id=396282768]
 layout_direction = 2
-offset_left = -6147.0
+offset_left = -6776.0
 offset_top = 825.0
 offset_right = 2178.0
 offset_bottom = 969.0
@@ -3344,7 +3415,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_yqjtg")
 
 [node name="floor3" type="Panel" parent="hallway/map" unique_id=1282165388]
 layout_direction = 2
-offset_left = -6148.0
+offset_left = -6776.0
 offset_top = 825.0
 offset_right = 2168.0
 offset_bottom = 872.0
@@ -3352,7 +3423,6 @@ mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_dinhu")
 
 [node name="R-19" type="Panel" parent="hallway/map" unique_id=1536788159]
-visible = false
 layout_direction = 2
 offset_left = 759.0
 offset_top = 633.0
@@ -3562,36 +3632,6 @@ label_settings = SubResource("LabelSettings_qnb83")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="R-12" type="Panel" parent="hallway/map" unique_id=1946662753]
-layout_direction = 2
-offset_left = -6075.0
-offset_top = 633.0
-offset_right = -5951.0
-offset_bottom = 825.0
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
-
-[node name="frame" type="Panel" parent="hallway/map/R-12" unique_id=1952890742]
-layout_direction = 2
-layout_mode = 0
-offset_left = 32.0
-offset_top = 22.0
-offset_right = 92.0
-offset_bottom = 41.0
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_pl11u")
-
-[node name="Label" type="Label" parent="hallway/map/R-12" unique_id=1693556121]
-layout_mode = 0
-offset_left = 42.0
-offset_top = 20.0
-offset_right = 82.0
-offset_bottom = 45.333336
-text = "R-12"
-label_settings = SubResource("LabelSettings_qnb83")
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="clock" type="Node2D" parent="hallway/map" unique_id=1067096502]
 position = Vector2(0, -57)
 
@@ -3619,8 +3659,8 @@ visible = false
 
 [node name="PointLight2D" type="PointLight2D" parent="hallway/lights" unique_id=75544695]
 z_index = 2
-position = Vector2(-380.50003, 736.99994)
-scale = Vector2(2.0812142, 1.0815899)
+position = Vector2(-2298.9998, 736.99994)
+scale = Vector2(7.345365, 1.0815899)
 energy = 0.97
 blend_mode = 1
 texture = ExtResource("1_yqjtg")
@@ -3639,8 +3679,22 @@ texture = ExtResource("5_u5sy4")
 position = Vector2(224, 821)
 shape = SubResource("SegmentShape2D_p57ef")
 
+[node name="right" type="Area2D" parent="hallway/boundaries" unique_id=1807119758]
+position = Vector2(145, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hallway/boundaries/right" unique_id=988795338]
+position = Vector2(1325, 439)
+shape = SubResource("SegmentShape2D_qnb83")
+
+[node name="left" type="Area2D" parent="hallway/boundaries" unique_id=1899365309]
+position = Vector2(-7221, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hallway/boundaries/left" unique_id=853365014]
+position = Vector2(1325, 439)
+shape = SubResource("SegmentShape2D_qnb83")
+
 [node name="player" parent="." unique_id=1089869233 instance=ExtResource("1_uwrxv")]
-position = Vector2(-2751, 53)
+position = Vector2(1438, 829)
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=870738312]
 position = Vector2(0, -84)
@@ -3659,6 +3713,7 @@ texture = ExtResource("3_lnu2h")
 [node name="canvas" type="CanvasLayer" parent="." unique_id=1209985598]
 
 [node name="book" type="Node2D" parent="canvas" unique_id=1042996452]
+visible = false
 
 [node name="book" type="Sprite2D" parent="canvas/book" unique_id=1608269786]
 position = Vector2(639.00006, 389.00003)
@@ -3773,12 +3828,14 @@ vertical_alignment = 2
 [connection signal="input_event" from="r15/room/mob/Area2D" to="." method="_on_mob_input_event"]
 [connection signal="mouse_entered" from="r15/room/mob/Area2D" to="." method="_on_mob_mouse_entered"]
 [connection signal="mouse_exited" from="r15/room/mob/Area2D" to="." method="_on_mob_mouse_exited"]
+[connection signal="input_event" from="r15/room/paint/painting" to="." method="_on_painting_r15_input_event"]
 [connection signal="input_event" from="r15/room/candle_area" to="." method="_on_candle_r15_input_event"]
 [connection signal="body_entered" from="r15/room/collect/num15" to="." method="_on_num_r15_body_entered"]
 [connection signal="body_entered" from="r15/boundaries/door_1" to="." method="_on_r15_door_up_body_entered"]
 [connection signal="body_exited" from="r15/boundaries/door_1" to="." method="_on_r15_door_up_body_exited"]
 [connection signal="body_entered" from="r15/boundaries/door_2" to="." method="_on_r15_door_down_body_entered"]
 [connection signal="body_exited" from="r15/boundaries/door_2" to="." method="_on_r15_door_down_body_exited"]
+[connection signal="input_event" from="r14/room/painting" to="." method="_on_painting_r14_input_event"]
 [connection signal="body_entered" from="r14/room/collect/num2" to="." method="_on_num_r14_body_entered"]
 [connection signal="body_entered" from="r14/room/desk/desk_push" to="." method="_on_desk_push_body_entered"]
 [connection signal="body_entered" from="r14/boundaries/door_1" to="." method="_on_r14_door_up_body_entered"]
@@ -3787,8 +3844,11 @@ vertical_alignment = 2
 [connection signal="body_exited" from="r14/boundaries/door_2" to="." method="_on_r14_door_down_body_exited"]
 [connection signal="input_event" from="r13/room/bookshelf/books/areas" to="." method="_on_book_input_event"]
 [connection signal="input_event" from="r13/room/candle_area" to="." method="_on_candle_r13_input_event"]
+[connection signal="input_event" from="r13/room/paint/painting" to="." method="_on_painting_r13_input_event"]
 [connection signal="body_entered" from="r13/boundaries/room_1_door_2" to="." method="_on_r13_door_up_body_entered"]
 [connection signal="body_exited" from="r13/boundaries/room_1_door_2" to="." method="_on_r13_door_up_body_exited"]
 [connection signal="body_entered" from="r13/boundaries/room_1_door_3" to="." method="_on_r13_door_down_body_entered"]
 [connection signal="body_exited" from="r13/boundaries/room_1_door_3" to="." method="_on_r13_door_down_body_exited"]
+[connection signal="body_entered" from="hallway/boundaries/right" to="." method="_on_hallway_right_body_entered"]
+[connection signal="body_entered" from="hallway/boundaries/left" to="." method="_on_hallway_left_body_entered"]
 [connection signal="pressed" from="canvas/book/close" to="." method="_on_close_book_pressed"]

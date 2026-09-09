@@ -319,12 +319,30 @@ func _on_book_coin_input_event(viewport: Node, event: InputEvent, shape_idx: int
 		await get_tree().create_timer(2).timeout
 		collect_num($canvas/book/collect/num, "VI")
 		await get_tree().create_timer(2).timeout
-		
 		$canvas/book/close.visible = 1
 		$canvas/book/Label.visible = 1
 		
-		
-		
 func _on_close_book_pressed() -> void:
-	$canvas/book.visible =0
-	
+	$canvas/book.visible = 0
+
+func _on_painting_r15_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		$r15/room/paint/paint.rotation = 12.9
+func _on_painting_r14_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		$r14/room/paint/paint.rotation = 12.9
+func _on_painting_r13_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		$r13/room/paint/paint.rotation = 12.9
+		$r13/room/collect/num2/CollisionShape2D.set_deferred("disabled", 0)
+		await get_tree().create_timer(1.0).timeout
+		
+		collect_num($r13/room/collect/num, "VII")
+
+
+func _on_hallway_right_body_entered(body: Node2D) -> void:
+	if body == $player:
+		$player.position.x = -5854.0
+func _on_hallway_left_body_entered(body: Node2D) -> void:
+	if body == $player:
+		$player.position.x = 1438.0
