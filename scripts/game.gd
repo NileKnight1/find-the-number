@@ -244,10 +244,11 @@ func collect_num(node1, tex):
 	await get_tree().create_timer(1).timeout
 	await get_tree().create_timer(1).timeout
 	node2.visible = 0
+	$hallway/map/clock.get_node(tex).visible = 1
 
 func _on_num_2_body_entered(body: Node2D) -> void:
 	if body == $player:
-		collect_num($r18/collect/num, "II")
+		collect_num($r18/collect/num, "X")
 
 func _on_num_r14_body_entered(body: Node2D) -> void:
 	if body == $player:
@@ -260,8 +261,8 @@ func _on_mob_mouse_entered() -> void:
 func _on_mob_mouse_exited() -> void:
 	$r15/room/mob/outline.visible = 0
 
-var mob_equipped = 1
-var lighter_equipped = 1
+var mob_equipped = 0
+var lighter_equipped = 0
 
 func _on_mob_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
@@ -337,8 +338,7 @@ func _on_painting_r13_input_event(viewport: Node, event: InputEvent, shape_idx: 
 		$r13/room/collect/num2/CollisionShape2D.set_deferred("disabled", 0)
 		await get_tree().create_timer(1.0).timeout
 		
-		collect_num($r13/room/collect/num, "VII")
-
+		collect_num($r13/room/collect/num, "XI")
 
 func _on_hallway_right_body_entered(body: Node2D) -> void:
 	if body == $player:

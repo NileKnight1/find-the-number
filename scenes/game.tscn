@@ -2409,7 +2409,7 @@ shape = SubResource("RectangleShape2D_gee14")
 
 [node name="paint" type="Node2D" parent="r14/room" unique_id=1250849493]
 
-[node name="door4" type="Panel" parent="r14/room/paint" unique_id=1059489311]
+[node name="paint" type="Panel" parent="r14/room/paint" unique_id=1059489311]
 layout_direction = 2
 offset_left = -31.0
 offset_top = -110.0
@@ -3395,10 +3395,9 @@ one_way_collision = true
 [node name="map" type="Node2D" parent="hallway" unique_id=1312918689]
 
 [node name="wall" type="Panel" parent="hallway/map" unique_id=479889919]
-self_modulate = Color(1, 1, 1, 0.45490196)
 layout_direction = 2
 offset_left = -6776.0
-offset_top = 458.0
+offset_top = 378.0
 offset_right = 2175.0
 offset_bottom = 829.0
 mouse_filter = 2
@@ -3644,12 +3643,140 @@ offset_bottom = 682.81354
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_trtic")
 
-[node name="12" type="Label" parent="hallway/map/clock" unique_id=1651877823]
+[node name="XII" type="Label" parent="hallway/map/clock" unique_id=1651877823]
 offset_left = -177.0
 offset_top = 616.0
 offset_right = -166.0
 offset_bottom = 629.0
-text = "12"
+theme_override_fonts/font = ExtResource("5_gee14")
+text = "XII"
+label_settings = SubResource("LabelSettings_p57ef")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VI" type="Label" parent="hallway/map/clock" unique_id=194486263]
+visible = false
+offset_left = -177.0
+offset_top = 669.0
+offset_right = -166.0
+offset_bottom = 683.25
+theme_override_fonts/font = ExtResource("5_gee14")
+text = "VI"
+label_settings = SubResource("LabelSettings_p57ef")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IX" type="Label" parent="hallway/map/clock" unique_id=689205187]
+offset_left = -205.0
+offset_top = 642.0
+offset_right = -194.0
+offset_bottom = 656.25
+theme_override_fonts/font = ExtResource("5_gee14")
+text = "IX"
+label_settings = SubResource("LabelSettings_p57ef")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="X" type="Label" parent="hallway/map/clock" unique_id=1864359942]
+visible = false
+offset_left = -201.0
+offset_top = 630.0
+offset_right = -190.0
+offset_bottom = 644.25
+theme_override_fonts/font = ExtResource("5_gee14")
+text = "X"
+label_settings = SubResource("LabelSettings_p57ef")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="XI" type="Label" parent="hallway/map/clock" unique_id=349212625]
+visible = false
+offset_left = -192.0
+offset_top = 620.0
+offset_right = -181.0
+offset_bottom = 634.25
+theme_override_fonts/font = ExtResource("5_gee14")
+text = "XI"
+label_settings = SubResource("LabelSettings_p57ef")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="III" type="Label" parent="hallway/map/clock" unique_id=754888321]
+offset_left = -146.0
+offset_top = 642.0
+offset_right = -135.0
+offset_bottom = 656.25
+theme_override_fonts/font = ExtResource("5_gee14")
+text = "III"
+label_settings = SubResource("LabelSettings_p57ef")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="I" type="Label" parent="hallway/map/clock" unique_id=1084945990]
+visible = false
+offset_left = -163.0
+offset_top = 618.0
+offset_right = -152.0
+offset_bottom = 632.25
+theme_override_fonts/font = ExtResource("5_gee14")
+text = "I"
+label_settings = SubResource("LabelSettings_p57ef")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="II" type="Label" parent="hallway/map/clock" unique_id=926817388]
+offset_left = -152.0
+offset_top = 627.0
+offset_right = -141.0
+offset_bottom = 641.25
+theme_override_fonts/font = ExtResource("5_gee14")
+text = "II"
+label_settings = SubResource("LabelSettings_p57ef")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IV" type="Label" parent="hallway/map/clock" unique_id=1367544159]
+visible = false
+offset_left = -152.0
+offset_top = 655.0
+offset_right = -141.0
+offset_bottom = 669.25
+theme_override_fonts/font = ExtResource("5_gee14")
+text = "IV"
+label_settings = SubResource("LabelSettings_p57ef")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="V" type="Label" parent="hallway/map/clock" unique_id=1232175162]
+visible = false
+offset_left = -163.0
+offset_top = 667.0
+offset_right = -152.0
+offset_bottom = 681.25
+theme_override_fonts/font = ExtResource("5_gee14")
+text = "V"
+label_settings = SubResource("LabelSettings_p57ef")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VII" type="Label" parent="hallway/map/clock" unique_id=946255093]
+offset_left = -191.0
+offset_top = 667.0
+offset_right = -180.0
+offset_bottom = 681.25
+theme_override_fonts/font = ExtResource("5_gee14")
+text = "VII"
+label_settings = SubResource("LabelSettings_p57ef")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VIII" type="Label" parent="hallway/map/clock" unique_id=1347777115]
+offset_left = -203.0
+offset_top = 656.0
+offset_right = -189.0
+offset_bottom = 670.25
+theme_override_fonts/font = ExtResource("5_gee14")
+text = "VIII"
 label_settings = SubResource("LabelSettings_p57ef")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -3659,8 +3786,8 @@ visible = false
 
 [node name="PointLight2D" type="PointLight2D" parent="hallway/lights" unique_id=75544695]
 z_index = 2
-position = Vector2(-2298.9998, 736.99994)
-scale = Vector2(7.345365, 1.0815899)
+position = Vector2(-2298.9998, 692.90265)
+scale = Vector2(7.345365, 1.2545204)
 energy = 0.97
 blend_mode = 1
 texture = ExtResource("1_yqjtg")
@@ -3694,7 +3821,7 @@ position = Vector2(1325, 439)
 shape = SubResource("SegmentShape2D_qnb83")
 
 [node name="player" parent="." unique_id=1089869233 instance=ExtResource("1_uwrxv")]
-position = Vector2(1438, 829)
+position = Vector2(-356, 761)
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=870738312]
 position = Vector2(0, -84)
@@ -3801,6 +3928,9 @@ theme_override_font_sizes/font_size = 3
 text = "I"
 horizontal_alignment = 1
 vertical_alignment = 2
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1332446475]
+color = Color(1, 0.92578125, 0.94547194, 1)
 
 [connection signal="input_event" from="r18/room/lighter_area" to="." method="_on_lighter_area_input_event"]
 [connection signal="mouse_entered" from="r18/room/lighter_area" to="." method="_on_lighter_area_mouse_entered"]
