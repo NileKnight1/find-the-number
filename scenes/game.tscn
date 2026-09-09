@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://b1uduvye332ew" path="res://assets/image.png" id="3_lnu2h"]
 [ext_resource type="FontFile" uid="uid://81dpg3hbtjeg" path="res://assets/digital-7 (mono).ttf" id="3_u5sy4"]
 [ext_resource type="FontFile" uid="uid://cuqyrw2hhre2p" path="res://assets/HoldMoney-Regular.ttf" id="5_gee14"]
-[ext_resource type="Texture2D" uid="uid://blohtwdyxv1ok" path="res://assets/cone.png" id="5_u5sy4"]
 [ext_resource type="Texture2D" uid="uid://nn47kxs437y6" path="res://assets/pngtree-a-close-up-isolated-image-of-single-candle-flame-burning-brightly-png-image_17770140.png" id="6_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://bc68g84isq4p2" path="res://assets/831c95ad2d399bf5ed9acffaa956d824-removebg-preview.png" id="10_vtaks"]
 
@@ -385,7 +384,7 @@ b = Vector2(382, 36)
 bg_color = Color(0.59481364, 0.41463348, 0.18327808, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dinhu"]
-bg_color = Color(0.62198806, 0, 0.10864409, 1)
+bg_color = Color(0.37890625, 0, 0.06672567, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pl11u"]
 bg_color = Color(0.11486266, 0.03590247, 3.008172e-09, 1)
@@ -420,6 +419,15 @@ corner_detail = 20
 font_size = 9
 font_color = Color(0, 0, 0, 1)
 
+[sub_resource type="Gradient" id="Gradient_0tnpc"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_vtaks"]
+gradient = SubResource("Gradient_0tnpc")
+fill = 1
+fill_from = Vector2(0.51282054, 0.20512821)
+fill_to = Vector2(0.77, -0.28)
+
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_p57ef"]
 a = Vector2(1944, 8)
 b = Vector2(-7002, 8)
@@ -427,6 +435,15 @@ b = Vector2(-7002, 8)
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_qnb83"]
 a = Vector2(2, 558)
 b = Vector2(5, -14)
+
+[sub_resource type="Gradient" id="Gradient_vtaks"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kvpfn"]
+gradient = SubResource("Gradient_vtaks")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
 
 [node name="game" type="Node2D" unique_id=994519513]
 script = ExtResource("1_lbhrr")
@@ -3794,9 +3811,9 @@ texture = ExtResource("1_yqjtg")
 
 [node name="PointLight2D2" type="PointLight2D" parent="hallway/lights" unique_id=1952745877]
 z_index = 2
-position = Vector2(-169, 694)
-scale = Vector2(0.7304687, 0.78125006)
-texture = ExtResource("5_u5sy4")
+position = Vector2(-176, 712)
+scale = Vector2(8.15625, 6.1713743)
+texture = SubResource("GradientTexture2D_vtaks")
 
 [node name="boundaries" type="Node2D" parent="hallway" unique_id=1720597780]
 
@@ -3821,7 +3838,7 @@ position = Vector2(1325, 439)
 shape = SubResource("SegmentShape2D_qnb83")
 
 [node name="player" parent="." unique_id=1089869233 instance=ExtResource("1_uwrxv")]
-position = Vector2(-356, 761)
+position = Vector2(458, 829)
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=870738312]
 position = Vector2(0, -84)
@@ -3829,6 +3846,12 @@ zoom = Vector2(1.7, 1.7)
 limit_enabled = false
 
 [node name="flash" type="PointLight2D" parent="player" unique_id=493230440]
+position = Vector2(0, -60.999996)
+scale = Vector2(5.9374995, 5.937499)
+energy = 0.3
+texture = SubResource("GradientTexture2D_kvpfn")
+
+[node name="flash2" type="PointLight2D" parent="player" unique_id=1460880421]
 visible = false
 position = Vector2(0, -60.999996)
 scale = Vector2(0.515625, 0.515625)
@@ -3930,6 +3953,7 @@ horizontal_alignment = 1
 vertical_alignment = 2
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1332446475]
+position = Vector2(0, -1)
 color = Color(1, 0.92578125, 0.94547194, 1)
 
 [connection signal="input_event" from="r18/room/lighter_area" to="." method="_on_lighter_area_input_event"]
