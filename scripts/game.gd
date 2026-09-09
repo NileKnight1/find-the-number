@@ -5,16 +5,19 @@ var sound_collect = preload("res://audio/638390__ulrich_wehner__horror-stinger-1
 var sound_clean_pond = preload("res://audio/freesound_community-water-splash-46402.mp3")
 var sound_book_close = preload("res://audio/oxidvideos-book-closing-466850.mp3")
 var sound_book_open = preload("res://audio/paper_turn.mp3")
-var sound_candle = preload("res://assets/youssefmizani-flame-lighting-a-fire-in-the-oven-510618.mp3")
-var sound_push_wood = preload("res://assets/floraphonic-beer-can-table-foley-slide-10-238336.mp3")
-var sound_jump = preload("res://assets/dragon-studio-simple-whoosh-382724.mp3")
-var sound_frame = preload("res://assets/freesound_community-menu-change-89197.mp3")
+var sound_candle = preload("res://audio/youssefmizani-flame-lighting-a-fire-in-the-oven-510618.mp3")
+var sound_push_wood = preload("res://audio/floraphonic-beer-can-table-foley-slide-10-238336.mp3")
+var sound_jump = preload("res://audio/dragon-studio-simple-whoosh-382724.mp3")
+var sound_frame = preload("res://audio/freesound_community-menu-change-89197.mp3")
+var sound_go = preload("res://audio/freesound_community-gooo-83817.mp3")
+var sound_go2 = preload("res://audio/freesound_community-go-80148.mp3")
 
-var sound_glass_break = preload("res://assets/universfield-glass-bottle-smash-277554.mp3")
-var sound_iseeyou = preload("res://assets/dragon-studio-i-see-you-creepy-ghost-whisper-401711.mp3")
-var sound_low_growl = preload("res://assets/gsmsea-megalodon-low-growl-432984.mp3")
-var sound_thud = preload("res://assets/edr-electronic-impact-soft-10019.mp3")
-var sound_stone = preload("res://assets/freesound_community-tomb-door-open-stone-scrape-102748.mp3")
+
+var sound_glass_break = preload("res://audio/universfield-glass-bottle-smash-277554.mp3")
+var sound_iseeyou = preload("res://audio/dragon-studio-i-see-you-creepy-ghost-whisper-401711.mp3")
+var sound_low_growl = preload("res://audio/gsmsea-megalodon-low-growl-432984.mp3")
+var sound_thud = preload("res://audio/edr-electronic-impact-soft-10019.mp3")
+var sound_stone = preload("res://audio/freesound_community-tomb-door-open-stone-scrape-102748.mp3")
 
 
 
@@ -58,6 +61,7 @@ func init_sounds():
 func _ready() -> void:
 	#play_sound(sound_collect)
 	init_game()
+	start_clock()
 	
 	pass
 
@@ -428,3 +432,24 @@ func _on_hallway_right_body_entered(body: Node2D) -> void:
 func _on_hallway_left_body_entered(body: Node2D) -> void:
 	if body == $player:
 		$player.position.x = 1438.0
+
+func start_clock():
+	$hallway/tick_lights.visible = 1
+	countdown_lights()
+	var tween = create_tween()
+	tween.set_parallel(true)
+	tween.tween_property($hallway/map/clock/hours, "rotation_degrees", 270, 60)
+	tween.tween_property($hallway/map/clock/minutes, "rotation_degrees", 270, 60)
+	tween.tween_property($hallway/map/clock/seconds, "rotation_degrees", 630, 60)
+	
+func countdown_lights():
+	for i in $hallway/tick_lights.get_children():
+		i.visible = 1
+		
+	await get_tree().create_timer(1).timeout
+	for i in $hallway/tick_lights.get_children():
+		i.visible = 0
+	
+	await get_tree().create_timer(1).timeout
+	
+	countdown_lights()

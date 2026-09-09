@@ -10,8 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://nn47kxs437y6" path="res://assets/pngtree-a-close-up-isolated-image-of-single-candle-flame-burning-brightly-png-image_17770140.png" id="6_0tnpc"]
 [ext_resource type="AudioStream" uid="uid://cqr2el40l02do" path="res://audio/PM_FSSF_AMBIENCE_SOUNDSCAPE_LOOP_3.mp3" id="10_kvpfn"]
 [ext_resource type="Texture2D" uid="uid://bc68g84isq4p2" path="res://assets/831c95ad2d399bf5ed9acffaa956d824-removebg-preview.png" id="10_vtaks"]
-[ext_resource type="AudioStream" uid="uid://kiyqsyw7j3i2" path="res://audio/soundreality-footsteps-walking-boots-parquet-1-420135.mp3" id="11_kvpfn"]
-[ext_resource type="AudioStream" uid="uid://6noaswfp0ye5" path="res://audio/dragon-studio-slow-cinematic-clock-ticking-357979.mp3" id="12_dinhu"]
+[ext_resource type="AudioStream" path="res://assets/soundreality-footsteps-walking-boots-parquet-1-420135.mp3" id="11_kvpfn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kvpfn"]
 bg_color = Color(0, 0, 0, 1)
@@ -426,14 +425,6 @@ corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 corner_detail = 20
-
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_dinhu"]
-
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_kvuet"]
-color = Color(0, 0.55859375, 0.5062256, 1)
-
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_trtic"]
-color = Color(0.58203125, 0.079574585, 0.079574585, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_p57ef"]
 font_size = 9
@@ -3677,36 +3668,6 @@ offset_bottom = 682.81354
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_trtic")
 
-[node name="seconds" type="Panel" parent="hallway/map/clock" unique_id=595875245]
-layout_direction = 2
-offset_left = -170.99997
-offset_top = 650.00006
-offset_right = -149.06564
-offset_bottom = 652.00006
-rotation = 4.712389
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxLine_dinhu")
-
-[node name="minutes" type="Panel" parent="hallway/map/clock" unique_id=89949075]
-layout_direction = 2
-offset_left = -170.99997
-offset_top = 650.00006
-offset_right = -153.53275
-offset_bottom = 652.00006
-rotation = 4.6076694
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxLine_kvuet")
-
-[node name="hours" type="Panel" parent="hallway/map/clock" unique_id=1225852243]
-layout_direction = 2
-offset_left = -170.99997
-offset_top = 650.00006
-offset_right = -166.12192
-offset_bottom = 652.00006
-rotation = 4.694936
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxLine_trtic")
-
 [node name="XII" type="Label" parent="hallway/map/clock" unique_id=1651877823]
 offset_left = -177.0
 offset_top = 616.0
@@ -3742,6 +3703,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="X" type="Label" parent="hallway/map/clock" unique_id=1864359942]
+visible = false
 offset_left = -201.0
 offset_top = 630.0
 offset_right = -190.0
@@ -3753,6 +3715,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="XI" type="Label" parent="hallway/map/clock" unique_id=349212625]
+visible = false
 offset_left = -192.0
 offset_top = 620.0
 offset_right = -181.0
@@ -3843,75 +3806,8 @@ label_settings = SubResource("LabelSettings_p57ef")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="tick_lights" type="Node2D" parent="hallway" unique_id=328662131]
-
-[node name="PointLight2D3" type="PointLight2D" parent="hallway/tick_lights" unique_id=131486862]
-z_index = 2
-position = Vector2(307.00003, 712)
-scale = Vector2(8.15625, 6.1713743)
-texture = SubResource("GradientTexture2D_vtaks")
-
-[node name="PointLight2D14" type="PointLight2D" parent="hallway/tick_lights" unique_id=1523018715]
-z_index = 2
-position = Vector2(871.00006, 712)
-scale = Vector2(8.15625, 6.1713743)
-texture = SubResource("GradientTexture2D_vtaks")
-
-[node name="PointLight2D4" type="PointLight2D" parent="hallway/tick_lights" unique_id=65785555]
-z_index = 2
-position = Vector2(-612.00006, 712)
-scale = Vector2(8.15625, 6.1713743)
-texture = SubResource("GradientTexture2D_vtaks")
-
-[node name="PointLight2D5" type="PointLight2D" parent="hallway/tick_lights" unique_id=199912097]
-z_index = 2
-position = Vector2(-1143, 712)
-scale = Vector2(8.15625, 6.1713743)
-texture = SubResource("GradientTexture2D_vtaks")
-
-[node name="PointLight2D6" type="PointLight2D" parent="hallway/tick_lights" unique_id=380729990]
-z_index = 2
-position = Vector2(-1659, 709.484)
-scale = Vector2(8.15625, 6.1713743)
-texture = SubResource("GradientTexture2D_vtaks")
-
-[node name="PointLight2D7" type="PointLight2D" parent="hallway/tick_lights" unique_id=478669642]
-z_index = 2
-position = Vector2(-2190, 709.484)
-scale = Vector2(8.15625, 6.1713743)
-texture = SubResource("GradientTexture2D_vtaks")
-
-[node name="PointLight2D8" type="PointLight2D" parent="hallway/tick_lights" unique_id=93331021]
-z_index = 2
-position = Vector2(-2729, 712)
-scale = Vector2(8.15625, 6.1713743)
-texture = SubResource("GradientTexture2D_vtaks")
-
-[node name="PointLight2D9" type="PointLight2D" parent="hallway/tick_lights" unique_id=1201373988]
-z_index = 2
-position = Vector2(-3260, 712)
-scale = Vector2(8.15625, 6.1713743)
-texture = SubResource("GradientTexture2D_vtaks")
-
-[node name="PointLight2D10" type="PointLight2D" parent="hallway/tick_lights" unique_id=1340609756]
-z_index = 2
-position = Vector2(-3776, 709.484)
-scale = Vector2(8.15625, 6.1713743)
-texture = SubResource("GradientTexture2D_vtaks")
-
-[node name="PointLight2D11" type="PointLight2D" parent="hallway/tick_lights" unique_id=1947691840]
-z_index = 2
-position = Vector2(-4307, 709.484)
-scale = Vector2(8.15625, 6.1713743)
-texture = SubResource("GradientTexture2D_vtaks")
-
-[node name="PointLight2D12" type="PointLight2D" parent="hallway/tick_lights" unique_id=1438682608]
-z_index = 2
-position = Vector2(-4844, 712)
-scale = Vector2(8.15625, 6.1713743)
-texture = SubResource("GradientTexture2D_vtaks")
-
 [node name="lights" type="Node2D" parent="hallway" unique_id=2140878775]
+visible = false
 
 [node name="PointLight2D" type="PointLight2D" parent="hallway/lights" unique_id=75544695]
 z_index = 2
@@ -3950,7 +3846,7 @@ position = Vector2(1325, 439)
 shape = SubResource("SegmentShape2D_qnb83")
 
 [node name="player" parent="." unique_id=1089869233 instance=ExtResource("1_uwrxv")]
-position = Vector2(-593, 763)
+position = Vector2(-4132, 53)
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=870738312]
 position = Vector2(0, -84)
@@ -4073,18 +3969,11 @@ color = Color(1, 0.92578125, 0.94547194, 1)
 
 [node name="bg" type="AudioStreamPlayer" parent="sfx" unique_id=464198809]
 stream = ExtResource("10_kvpfn")
-volume_db = -3.355
 autoplay = true
 parameters/looping = true
 
 [node name="walking_sound" type="AudioStreamPlayer" parent="sfx" unique_id=690832637]
 stream = ExtResource("11_kvpfn")
-parameters/looping = true
-
-[node name="clock_ticking" type="AudioStreamPlayer2D" parent="sfx" unique_id=1304099086]
-position = Vector2(-169, 598)
-stream = ExtResource("12_dinhu")
-autoplay = true
 parameters/looping = true
 
 [connection signal="input_event" from="r18/room/lighter_area" to="." method="_on_lighter_area_input_event"]

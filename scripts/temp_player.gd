@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var sound_jump = preload("res://assets/dragon-studio-simple-whoosh-382724.mp3")
+var sound_jump = preload("res://audio/dragon-studio-simple-whoosh-382724.mp3")
 
 var def_speed = 300.0
 var def_sprint = 400.0
