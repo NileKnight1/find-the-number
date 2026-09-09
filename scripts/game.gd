@@ -1,9 +1,39 @@
 extends Node2D
 
+var sound_door_open = preload("res://audio/yodguard-door-opening-slowly-1-535465.mp3")
+var sound_collect = preload("res://audio/638390__ulrich_wehner__horror-stinger-13_killing-machine.wav")
+var sound_clean_pond = preload("res://audio/freesound_community-water-splash-46402.mp3")
+var sound_book_close = preload("res://audio/oxidvideos-book-closing-466850.mp3")
+var sound_book_open = preload("res://audio/paper_turn.mp3")
+var sound_candle = preload("res://assets/youssefmizani-flame-lighting-a-fire-in-the-oven-510618.mp3")
+var sound_push_wood = preload("res://assets/floraphonic-beer-can-table-foley-slide-10-238336.mp3")
+var sound_jump = preload("res://assets/dragon-studio-simple-whoosh-382724.mp3")
+var sound_frame = preload("res://assets/freesound_community-menu-change-89197.mp3")
+
+var sound_glass_break = preload("res://assets/universfield-glass-bottle-smash-277554.mp3")
+var sound_iseeyou = preload("res://assets/dragon-studio-i-see-you-creepy-ghost-whisper-401711.mp3")
+var sound_low_growl = preload("res://assets/gsmsea-megalodon-low-growl-432984.mp3")
+var sound_thud = preload("res://assets/edr-electronic-impact-soft-10019.mp3")
+var sound_stone = preload("res://assets/freesound_community-tomb-door-open-stone-scrape-102748.mp3")
+
+
+
+@onready var walking_sound = $sfx/walking_sound
+
+func play_sound(sound, vol = 0.0):
+	var temp = AudioStreamPlayer.new()
+	temp.stream = sound
+	temp.volume_db = vol
+	add_child(temp)
+	
+	temp.finished.connect(temp.queue_free)
+	temp.play()
+
 
 func init_game():
 	init_lights()
 	init_shine()
+	init_sounds()
 
 func init_shine():
 	shine($r18/collect/num)
@@ -19,8 +49,14 @@ func init_lights():
 	
 	$player/flash.visible = 1
 	$hallway/lights.visible = 1
+
+func init_sounds():
+	await get_tree().create_timer(15).timeout
+	play_sound(sound_glass_break)
 	
+
 func _ready() -> void:
+	#play_sound(sound_collect)
 	init_game()
 	
 	pass
@@ -46,35 +82,61 @@ func _on_main_room_door_2_body_exited(body: Node2D) -> void:
 
 func _process(delta: float) -> void:
 	#print($player.position)
+	if $player.walk && $player.move:
+		#print($player.walk)
+		if !walking_sound.playing:
+			walking_sound.play()
+			#print("um?a")
+		if $player.sprint:
+			walking_sound.pitch_scale = 2.0
+		else:
+			walking_sound.pitch_scale = 1
+	else:
+		walking_sound.stop()
+	
+	#if $player.jumping:
+	
 	if Input.is_action_just_pressed("interact"):
 		if main_room_door_1:
+			play_sound(sound_door_open)
 			$player.position = Vector2(-177.0, 74)
 		elif main_room_door_2:
+			play_sound(sound_door_open)
 			$player.position = Vector2(-169.0, 821.0)
 		
 		if r17_door_down:
+			play_sound(sound_door_open)
 			$player.position = Vector2(-1504.0, 74)
 		elif r17_door_up:
+			play_sound(sound_door_open)
 			$player.position = Vector2(-1113.0, 821.0)
 		
 		if r16_door_down:
+			play_sound(sound_door_open)
 			$player.position = Vector2(-2834.0, 74)
 		elif r16_door_up:
+			play_sound(sound_door_open)
 			$player.position = Vector2(-2103.0, 821)
 		
 		if r15_door_down:
+			play_sound(sound_door_open)
 			$player.position = Vector2(-4132.0, 74)
 		elif r15_door_up:
+			play_sound(sound_door_open)
 			$player.position = Vector2(-3095.0, 821)
 		
 		if r14_door_down:
+			play_sound(sound_door_open)
 			$player.position = Vector2(-5461.0, 74)
 		elif r14_door_up:
+			play_sound(sound_door_open)
 			$player.position = Vector2(-4037.0, 821)
 		
 		if r13_door_down:
+			play_sound(sound_door_open)
 			$player.position = Vector2(-6838.0, 74)
 		elif r13_door_up:
+			play_sound(sound_door_open)
 			$player.position = Vector2(-5024.0, 821)
 		
 
@@ -94,11 +156,13 @@ func _on_pond_area_body_exited(body: Node2D) -> void:
 		
 func _on_desk_push_body_entered(body: Node2D) -> void:
 	if body == $player:
-		print("pushed")
-		var tween = create_tween()
-		tween.tween_property($r14/room/desk, "position:x", 30, 1)
-		await get_tree().create_timer(1.0).timeout
-		$r14/room/collect/num2/CollisionShape2D.set_deferred("disabled", 0)
+		if $r14/room/desk.position.x == 0:
+			print("pushed")
+			play_sound(sound_push_wood)
+			var tween = create_tween()
+			tween.tween_property($r14/room/desk, "position:x", 30, 1)
+			await get_tree().create_timer(1.0).timeout
+			$r14/room/collect/num2/CollisionShape2D.set_deferred("disabled", 0)
 
 var r17_door_down = 0
 var r17_door_up = 0
@@ -224,11 +288,12 @@ func collect_num(node1, tex):
 	#play_sound()
 	if !node1.visible: return
 	node1.visible = 0
+	play_sound(sound_collect)
 	var node2 = $canvas/nums/num1
 	#node.scale = Vector2(2, 2)
 	#node2.position.x -= 300
 	node2.get_node('num1').get_node('Label').text = tex
-	node2.visible = 1
+	#node2.visible = 1
 	node2.modulate.a = 0
 	var tween = create_tween()
 	#$canvas/nums
@@ -260,9 +325,9 @@ func _on_mob_mouse_entered() -> void:
 	$r15/room/mob/outline.visible = 1
 func _on_mob_mouse_exited() -> void:
 	$r15/room/mob/outline.visible = 0
-
-var mob_equipped = 0
-var lighter_equipped = 0
+	
+var mob_equipped = 1
+var lighter_equipped = 1
 
 func _on_mob_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
@@ -273,9 +338,11 @@ func _on_mob_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> v
 func _on_pond_clean_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if mob_equipped:
-			$r17/room/pond2.visible = 0
-			$r17/boundaries/walls/pond_clear.set_deferred("disabled", 0)
-			$r17/room/pond_area/CollisionShape2D.set_deferred("disabled", 1)
+			if $r17/room/pond2.visible:
+				$r17/room/pond2.visible = 0
+				$r17/boundaries/walls/pond_clear.set_deferred("disabled", 0)
+				$r17/room/pond_area/CollisionShape2D.set_deferred("disabled", 1)
+				play_sound(sound_clean_pond)
 
 func _on_lighter_area_mouse_entered() -> void:
 	$r18/room/lighter/outline.visible = 1
@@ -288,13 +355,18 @@ func _on_lighter_area_input_event(viewport: Node, event: InputEvent, shape_idx: 
 func _on_candle_r16_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if lighter_equipped:
-			$r16/room/candle.visible = 1
+			if !$r16/room/candle.visible:
+				play_sound(sound_candle)
+				$r16/room/candle.visible = 1
 func _on_candle_r15_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if lighter_equipped:
-			$r15/room/collect.visible = 1
-			$r15/room/candle.visible = 1
-			$r15/room/collect/num15/CollisionShape2D.set_deferred("disabled", 0)
+			if !$r15/room/candle.visible:
+				play_sound(sound_iseeyou)
+				play_sound(sound_candle)
+				$r15/room/collect.visible = 1
+				$r15/room/candle.visible = 1
+				$r15/room/collect/num15/CollisionShape2D.set_deferred("disabled", 0)
 func _on_num_r15_body_entered(body: Node2D) -> void:
 	if body == $player:
 		print('r15_coin')
@@ -303,41 +375,51 @@ func _on_num_r15_body_entered(body: Node2D) -> void:
 func _on_candle_r13_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if lighter_equipped:
-			$r13/room/candle.visible = 1
+			if !$r13/room/candle.visible:
+				play_sound(sound_candle)
+				$r13/room/candle.visible = 1
 
 func _on_book_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		print('book opened')
+		play_sound(sound_book_open)
 		$canvas/book.visible = 1
 func _on_book_coin_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		print('special opened')
-		$canvas/book.visible = 1
-		$canvas/book/close.visible = 0
-		$canvas/book/Label.visible = 0
-		$canvas/book/collect/num/Label.visible = 1
-		$canvas/book/collect.visible = 1
-		await get_tree().create_timer(2).timeout
-		collect_num($canvas/book/collect/num, "VI")
-		await get_tree().create_timer(2).timeout
-		$canvas/book/close.visible = 1
-		$canvas/book/Label.visible = 1
+		play_sound(sound_book_open)
+		if $canvas/book/collect/num.visible:
+			$canvas/book.visible = 1
+			$canvas/book/close.visible = 0
+			$canvas/book/Label.visible = 0
+			$canvas/book/collect/num/Label.visible = 1
+			$canvas/book/collect.visible = 1
+			await get_tree().create_timer(2).timeout
+			collect_num($canvas/book/collect/num, "VI")
+			await get_tree().create_timer(2).timeout
+			$canvas/book/close.visible = 1
+			$canvas/book/Label.visible = 1
 		
 func _on_close_book_pressed() -> void:
+	play_sound(sound_book_close)
 	$canvas/book.visible = 0
+
+func painting_rotate(paint):
+	if paint.rotation != 12.9:
+		paint.rotation = 12.9
+		play_sound(sound_frame)
 
 func _on_painting_r15_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		$r15/room/paint/paint.rotation = 12.9
+		painting_rotate($r15/room/paint/paint)
 func _on_painting_r14_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		$r14/room/paint/paint.rotation = 12.9
+		painting_rotate($r14/room/paint/paint)
 func _on_painting_r13_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		$r13/room/paint/paint.rotation = 12.9
+		painting_rotate($r13/room/paint/paint)
 		$r13/room/collect/num2/CollisionShape2D.set_deferred("disabled", 0)
 		await get_tree().create_timer(1.0).timeout
-		
 		collect_num($r13/room/collect/num, "XI")
 
 func _on_hallway_right_body_entered(body: Node2D) -> void:

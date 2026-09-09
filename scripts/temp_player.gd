@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+var sound_jump = preload("res://assets/dragon-studio-simple-whoosh-382724.mp3")
+
 var def_speed = 300.0
 var def_sprint = 400.0
 var def_jump = -350.0
@@ -10,6 +12,16 @@ var JUMP_VELOCITY = -250.0
 var sprint = 0
 var move = 1
 var walk = 0 
+
+func play_sound(sound, vol = 0.0):
+	var temp = AudioStreamPlayer.new()
+	temp.stream = sound
+	temp.volume_db = vol
+	add_child(temp)
+	
+	temp.finished.connect(temp.queue_free)
+	temp.play()
+
 
 
 func _physics_process(delta: float) -> void:
@@ -43,6 +55,7 @@ func _physics_process(delta: float) -> void:
 		JUMP_VELOCITY = def_jump
 		
 	if Input.is_action_just_pressed("jump") and is_on_floor():
+		play_sound(sound_jump)
 		velocity.y = JUMP_VELOCITY
 
 	var direction := Input.get_axis("left", "right")

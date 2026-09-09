@@ -8,7 +8,9 @@
 [ext_resource type="FontFile" uid="uid://81dpg3hbtjeg" path="res://assets/digital-7 (mono).ttf" id="3_u5sy4"]
 [ext_resource type="FontFile" uid="uid://cuqyrw2hhre2p" path="res://assets/HoldMoney-Regular.ttf" id="5_gee14"]
 [ext_resource type="Texture2D" uid="uid://nn47kxs437y6" path="res://assets/pngtree-a-close-up-isolated-image-of-single-candle-flame-burning-brightly-png-image_17770140.png" id="6_0tnpc"]
+[ext_resource type="AudioStream" uid="uid://cqr2el40l02do" path="res://audio/PM_FSSF_AMBIENCE_SOUNDSCAPE_LOOP_3.mp3" id="10_kvpfn"]
 [ext_resource type="Texture2D" uid="uid://bc68g84isq4p2" path="res://assets/831c95ad2d399bf5ed9acffaa956d824-removebg-preview.png" id="10_vtaks"]
+[ext_resource type="AudioStream" uid="uid://84kn7wvl02p6" path="res://assets/soundreality-footsteps-walking-boots-parquet-1-420135.mp3" id="11_kvpfn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kvpfn"]
 bg_color = Color(0, 0, 0, 1)
@@ -299,6 +301,15 @@ corner_radius_top_right = 1
 corner_radius_bottom_right = 1
 corner_radius_bottom_left = 1
 
+[sub_resource type="Gradient" id="Gradient_vtaks"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kvpfn"]
+gradient = SubResource("Gradient_vtaks")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kvpfn"]
 size = Vector2(20, 24)
 
@@ -436,10 +447,7 @@ b = Vector2(-7002, 8)
 a = Vector2(2, 558)
 b = Vector2(5, -14)
 
-[sub_resource type="Gradient" id="Gradient_vtaks"]
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_kvpfn"]
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dinhu"]
 gradient = SubResource("Gradient_vtaks")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
@@ -1791,12 +1799,12 @@ position = Vector2(-304.9999, -10)
 scale = Vector2(0.050000314, 0.049999993)
 texture = ExtResource("6_0tnpc")
 
-[node name="flash" type="PointLight2D" parent="r16/room/candle" unique_id=1730895103]
-position = Vector2(-305, -73.5)
-scale = Vector2(0.38671866, 0.5214844)
-color = Color(0.9296875, 0.48464727, 0.010894775, 1)
-energy = 0.16
-texture = ExtResource("3_lnu2h")
+[node name="flash" type="PointLight2D" parent="r16/room/candle" unique_id=1769360451]
+position = Vector2(-304.99997, -36.999996)
+scale = Vector2(5.9374995, 5.937499)
+color = Color(1, 0.5859375, 0, 1)
+energy = 0.3
+texture = SubResource("GradientTexture2D_kvpfn")
 
 [node name="candle_area" type="Area2D" parent="r16/room" unique_id=979335699]
 
@@ -2120,12 +2128,12 @@ position = Vector2(-304.9999, -10)
 scale = Vector2(0.050000314, 0.049999993)
 texture = ExtResource("6_0tnpc")
 
-[node name="flash" type="PointLight2D" parent="r15/room/candle" unique_id=105188459]
-position = Vector2(-305, -73.5)
-scale = Vector2(0.38671866, 0.5214844)
-color = Color(0.9296875, 0.48464727, 0.010894775, 1)
-energy = 0.16
-texture = ExtResource("3_lnu2h")
+[node name="flash" type="PointLight2D" parent="r15/room/candle" unique_id=837894544]
+position = Vector2(-304.99997, -36.999996)
+scale = Vector2(5.9374995, 5.937499)
+color = Color(1, 0.5859375, 0, 1)
+energy = 0.3
+texture = SubResource("GradientTexture2D_kvpfn")
 
 [node name="candle_area" type="Area2D" parent="r15/room" unique_id=1389464636]
 position = Vector2(-39, 0)
@@ -3267,12 +3275,12 @@ position = Vector2(-304.9999, -10)
 scale = Vector2(0.050000314, 0.049999993)
 texture = ExtResource("6_0tnpc")
 
-[node name="flash" type="PointLight2D" parent="r13/room/candle" unique_id=1879499962]
-position = Vector2(-305, -73.5)
-scale = Vector2(0.38671866, 0.5214844)
-color = Color(0.9296875, 0.48464727, 0.010894775, 1)
-energy = 0.16
-texture = ExtResource("3_lnu2h")
+[node name="flash" type="PointLight2D" parent="r13/room/candle" unique_id=333556411]
+position = Vector2(-304.99997, -36.999996)
+scale = Vector2(5.9374995, 5.937499)
+color = Color(1, 0.5859375, 0, 1)
+energy = 0.3
+texture = SubResource("GradientTexture2D_kvpfn")
 
 [node name="candle_area" type="Area2D" parent="r13/room" unique_id=140075699]
 position = Vector2(-42, 0)
@@ -3838,7 +3846,7 @@ position = Vector2(1325, 439)
 shape = SubResource("SegmentShape2D_qnb83")
 
 [node name="player" parent="." unique_id=1089869233 instance=ExtResource("1_uwrxv")]
-position = Vector2(458, 829)
+position = Vector2(-4132, 53)
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=870738312]
 position = Vector2(0, -84)
@@ -3849,7 +3857,7 @@ limit_enabled = false
 position = Vector2(0, -60.999996)
 scale = Vector2(5.9374995, 5.937499)
 energy = 0.3
-texture = SubResource("GradientTexture2D_kvpfn")
+texture = SubResource("GradientTexture2D_dinhu")
 
 [node name="flash2" type="PointLight2D" parent="player" unique_id=1460880421]
 visible = false
@@ -3953,8 +3961,20 @@ horizontal_alignment = 1
 vertical_alignment = 2
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1332446475]
+visible = false
 position = Vector2(0, -1)
 color = Color(1, 0.92578125, 0.94547194, 1)
+
+[node name="sfx" type="Node2D" parent="." unique_id=604922766]
+
+[node name="bg" type="AudioStreamPlayer" parent="sfx" unique_id=464198809]
+stream = ExtResource("10_kvpfn")
+autoplay = true
+parameters/looping = true
+
+[node name="walking_sound" type="AudioStreamPlayer" parent="sfx" unique_id=690832637]
+stream = ExtResource("11_kvpfn")
+parameters/looping = true
 
 [connection signal="input_event" from="r18/room/lighter_area" to="." method="_on_lighter_area_input_event"]
 [connection signal="mouse_entered" from="r18/room/lighter_area" to="." method="_on_lighter_area_mouse_entered"]
