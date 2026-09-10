@@ -9,15 +9,16 @@ var sound_candle = preload("res://audio/youssefmizani-flame-lighting-a-fire-in-t
 var sound_push_wood = preload("res://audio/floraphonic-beer-can-table-foley-slide-10-238336.mp3")
 var sound_jump = preload("res://audio/dragon-studio-simple-whoosh-382724.mp3")
 var sound_frame = preload("res://audio/freesound_community-menu-change-89197.mp3")
+var sound_collect2 = preload("res://audio/litupsubway-key-collect-sfx-522219.mp3")
 var sound_go = preload("res://audio/freesound_community-gooo-83817.mp3")
 var sound_go2 = preload("res://audio/freesound_community-go-80148.mp3")
+var sound_door_locked = preload("res://audio/freesound_community-lock-a-door-43194.mp3")
+var sound_iseeyou = preload("res://audio/dragon-studio-i-see-you-creepy-ghost-whisper-401711.mp3")
 
 var sound_glass_break = preload("res://audio/universfield-glass-bottle-smash-277554.mp3")
-var sound_iseeyou = preload("res://audio/dragon-studio-i-see-you-creepy-ghost-whisper-401711.mp3")
 var sound_low_growl = preload("res://audio/gsmsea-megalodon-low-growl-432984.mp3")
 var sound_thud = preload("res://audio/edr-electronic-impact-soft-10019.mp3")
 var sound_stone = preload("res://audio/freesound_community-tomb-door-open-stone-scrape-102748.mp3")
-var sound_door_locked = preload("res://audio/freesound_community-lock-a-door-43194.mp3")
 
 var sound_balloon = preload("res://audio/universfield-party-balloon-pop-323588.mp3")
 var sound_horn = preload("res://audio/cartoon_music-horn-party-horn-504511.mp3")
@@ -60,15 +61,20 @@ func init_lights():
 	$hallway/lights.visible = 1
 
 func init_sounds():
-	await get_tree().create_timer(15).timeout
-	play_sound(sound_glass_break)
-	
+	var temp = randi_range(15, 35)
+	await get_tree().create_timer(temp).timeout
+	temp = randi_range(0,3)
+	match temp:
+		0: play_sound(sound_glass_break)
+		1: play_sound(sound_low_growl)
+		2: play_sound(sound_thud)
+		3: play_sound(sound_stone)
 
 func _ready() -> void:
 	#play_sound(sound_collect)
 	init_game()
 	#start_clock()
-	start_party_sounds()
+	#start_party()
 	
 	pass
 
@@ -117,6 +123,11 @@ func _process(delta: float) -> void:
 		elif main_room_door_2:
 			play_sound(sound_door_open)
 			$player.position = Vector2(-169.0, 821.0)
+		
+		if r19_door_down:
+			play_sound(sound_door_open)
+			$player.position = Vector2(1143.0, 74)
+			start_party()
 		
 		if r17_door_down:
 			if force_no_enter:
@@ -168,7 +179,7 @@ func _process(delta: float) -> void:
 			play_sound(sound_door_open)
 			$player.position = Vector2(-5024.0, 821)
 
-var force_no_enter = 1
+var force_no_enter = 0
 
 func _on_pond_area_body_entered(body: Node2D) -> void:
 	if body == $player:
@@ -193,6 +204,8 @@ func _on_desk_push_body_entered(body: Node2D) -> void:
 			await get_tree().create_timer(1.0).timeout
 			$r14/room/collect/num2/CollisionShape2D.set_deferred("disabled", 0)
 
+var r19_door_down = 0
+var r19_door_up = 0
 var r17_door_down = 0
 var r17_door_up = 0
 var r16_door_down = 0
@@ -203,6 +216,15 @@ var r14_door_down = 0
 var r14_door_up = 0
 var r13_door_down = 0
 var r13_door_up = 0
+
+func _on_r19_door_down_body_entered(body: Node2D) -> void:
+	if body == $player:
+		r19_door_down = 1
+		print("r19_door_down",r19_door_down)
+func _on_r19_door_down_body_exited(body: Node2D) -> void:
+	if body == $player:
+		r19_door_down = 0
+		print("r19_door_down",r19_door_down)
 
 func _on_r17_door_down_body_entered(body: Node2D) -> void:
 	if body == $player:
@@ -313,6 +335,9 @@ func _on_num_1_body_entered(body: Node2D) -> void:
 	if body == $player:
 		collect_num($r18/collect/num, "I")
 
+var collected_nums = [0, 0, 0, 0, 0, 0]
+var collected_nums_count = 0
+
 func collect_num(node1, tex):
 	#play_sound()
 	if !node1.visible: return
@@ -328,21 +353,28 @@ func collect_num(node1, tex):
 	#$canvas/nums
 	#await tween.tween_property(node2, "position:x", node2.position.x +300, 1)
 	#await tween.tween_property(node2, "position:x", node2.position.x +300, 1)
-	
 	tween.tween_property(node2, "modulate:a", 1.0, 0.4)
 	await get_tree().create_timer(1).timeout
-	
 	var tween2 = create_tween()
 	tween2.tween_property(node2, "modulate:a", 0.0, 0.2)
-	
 	await get_tree().create_timer(1).timeout
 	await get_tree().create_timer(1).timeout
 	node2.visible = 0
 	$hallway/map/clock.get_node(tex).visible = 1
+	collected_nums_count += 1
+	match tex:
+		"I": collected_nums[0] = 1
+		"IV": collected_nums[1] = 1
+		"V": collected_nums[2] = 1
+		"VI": collected_nums[3] = 1
+		"X": collected_nums[4] = 1
+		"XI": collected_nums[5] = 1
+	if collected_nums_count == 6:
+		start_clock()
 
-func _on_num_2_body_entered(body: Node2D) -> void:
+func _on_num_r17_body_entered(body: Node2D) -> void:
 	if body == $player:
-		collect_num($r18/collect/num, "X")
+		collect_num($r17/collect/num, "X")
 
 func _on_num_r14_body_entered(body: Node2D) -> void:
 	if body == $player:
@@ -355,20 +387,24 @@ func _on_mob_mouse_entered() -> void:
 func _on_mob_mouse_exited() -> void:
 	$r15/room/mob/outline.visible = 0
 	
-var mob_equipped = 1
-var lighter_equipped = 1
+var mob_equipped = 0
+var lighter_equipped = 0
 
 func _on_mob_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		$r15/room/mob.visible = 0
-		mob_equipped = 1
-		print("mob taken")
+		if $r15/room/mob.visible:
+			$r15/room/mob.visible = 0
+			mob_equipped = 1
+			play_sound(sound_collect2)
+			print("mob taken")
 
 func _on_pond_clean_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if mob_equipped:
 			if $r17/room/pond2.visible:
 				$r17/room/pond2.visible = 0
+				$r17/collect/num.visible = 1
+				$r17/collect/num2/CollisionShape2D.set_deferred("disabled", 0)
 				$r17/boundaries/walls/pond_clear.set_deferred("disabled", 0)
 				$r17/room/pond_area/CollisionShape2D.set_deferred("disabled", 1)
 				play_sound(sound_clean_pond)
@@ -379,8 +415,10 @@ func _on_lighter_area_mouse_exited() -> void:
 	$r18/room/lighter/outline.visible = 0
 func _on_lighter_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		$r18/room/lighter.visible = 0
-		lighter_equipped = 1
+		if $r18/room/lighter.visible:
+			play_sound(sound_collect2)
+			$r18/room/lighter.visible = 0
+			lighter_equipped = 1
 func _on_candle_r16_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if lighter_equipped:
@@ -460,6 +498,7 @@ func _on_hallway_left_body_entered(body: Node2D) -> void:
 
 func start_clock():
 	$sfx/clock_ticking.play()
+	force_no_enter = 1
 	start_clock_effects()
 	var tween = create_tween()
 	tween.set_parallel(true)
@@ -487,6 +526,7 @@ func start_clock_effects():
 	tick_increase_apply = 0
 	await get_tree().create_timer(5.5).timeout
 	$"hallway/map/R-19".visible = 1
+	$"hallway/lights/R-19".visible = 1
 	$sfx/clock_ticking.stop()
 	$r19/boundaries/main_room_door_1/CollisionShape2D.set_deferred("disabled", 0)
 	
@@ -494,7 +534,7 @@ func countdown_lights():
 	$hallway/tick_lights.visible = 1
 	#for i in $hallway/tick_lights.get_children():
 		#i.visible = 1
-		
+	
 	await get_tree().create_timer(1).timeout
 	#for i in $hallway/tick_lights.get_children():
 		#i.visible = 0
@@ -520,7 +560,7 @@ func tick_increase():
 	if tick_increase_apply:
 		tick_increase()
 
-func start_party_sounds():
+func start_party():
 	$sfx/bg.stop()
 	$canvas/hbd.visible = 1
 	play_sound(sound_balloon)
@@ -547,7 +587,4 @@ func start_party_sounds():
 	await get_tree().create_timer(1).timeout
 	$sfx/fireworks.play()
 	
-	
 	#play_sound()
-	
-	

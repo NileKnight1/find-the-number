@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var sound_jump = preload("res://audio/dragon-studio-simple-whoosh-382724.mp3")
 
-var def_speed = 300.0
+var def_speed = 1000.0
 var def_sprint = 400.0
 var def_jump = -350.0
 var def_sprint_jump = -400
@@ -38,12 +38,12 @@ func _physics_process(delta: float) -> void:
 	else:
 		walk = 1
 	
-	#if sprint:
-		#$sprite.play("sprint")
-	#elif walk:
-		#$sprite.play("walk")
-	#else:
-		#$sprite.play("idle")
+	if sprint:
+		$sprite.play("sprint")
+	elif walk:
+		$sprite.play("walk")
+	else:
+		$sprite.play("idle")
 		
 	if Input.is_action_pressed("sprint"):
 		SPEED = def_sprint
@@ -61,10 +61,10 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("left", "right")
 	if direction:
 		velocity.x = direction * SPEED
-		#if direction < 0:
-			#$sprite.flip_h = 1
-		#else:
-			#$sprite.flip_h = 0
+		if direction < 0:
+			$sprite.flip_h = 1
+		else:
+			$sprite.flip_h = 0
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	move_and_slide()
