@@ -17,6 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://kiyqsyw7j3i2" path="res://audio/soundreality-footsteps-walking-boots-parquet-1-420135.mp3" id="11_kvpfn"]
 [ext_resource type="AudioStream" uid="uid://6noaswfp0ye5" path="res://audio/dragon-studio-slow-cinematic-clock-ticking-357979.mp3" id="12_dinhu"]
 [ext_resource type="PackedScene" uid="uid://d1y64i6s8acij" path="res://scenes/temp_player.tscn" id="12_ssvqc"]
+[ext_resource type="PackedScene" uid="uid://yt587odfst1s" path="res://scenes/mobile.tscn" id="14_5newe"]
 [ext_resource type="FontFile" uid="uid://bqn4um072n8b2" path="res://assets/Stranger back in the Night.ttf" id="15_1kice"]
 [ext_resource type="AudioStream" uid="uid://bv0a41ym8xl3n" path="res://audio/dragon-studio-fireworks-13-419033.mp3" id="17_ssvqc"]
 [ext_resource type="Texture2D" uid="uid://cpq77x5dpha8l" path="res://assets/pngtree-white-ripped-paper-torn-edges-strips-isolated-on-background-png-image_13497364.png" id="19_264po"]
@@ -4317,6 +4318,9 @@ texture = ExtResource("3_lnu2h")
 [node name="areas" type="Node2D" parent="." unique_id=1193393466]
 
 [node name="canvas" type="CanvasLayer" parent="." unique_id=1209985598]
+
+[node name="mobile" parent="canvas" unique_id=2043303018 instance=ExtResource("14_5newe")]
+visible = false
 
 [node name="paper" type="Sprite2D" parent="canvas" unique_id=1963877162]
 visible = false
