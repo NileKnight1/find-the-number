@@ -41,7 +41,7 @@ func play_sound(sound, vol = 0.0):
 func init_game():
 	init_lights()
 	init_shine()
-	init_sounds()
+	#init_sounds()
 
 func init_shine():
 	shine($r18/collect/num)
@@ -68,7 +68,7 @@ func _ready() -> void:
 	#play_sound(sound_collect)
 	init_game()
 	#start_clock()
-	
+	start_party_sounds()
 	
 	pass
 
@@ -490,7 +490,6 @@ func start_clock_effects():
 	$sfx/clock_ticking.stop()
 	$r19/boundaries/main_room_door_1/CollisionShape2D.set_deferred("disabled", 0)
 	
-	
 func countdown_lights():
 	$hallway/tick_lights.visible = 1
 	#for i in $hallway/tick_lights.get_children():
@@ -513,8 +512,6 @@ func lights_color(color):
 		i.color = color
 	await get_tree().create_timer(0.3).timeout
 	$hallway/tick_lights.visible = 1
-	
-	
 
 func tick_increase():
 	$sfx/bg.stop()
@@ -522,3 +519,35 @@ func tick_increase():
 	await get_tree().create_timer(1).timeout
 	if tick_increase_apply:
 		tick_increase()
+
+func start_party_sounds():
+	$sfx/bg.stop()
+	$canvas/hbd.visible = 1
+	play_sound(sound_balloon)
+	play_sound(sound_horn)
+	play_sound(sound_fireworks)
+	play_sound(sound_horn2)
+	await get_tree().create_timer(1).timeout
+	#play_sound(sound_bd)
+	await get_tree().create_timer(3).timeout
+	play_sound(sound_horn2)
+	play_sound(sound_balloon)
+	play_sound(sound_horn)
+	play_sound(sound_fireworks)
+	await get_tree().create_timer(1).timeout
+	play_sound(sound_fireworks)
+	await get_tree().create_timer(2).timeout
+	play_sound(sound_horn2)
+	play_sound(sound_horn)
+	play_sound(sound_balloon)
+	await get_tree().create_timer(0.5).timeout
+	play_sound(sound_fireworks)
+	await get_tree().create_timer(1.5).timeout
+	play_sound(sound_fireworks)
+	await get_tree().create_timer(1).timeout
+	$sfx/fireworks.play()
+	
+	
+	#play_sound()
+	
+	
