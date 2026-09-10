@@ -4292,7 +4292,7 @@ position = Vector2(1325, 439)
 shape = SubResource("SegmentShape2D_qnb83")
 
 [node name="player" parent="." unique_id=312059141 instance=ExtResource("12_ssvqc")]
-position = Vector2(-5104.9995, -36.999878)
+position = Vector2(364.99982, 60)
 scale = Vector2(0.71256596, 0.71256596)
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=870738312]

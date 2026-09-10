@@ -38,11 +38,13 @@ func play_sound(sound, vol = 0.0):
 	temp.finished.connect(temp.queue_free)
 	temp.play()
 
+var play_sounds = 1
 
 func init_game():
 	init_lights()
 	init_shine()
-	#init_sounds()
+	init_sounds()
+	init_book_labels()
 
 func init_shine():
 	shine($r18/collect/num)
@@ -63,12 +65,27 @@ func init_lights():
 func init_sounds():
 	var temp = randi_range(15, 35)
 	await get_tree().create_timer(temp).timeout
+	if !play_sounds: return
 	temp = randi_range(0,3)
 	match temp:
 		0: play_sound(sound_glass_break)
 		1: play_sound(sound_low_growl)
 		2: play_sound(sound_thud)
 		3: play_sound(sound_stone)
+	
+	init_sounds()
+
+var book_label = 10
+func init_book_labels():
+	for i in $r16/room/bookshelf/books.get_children():
+		if i is Panel:
+			i.get_child(0).text = str(book_label) + "-9"
+			book_label += 1
+	for i in $r13/room/bookshelf/books.get_children():
+		if i is Panel:
+			i.get_child(0).text = str(book_label) + "-9"
+			book_label += 1
+	
 
 func _ready() -> void:
 	#play_sound(sound_collect)
