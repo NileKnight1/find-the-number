@@ -6,8 +6,13 @@
 [ext_resource type="FontFile" uid="uid://dlgw2j47t5btj" path="res://assets/digital-7.ttf" id="2_p57ef"]
 [ext_resource type="Texture2D" uid="uid://b1uduvye332ew" path="res://assets/image.png" id="3_lnu2h"]
 [ext_resource type="FontFile" uid="uid://81dpg3hbtjeg" path="res://assets/digital-7 (mono).ttf" id="3_u5sy4"]
+[ext_resource type="Texture2D" uid="uid://dnmtqdmu5jajm" path="res://assets/happy-birthday-cake-design_24877-49758-removebg-preview.png" id="4_kvuet"]
+[ext_resource type="Texture2D" uid="uid://c50tvnvpaotym" path="res://assets/colourful-helium-balloons-white-background_1308-18056-removebg-preview.png" id="5_ca42v"]
 [ext_resource type="FontFile" uid="uid://cuqyrw2hhre2p" path="res://assets/HoldMoney-Regular.ttf" id="5_gee14"]
+[ext_resource type="Texture2D" uid="uid://bcqau3v2qmjk5" path="res://assets/balloons-helium-floating-decorative-icons-free-vector-removebg-preview.png" id="5_rysoc"]
+[ext_resource type="Texture2D" uid="uid://d3u23nq3068tv" path="res://assets/5515700.png" id="5_trtic"]
 [ext_resource type="Texture2D" uid="uid://nn47kxs437y6" path="res://assets/pngtree-a-close-up-isolated-image-of-single-candle-flame-burning-brightly-png-image_17770140.png" id="6_0tnpc"]
+[ext_resource type="Texture2D" uid="uid://u2ouvar2u7gg" path="res://assets/pngtree-celebration-balloons-vector-art-2d-png-image_7108744.png" id="6_ir15t"]
 [ext_resource type="AudioStream" uid="uid://cqr2el40l02do" path="res://audio/PM_FSSF_AMBIENCE_SOUNDSCAPE_LOOP_3.mp3" id="10_kvpfn"]
 [ext_resource type="Texture2D" uid="uid://bc68g84isq4p2" path="res://assets/831c95ad2d399bf5ed9acffaa956d824-removebg-preview.png" id="10_vtaks"]
 [ext_resource type="AudioStream" uid="uid://kiyqsyw7j3i2" path="res://audio/soundreality-footsteps-walking-boots-parquet-1-420135.mp3" id="11_kvpfn"]
@@ -16,49 +21,13 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kvpfn"]
 bg_color = Color(0, 0, 0, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uwrxv"]
-bg_color = Color(0.45620194, 0.45620194, 0.4629261, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_twgab"]
+bg_color = Color(0.5874443, 0.39196777, 0.59375, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yqjtg"]
-bg_color = Color(0.40166503, 0.2870361, 0.23113844, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_02fa5"]
+bg_color = Color(0.52734375, 0.0844574, 0.0844574, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lnu2h"]
-bg_color = Color(0.24750742, 0.1078592, 0, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iywne"]
-bg_color = Color(0.3238646, 0.11200904, 0, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u5sy4"]
-bg_color = Color(0.24750742, 0.1078592, 0, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gee14"]
-bg_color = Color(0.24750742, 0.1078592, 0, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p57ef"]
-bg_color = Color(0, 0.5814972, 0.43749136, 1)
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lbhrr"]
 bg_color = Color(0.24750742, 0.1078592, 0, 1)
 border_width_left = 3
 border_width_top = 3
@@ -104,6 +73,114 @@ corner_radius_bottom_left = 1
 shadow_color = Color(1, 0.15686275, 0.21568628, 0.78431374)
 shadow_size = 5
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v2yb1"]
+bg_color = Color(0.3254902, 0.11372549, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_js0lu"]
+bg_color = Color(0.515625, 0.18015814, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gxtfn"]
+bg_color = Color(0.3254902, 0.11372549, 0, 1)
+border_width_left = 3
+border_width_right = 3
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_suyxu"]
+a = Vector2(233, 36)
+b = Vector2(269, 36)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_sgl2t"]
+a = Vector2(226, 36)
+b = Vector2(276, 36)
+
+[sub_resource type="Gradient" id="Gradient_0tnpc"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rysoc"]
+gradient = SubResource("Gradient_0tnpc")
+fill = 1
+fill_from = Vector2(0.51282054, 0.20512821)
+fill_to = Vector2(1.32, -1.82)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_dinhu"]
+a = Vector2(236, 14)
+b = Vector2(-682, 12)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_u5sy4"]
+a = Vector2(-680, -355)
+b = Vector2(-681, 13)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_gee14"]
+a = Vector2(-680, -355)
+b = Vector2(-681, 13)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_sww3w"]
+a = Vector2(235, 36)
+b = Vector2(352, 35)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_kvuet"]
+a = Vector2(235, 36)
+b = Vector2(504, 36)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_trtic"]
+a = Vector2(235, 36)
+b = Vector2(280, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u5sy4"]
+size = Vector2(148, 214)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uwrxv"]
+bg_color = Color(0.45620194, 0.45620194, 0.4629261, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yqjtg"]
+bg_color = Color(0.40166503, 0.2870361, 0.23113844, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iywne"]
+bg_color = Color(0.3238646, 0.11200904, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u5sy4"]
+bg_color = Color(0.24750742, 0.1078592, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gee14"]
+bg_color = Color(0.24750742, 0.1078592, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p57ef"]
+bg_color = Color(0, 0.5814972, 0.43749136, 1)
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lbhrr"]
+bg_color = Color(0.24750742, 0.1078592, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_color = Color(0, 0, 0, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qouja"]
 bg_color = Color(0.58203125, 0.5527592, 0.11367798, 1)
 skew = Vector2(0.725, 0)
@@ -129,20 +206,8 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0tnpc"]
-radius = 9.0
-height = 18.0
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_dinhu"]
-a = Vector2(236, 14)
-b = Vector2(-682, 12)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_u5sy4"]
-a = Vector2(-680, -355)
-b = Vector2(-681, 13)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_gee14"]
-a = Vector2(-680, -355)
-b = Vector2(-681, 13)
+radius = 39.0
+height = 78.0
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_0tnpc"]
 a = Vector2(207, 35)
@@ -155,17 +220,6 @@ b = Vector2(343, 36)
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ir15t"]
 a = Vector2(235, 34)
 b = Vector2(342, 34)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_kvuet"]
-a = Vector2(235, 36)
-b = Vector2(349, 36)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_trtic"]
-a = Vector2(235, 36)
-b = Vector2(280, 35)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_u5sy4"]
-size = Vector2(148, 214)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_37s47"]
 bg_color = Color(0.00070290297, 0.03871984, 0.105631046, 1)
@@ -439,21 +493,23 @@ color = Color(0.58203125, 0.079574585, 0.079574585, 1)
 font_size = 9
 font_color = Color(0, 0, 0, 1)
 
-[sub_resource type="Gradient" id="Gradient_0tnpc"]
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
-
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_vtaks"]
 gradient = SubResource("Gradient_0tnpc")
 fill = 1
-fill_from = Vector2(0.51282054, 0.20512821)
-fill_to = Vector2(0.77, -0.28)
+fill_from = Vector2(0.51282054, 0.18803419)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ssvqc"]
+gradient = SubResource("Gradient_0tnpc")
+fill = 1
+fill_from = Vector2(0.525641, 0.43162394)
+fill_to = Vector2(1, 0.66239315)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_p57ef"]
 a = Vector2(1944, 8)
 b = Vector2(-7002, 8)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_qnb83"]
-a = Vector2(2, 558)
+a = Vector2(7, 604)
 b = Vector2(5, -14)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_dinhu"]
@@ -464,6 +520,239 @@ fill_to = Vector2(1, 0.5)
 
 [node name="game" type="Node2D" unique_id=994519513]
 script = ExtResource("1_lbhrr")
+
+[node name="r19" type="Node2D" parent="." unique_id=1873452232]
+position = Vector2(1332, 0)
+
+[node name="room" type="Node2D" parent="r19" unique_id=2093577081]
+
+[node name="wall2" type="Panel" parent="r19/room" unique_id=34580977]
+light_mask = 0
+visibility_layer = 2
+layout_direction = 2
+offset_left = -835.0
+offset_top = -596.0
+offset_right = 867.0
+offset_bottom = 238.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kvpfn")
+
+[node name="wall" type="Panel" parent="r19/room" unique_id=1642587687]
+layout_direction = 2
+offset_left = -457.0
+offset_top = -282.0
+offset_right = 458.0
+offset_bottom = 89.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_twgab")
+
+[node name="floor2" type="Panel" parent="r19/room" unique_id=1419273344]
+layout_direction = 2
+offset_left = -457.0
+offset_top = 85.0
+offset_right = 458.0
+offset_bottom = 229.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_02fa5")
+
+[node name="door" type="Panel" parent="r19/room" unique_id=536255701]
+layout_direction = 2
+offset_left = -238.0
+offset_top = -107.0
+offset_right = -114.0
+offset_bottom = 85.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
+
+[node name="desk" type="Node2D" parent="r19/room" unique_id=1452396580]
+
+[node name="balloons" type="Sprite2D" parent="r19/room/desk" unique_id=1856661718]
+position = Vector2(-385, -64)
+scale = Vector2(0.51111114, 0.51111114)
+texture = ExtResource("6_ir15t")
+
+[node name="door2" type="Panel" parent="r19/room/desk" unique_id=477473316]
+layout_direction = 2
+offset_left = -406.0
+offset_top = 16.0
+offset_right = -285.0
+offset_bottom = 85.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0tnpc")
+
+[node name="door3" type="Panel" parent="r19/room/desk" unique_id=1005239007]
+layout_direction = 2
+offset_left = -372.0
+offset_top = -3.0
+offset_right = -324.0
+offset_bottom = 16.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vtaks")
+
+[node name="Label" type="Label" parent="r19/room/desk" unique_id=1438046531]
+offset_left = -370.0
+offset_top = -5.0
+offset_right = -324.0
+offset_bottom = 18.0
+theme_override_fonts/font = ExtResource("2_p57ef")
+theme_override_font_sizes/font_size = 23
+text = "00:00"
+label_settings = SubResource("LabelSettings_gee14")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lighter" type="Node2D" parent="r19/room" unique_id=6274476]
+
+[node name="outline" type="Node2D" parent="r19/room/lighter" unique_id=2071462502]
+visible = false
+
+[node name="lighter" type="Panel" parent="r19/room/lighter/outline" unique_id=1512560834]
+layout_direction = 2
+offset_left = -298.00003
+offset_top = 7.9999943
+offset_right = -290.5592
+offset_bottom = 25.456003
+rotation = 0.7853982
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wljb1")
+
+[node name="table" type="Node2D" parent="r19/room" unique_id=276404336]
+
+[node name="BalloonsHeliumFloatingDecorativeIconsFreeVectorRemovebgPreview" type="Sprite2D" parent="r19/room/table" unique_id=1098158361]
+position = Vector2(235, -83)
+scale = Vector2(0.36884794, 0.36884797)
+texture = ExtResource("5_rysoc")
+
+[node name="ballonos" type="Sprite2D" parent="r19/room/table" unique_id=2135428657]
+position = Vector2(0, -49.000004)
+scale = Vector2(0.3064287, 0.30642864)
+texture = ExtResource("5_ca42v")
+
+[node name="door2" type="Panel" parent="r19/room/table" unique_id=188682382]
+layout_direction = 2
+offset_left = -20.0
+offset_top = 23.0
+offset_right = 235.0
+offset_bottom = 38.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_v2yb1")
+
+[node name="door5" type="Panel" parent="r19/room/table" unique_id=374753947]
+layout_direction = 2
+offset_left = -27.0
+offset_top = 6.0
+offset_right = 242.0
+offset_bottom = 29.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_js0lu")
+
+[node name="door3" type="Panel" parent="r19/room/table" unique_id=128270015]
+layout_direction = 2
+offset_left = -20.0
+offset_top = 35.0
+offset_right = -6.0
+offset_bottom = 90.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gxtfn")
+
+[node name="door4" type="Panel" parent="r19/room/table" unique_id=759449258]
+layout_direction = 2
+offset_left = 221.0
+offset_top = 35.0
+offset_right = 235.0
+offset_bottom = 90.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gxtfn")
+
+[node name="cake" type="Sprite2D" parent="r19/room/table" unique_id=243560969]
+position = Vector2(162, -14)
+scale = Vector2(0.16200007, 0.16200007)
+texture = ExtResource("4_kvuet")
+
+[node name="hat" type="Sprite2D" parent="r19/room/table" unique_id=104612319]
+position = Vector2(124.3125, 2.3124762)
+scale = Vector2(0.05200186, 0.05200186)
+texture = ExtResource("5_trtic")
+
+[node name="hat2" type="Sprite2D" parent="r19/room/table" unique_id=1417544334]
+position = Vector2(132.625, 6.9999647)
+scale = Vector2(0.05200186, 0.05200186)
+texture = ExtResource("5_trtic")
+
+[node name="Area2D" type="StaticBody2D" parent="r19/room/table" unique_id=155112047]
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="r19/room/table/Area2D" unique_id=838038676]
+position = Vector2(-89, -71)
+shape = SubResource("SegmentShape2D_suyxu")
+one_way_collision = true
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="r19/room/table/Area2D" unique_id=474446809]
+position = Vector2(-89, -49)
+shape = SubResource("SegmentShape2D_sgl2t")
+one_way_collision = true
+
+[node name="lights" type="Node2D" parent="r19" unique_id=262085856]
+
+[node name="PointLight2D" type="PointLight2D" parent="r19/lights" unique_id=956700552]
+z_index = 2
+position = Vector2(0, -19.5)
+scale = Vector2(0.88030887, 1.0815899)
+energy = 0.97
+blend_mode = 1
+texture = ExtResource("1_yqjtg")
+
+[node name="PointLight2D3" type="PointLight2D" parent="r19/lights" unique_id=1270104304]
+z_index = 2
+position = Vector2(3.0517578e-05, -45)
+scale = Vector2(14.312502, 7.353632)
+color = Color(1, 0.9892578, 0.875, 1)
+texture = SubResource("GradientTexture2D_rysoc")
+
+[node name="boundaries" type="Node2D" parent="r19" unique_id=1394948992]
+
+[node name="walls" type="StaticBody2D" parent="r19/boundaries" unique_id=346891062]
+position = Vector2(0, 86)
+
+[node name="down" type="CollisionShape2D" parent="r19/boundaries/walls" unique_id=303643435]
+position = Vector2(224, -12)
+shape = SubResource("SegmentShape2D_dinhu")
+
+[node name="up" type="CollisionShape2D" parent="r19/boundaries/walls" unique_id=904148543]
+position = Vector2(224, -381)
+shape = SubResource("SegmentShape2D_dinhu")
+
+[node name="left" type="CollisionShape2D" parent="r19/boundaries/walls" unique_id=247224753]
+position = Vector2(224, -12)
+shape = SubResource("SegmentShape2D_u5sy4")
+
+[node name="right" type="CollisionShape2D" parent="r19/boundaries/walls" unique_id=317929536]
+position = Vector2(1137, -6)
+shape = SubResource("SegmentShape2D_gee14")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="r19/boundaries" unique_id=1419781290]
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="r19/boundaries/StaticBody2D" unique_id=1882116065]
+position = Vector2(-638, -17)
+shape = SubResource("SegmentShape2D_sww3w")
+one_way_collision = true
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="r19/boundaries/StaticBody2D" unique_id=974296662]
+position = Vector2(-263, -29)
+shape = SubResource("SegmentShape2D_kvuet")
+one_way_collision = true
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="r19/boundaries/StaticBody2D" unique_id=1372747548]
+position = Vector2(-606, -37)
+shape = SubResource("SegmentShape2D_trtic")
+one_way_collision = true
+
+[node name="main_room_door_1" type="Area2D" parent="r19/boundaries" unique_id=1890976210]
+position = Vector2(7, 735)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="r19/boundaries/main_room_door_1" unique_id=1888522033]
+position = Vector2(-517, -10)
+shape = SubResource("RectangleShape2D_u5sy4")
+disabled = true
 
 [node name="r18" type="Node2D" parent="." unique_id=1665507269]
 
@@ -3432,7 +3721,7 @@ one_way_collision = true
 layout_direction = 2
 offset_left = -6776.0
 offset_top = 378.0
-offset_right = 2175.0
+offset_right = 2424.0
 offset_bottom = 829.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_kvuet")
@@ -3441,7 +3730,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_kvuet")
 layout_direction = 2
 offset_left = -6776.0
 offset_top = 825.0
-offset_right = 2178.0
+offset_right = 2424.0
 offset_bottom = 969.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_yqjtg")
@@ -3450,7 +3739,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_yqjtg")
 layout_direction = 2
 offset_left = -6776.0
 offset_top = 825.0
-offset_right = 2168.0
+offset_right = 2424.0
 offset_bottom = 872.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_dinhu")
@@ -3913,11 +4202,12 @@ scale = Vector2(8.15625, 6.1713743)
 texture = SubResource("GradientTexture2D_vtaks")
 
 [node name="lights" type="Node2D" parent="hallway" unique_id=2140878775]
+visible = false
 
 [node name="PointLight2D" type="PointLight2D" parent="hallway/lights" unique_id=75544695]
 z_index = 2
-position = Vector2(-2298.9998, 692.90265)
-scale = Vector2(7.345365, 1.2545204)
+position = Vector2(-2116.5, 692.90265)
+scale = Vector2(7.6447906, 1.2545204)
 energy = 0.97
 blend_mode = 1
 texture = ExtResource("1_yqjtg")
@@ -3928,6 +4218,14 @@ position = Vector2(-176, 712)
 scale = Vector2(8.15625, 6.1713743)
 texture = SubResource("GradientTexture2D_vtaks")
 
+[node name="R-19" type="PointLight2D" parent="hallway/lights" unique_id=1501882350]
+z_index = 2
+position = Vector2(782, 698)
+scale = Vector2(23.593754, 6.1713743)
+color = Color(0.949646, 0.7421875, 1, 1)
+energy = 2.23
+texture = SubResource("GradientTexture2D_ssvqc")
+
 [node name="boundaries" type="Node2D" parent="hallway" unique_id=1720597780]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="hallway/boundaries" unique_id=488490845]
@@ -3937,7 +4235,7 @@ position = Vector2(224, 821)
 shape = SubResource("SegmentShape2D_p57ef")
 
 [node name="right" type="Area2D" parent="hallway/boundaries" unique_id=1807119758]
-position = Vector2(145, 0)
+position = Vector2(694, -57)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hallway/boundaries/right" unique_id=988795338]
 position = Vector2(1325, 439)
@@ -3951,7 +4249,7 @@ position = Vector2(1325, 439)
 shape = SubResource("SegmentShape2D_qnb83")
 
 [node name="player" parent="." unique_id=1089869233 instance=ExtResource("1_uwrxv")]
-position = Vector2(-593, 763)
+position = Vector2(1986, 782)
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=870738312]
 position = Vector2(0, -84)
@@ -4085,9 +4383,10 @@ parameters/looping = true
 [node name="clock_ticking" type="AudioStreamPlayer2D" parent="sfx" unique_id=1304099086]
 position = Vector2(-169, 598)
 stream = ExtResource("12_dinhu")
-autoplay = true
 parameters/looping = true
 
+[connection signal="body_entered" from="r19/boundaries/main_room_door_1" to="." method="_on_main_room_door_1_body_entered"]
+[connection signal="body_exited" from="r19/boundaries/main_room_door_1" to="." method="_on_main_room_door_1_body_exited"]
 [connection signal="input_event" from="r18/room/lighter_area" to="." method="_on_lighter_area_input_event"]
 [connection signal="mouse_entered" from="r18/room/lighter_area" to="." method="_on_lighter_area_mouse_entered"]
 [connection signal="mouse_exited" from="r18/room/lighter_area" to="." method="_on_lighter_area_mouse_exited"]

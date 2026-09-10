@@ -12,13 +12,18 @@ var sound_frame = preload("res://audio/freesound_community-menu-change-89197.mp3
 var sound_go = preload("res://audio/freesound_community-gooo-83817.mp3")
 var sound_go2 = preload("res://audio/freesound_community-go-80148.mp3")
 
-
 var sound_glass_break = preload("res://audio/universfield-glass-bottle-smash-277554.mp3")
 var sound_iseeyou = preload("res://audio/dragon-studio-i-see-you-creepy-ghost-whisper-401711.mp3")
 var sound_low_growl = preload("res://audio/gsmsea-megalodon-low-growl-432984.mp3")
 var sound_thud = preload("res://audio/edr-electronic-impact-soft-10019.mp3")
 var sound_stone = preload("res://audio/freesound_community-tomb-door-open-stone-scrape-102748.mp3")
+var sound_door_locked = preload("res://audio/freesound_community-lock-a-door-43194.mp3")
 
+var sound_balloon = preload("res://audio/universfield-party-balloon-pop-323588.mp3")
+var sound_horn = preload("res://audio/cartoon_music-horn-party-horn-504511.mp3")
+var sound_horn2 = preload("res://audio/universfield-birthday-party-horn-250238.mp3")
+var sound_bd = preload("res://audio/freesound_community-happy-birthday-to-you-made-by-me-100631.mp3")
+var sound_fireworks = preload("res://audio/dragon-studio-fireworks-13-419033.mp3")
 
 
 @onready var walking_sound = $sfx/walking_sound
@@ -43,6 +48,7 @@ func init_shine():
 	shine($canvas/nums/num1/num1)
 
 func init_lights():
+	$r19/lights.visible = 1
 	$r18/lights.visible = 1
 	$r17/lights.visible = 1
 	$r16/lights.visible = 1
@@ -61,7 +67,7 @@ func init_sounds():
 func _ready() -> void:
 	#play_sound(sound_collect)
 	init_game()
-	start_clock()
+	#start_clock()
 	
 	
 	pass
@@ -103,6 +109,9 @@ func _process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("interact"):
 		if main_room_door_1:
+			if force_no_enter:
+				play_sound(sound_door_locked)
+				return
 			play_sound(sound_door_open)
 			$player.position = Vector2(-177.0, 74)
 		elif main_room_door_2:
@@ -110,6 +119,9 @@ func _process(delta: float) -> void:
 			$player.position = Vector2(-169.0, 821.0)
 		
 		if r17_door_down:
+			if force_no_enter:
+				play_sound(sound_door_locked)
+				return
 			play_sound(sound_door_open)
 			$player.position = Vector2(-1504.0, 74)
 		elif r17_door_up:
@@ -117,6 +129,9 @@ func _process(delta: float) -> void:
 			$player.position = Vector2(-1113.0, 821.0)
 		
 		if r16_door_down:
+			if force_no_enter:
+				play_sound(sound_door_locked)
+				return
 			play_sound(sound_door_open)
 			$player.position = Vector2(-2834.0, 74)
 		elif r16_door_up:
@@ -124,6 +139,9 @@ func _process(delta: float) -> void:
 			$player.position = Vector2(-2103.0, 821)
 		
 		if r15_door_down:
+			if force_no_enter:
+				play_sound(sound_door_locked)
+				return
 			play_sound(sound_door_open)
 			$player.position = Vector2(-4132.0, 74)
 		elif r15_door_up:
@@ -131,6 +149,9 @@ func _process(delta: float) -> void:
 			$player.position = Vector2(-3095.0, 821)
 		
 		if r14_door_down:
+			if force_no_enter:
+				play_sound(sound_door_locked)
+				return
 			play_sound(sound_door_open)
 			$player.position = Vector2(-5461.0, 74)
 		elif r14_door_up:
@@ -138,13 +159,16 @@ func _process(delta: float) -> void:
 			$player.position = Vector2(-4037.0, 821)
 		
 		if r13_door_down:
+			if force_no_enter:
+				play_sound(sound_door_locked)
+				return
 			play_sound(sound_door_open)
 			$player.position = Vector2(-6838.0, 74)
 		elif r13_door_up:
 			play_sound(sound_door_open)
 			$player.position = Vector2(-5024.0, 821)
-		
 
+var force_no_enter = 1
 
 func _on_pond_area_body_entered(body: Node2D) -> void:
 	if body == $player:
@@ -432,11 +456,11 @@ func _on_hallway_right_body_entered(body: Node2D) -> void:
 		$player.position.x = -5854.0
 func _on_hallway_left_body_entered(body: Node2D) -> void:
 	if body == $player:
-		$player.position.x = 1438.0
+		$player.position.x = 2000
 
 func start_clock():
+	$sfx/clock_ticking.play()
 	start_clock_effects()
-	
 	var tween = create_tween()
 	tween.set_parallel(true)
 	tween.tween_property($hallway/map/clock/hours, "rotation_degrees", 270, 60)
@@ -462,9 +486,11 @@ func start_clock_effects():
 	await get_tree().create_timer(10).timeout
 	tick_increase_apply = 0
 	await get_tree().create_timer(5.5).timeout
+	$"hallway/map/R-19".visible = 1
+	$sfx/clock_ticking.stop()
+	$r19/boundaries/main_room_door_1/CollisionShape2D.set_deferred("disabled", 0)
 	
 	
-
 func countdown_lights():
 	$hallway/tick_lights.visible = 1
 	#for i in $hallway/tick_lights.get_children():
