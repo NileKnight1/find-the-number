@@ -63,6 +63,7 @@ func _ready() -> void:
 	init_game()
 	start_clock()
 	
+	
 	pass
 
 var main_room_door_1 = 0
@@ -434,22 +435,64 @@ func _on_hallway_left_body_entered(body: Node2D) -> void:
 		$player.position.x = 1438.0
 
 func start_clock():
-	$hallway/tick_lights.visible = 1
-	countdown_lights()
+	start_clock_effects()
+	
 	var tween = create_tween()
 	tween.set_parallel(true)
 	tween.tween_property($hallway/map/clock/hours, "rotation_degrees", 270, 60)
 	tween.tween_property($hallway/map/clock/minutes, "rotation_degrees", 270, 60)
 	tween.tween_property($hallway/map/clock/seconds, "rotation_degrees", 630, 60)
+
+var countdown_lights_apply = 0
+var tick_increase_apply = 0
+
+func start_clock_effects():
+	#lights_color(("380000ff"))
+
+	await get_tree().create_timer(14.5).timeout
+	countdown_lights_apply = 1
+	countdown_lights()
+	await get_tree().create_timer(15).timeout
+	countdown_lights_apply = 0
+	lights_color(Color("ff0000ff"))
+	await get_tree().create_timer(15).timeout
+	$hallway/tick_lights.visible = 0
+	tick_increase_apply = 1
+	tick_increase()
+	await get_tree().create_timer(10).timeout
+	tick_increase_apply = 0
+	await get_tree().create_timer(5.5).timeout
 	
+	
+
 func countdown_lights():
-	for i in $hallway/tick_lights.get_children():
-		i.visible = 1
+	$hallway/tick_lights.visible = 1
+	#for i in $hallway/tick_lights.get_children():
+		#i.visible = 1
 		
 	await get_tree().create_timer(1).timeout
-	for i in $hallway/tick_lights.get_children():
-		i.visible = 0
+	#for i in $hallway/tick_lights.get_children():
+		#i.visible = 0
+	$hallway/tick_lights.visible = 0
+	
 	
 	await get_tree().create_timer(1).timeout
+	if countdown_lights_apply:
+		countdown_lights()
+
+func lights_color(color):
+	$hallway/tick_lights.visible = 1
+	$hallway/lights/PointLight2D2.color = color
+	for i in $hallway/tick_lights.get_children():
+		i.color = color
+	await get_tree().create_timer(0.3).timeout
+	$hallway/tick_lights.visible = 1
 	
-	countdown_lights()
+	
+
+func tick_increase():
+	$sfx/bg.stop()
+	$sfx/clock_ticking.volume_db += 1
+	await get_tree().create_timer(1).timeout
+	if tick_increase_apply:
+		tick_increase()

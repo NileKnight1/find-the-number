@@ -3844,6 +3844,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="tick_lights" type="Node2D" parent="hallway" unique_id=328662131]
+visible = false
 
 [node name="PointLight2D3" type="PointLight2D" parent="hallway/tick_lights" unique_id=131486862]
 z_index = 2
