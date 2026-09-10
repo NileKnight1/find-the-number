@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://bd6o6wj7lku5e"]
+
+[ext_resource type="Script" uid="uid://bvj6hhvs87sm5" path="res://scripts/main_menu.gd" id="1_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://okb7hnr57f6n" path="res://assets/rect.png" id="1_l6cm7"]
+[ext_resource type="FontFile" uid="uid://bqn4um072n8b2" path="res://assets/Stranger back in the Night.ttf" id="2_ekxnf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vue75"]
+bg_color = Color(0.37890625, 0, 0, 1)
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Gradient" id="Gradient_0tnpc"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ekxnf"]
+gradient = SubResource("Gradient_0tnpc")
+fill = 1
+fill_from = Vector2(0.517094, 0.3803419)
+fill_to = Vector2(0.7991453, 0.47863248)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bqqt6"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wu84c"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ln24"]
+draw_center = false
+
+[node name="main_menu" type="Node2D" unique_id=922493659]
+script = ExtResource("1_bqqt6")
+
+[node name="bg" type="Panel" parent="." unique_id=311924974]
+layout_direction = 2
+offset_right = 1303.0
+offset_bottom = 720.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vue75")
+
+[node name="R-19" type="PointLight2D" parent="." unique_id=623298830]
+z_index = 2
+position = Vector2(650.99994, 359.25803)
+scale = Vector2(20.375002, 11.273188)
+energy = 1.27
+texture = SubResource("GradientTexture2D_ekxnf")
+
+[node name="black" type="PointLight2D" parent="." unique_id=726974481]
+z_index = 2
+position = Vector2(653.8203, 359.99997)
+scale = Vector2(1.065102, 1.4117646)
+energy = 0.97
+blend_mode = 1
+texture = ExtResource("1_l6cm7")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2034702864]
+position = Vector2(662, 361)
+
+[node name="play" type="Button" parent="." unique_id=1392224073]
+offset_left = 557.0
+offset_top = 206.0
+offset_right = 789.0
+offset_bottom = 338.0
+theme_override_colors/font_hover_color = Color(0.3671875, 0.3671875, 0.3671875, 1)
+theme_override_fonts/font = ExtResource("2_ekxnf")
+theme_override_font_sizes/font_size = 122
+theme_override_styles/normal = SubResource("StyleBoxFlat_bqqt6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wu84c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8ln24")
+text = "Play"
+
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
