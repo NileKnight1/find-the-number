@@ -588,3 +588,15 @@ func start_party():
 	$sfx/fireworks.play()
 	
 	#play_sound()
+
+func _on_close_paper_pressed() -> void:
+	play_sound(sound_book_close)
+	$canvas/paper.visible = 0
+func _on_paper_area_body_entered(body: Node2D) -> void:
+	if body == $player:
+		$canvas/paper.visible = 1
+		play_sound(sound_book_open)
+func _on_paper_area_body_exited(body: Node2D) -> void:
+	if body == $player:
+		play_sound(sound_book_close)
+		$canvas/paper.visible = 0

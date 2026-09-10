@@ -17,7 +17,9 @@
 [ext_resource type="AudioStream" uid="uid://kiyqsyw7j3i2" path="res://audio/soundreality-footsteps-walking-boots-parquet-1-420135.mp3" id="11_kvpfn"]
 [ext_resource type="AudioStream" uid="uid://6noaswfp0ye5" path="res://audio/dragon-studio-slow-cinematic-clock-ticking-357979.mp3" id="12_dinhu"]
 [ext_resource type="PackedScene" uid="uid://d1y64i6s8acij" path="res://scenes/temp_player.tscn" id="12_ssvqc"]
+[ext_resource type="FontFile" uid="uid://bqn4um072n8b2" path="res://assets/Stranger back in the Night.ttf" id="15_1kice"]
 [ext_resource type="AudioStream" uid="uid://bv0a41ym8xl3n" path="res://audio/dragon-studio-fireworks-13-419033.mp3" id="17_ssvqc"]
+[ext_resource type="Texture2D" uid="uid://cpq77x5dpha8l" path="res://assets/pngtree-white-ripped-paper-torn-edges-strips-isolated-on-background-png-image_13497364.png" id="19_264po"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kvpfn"]
 bg_color = Color(0, 0, 0, 1)
@@ -441,6 +443,18 @@ b = Vector2(-7, 67)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gee14"]
 size = Vector2(5, 54)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nepv3"]
+bg_color = Color(0.91280335, 0.780789, 0.7870394, 1)
+skew = Vector2(0.52, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7025r"]
+height = 40.0
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_kvpfn"]
 a = Vector2(235, 36)
@@ -2771,6 +2785,22 @@ offset_bottom = 86.725006
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_iywne")
 
+[node name="paper" type="Panel" parent="r14/room" unique_id=23884399]
+layout_direction = 2
+offset_left = 356.0
+offset_top = -123.0
+offset_right = 373.0
+offset_bottom = -114.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nepv3")
+
+[node name="paper_area" type="Area2D" parent="r14/room" unique_id=1350174350]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="r14/room/paper_area" unique_id=1783950558]
+position = Vector2(362, -123)
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_7025r")
+
 [node name="lights" type="Node2D" parent="r14" unique_id=1619556010]
 visible = false
 
@@ -4262,7 +4292,7 @@ position = Vector2(1325, 439)
 shape = SubResource("SegmentShape2D_qnb83")
 
 [node name="player" parent="." unique_id=312059141 instance=ExtResource("12_ssvqc")]
-position = Vector2(537.00006, 757.99994)
+position = Vector2(-5104.9995, -36.999878)
 scale = Vector2(0.71256596, 0.71256596)
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=870738312]
@@ -4287,6 +4317,41 @@ texture = ExtResource("3_lnu2h")
 [node name="areas" type="Node2D" parent="." unique_id=1193393466]
 
 [node name="canvas" type="CanvasLayer" parent="." unique_id=1209985598]
+
+[node name="paper" type="Sprite2D" parent="canvas" unique_id=1963877162]
+visible = false
+position = Vector2(634, 378)
+texture = ExtResource("19_264po")
+
+[node name="Label" type="Label" parent="canvas/paper" unique_id=216353685]
+offset_left = -51.0
+offset_top = -38.0
+offset_right = 48.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_1kice")
+theme_override_font_sizes/font_size = 85
+text = "13-9"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="close" type="Button" parent="canvas/paper" unique_id=1560082243]
+offset_left = 94.0
+offset_top = -133.0
+offset_right = 132.0
+offset_bottom = -95.0
+
+[node name="Label2" type="Label" parent="canvas/paper" unique_id=1533520054]
+offset_left = 103.0
+offset_top = -139.0
+offset_right = 123.0
+offset_bottom = -82.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_gee14")
+theme_override_font_sizes/font_size = 36
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="book" type="Node2D" parent="canvas" unique_id=1042996452]
 visible = false
@@ -4454,6 +4519,8 @@ parameters/looping = true
 [connection signal="input_event" from="r14/room/painting" to="." method="_on_painting_r14_input_event"]
 [connection signal="body_entered" from="r14/room/collect/num2" to="." method="_on_num_r14_body_entered"]
 [connection signal="body_entered" from="r14/room/desk/desk_push" to="." method="_on_desk_push_body_entered"]
+[connection signal="body_entered" from="r14/room/paper_area" to="." method="_on_paper_area_body_entered"]
+[connection signal="body_exited" from="r14/room/paper_area" to="." method="_on_paper_area_body_exited"]
 [connection signal="body_entered" from="r14/boundaries/door_1" to="." method="_on_r14_door_up_body_entered"]
 [connection signal="body_exited" from="r14/boundaries/door_1" to="." method="_on_r14_door_up_body_exited"]
 [connection signal="body_entered" from="r14/boundaries/door_2" to="." method="_on_r14_door_down_body_entered"]
@@ -4467,4 +4534,5 @@ parameters/looping = true
 [connection signal="body_exited" from="r13/boundaries/room_1_door_3" to="." method="_on_r13_door_down_body_exited"]
 [connection signal="body_entered" from="hallway/boundaries/right" to="." method="_on_hallway_right_body_entered"]
 [connection signal="body_entered" from="hallway/boundaries/left" to="." method="_on_hallway_left_body_entered"]
+[connection signal="pressed" from="canvas/paper/close" to="." method="_on_close_paper_pressed"]
 [connection signal="pressed" from="canvas/book/close" to="." method="_on_close_book_pressed"]
