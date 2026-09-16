@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://d3u23nq3068tv" path="res://assets/5515700.png" id="5_trtic"]
 [ext_resource type="Texture2D" uid="uid://nn47kxs437y6" path="res://assets/pngtree-a-close-up-isolated-image-of-single-candle-flame-burning-brightly-png-image_17770140.png" id="6_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://u2ouvar2u7gg" path="res://assets/pngtree-celebration-balloons-vector-art-2d-png-image_7108744.png" id="6_ir15t"]
+[ext_resource type="AudioStream" uid="uid://dlcm8hxfpy8tk" path="res://audio/dragon-studio-creepy-whisper-472369.mp3" id="10_37s47"]
 [ext_resource type="AudioStream" uid="uid://cqr2el40l02do" path="res://audio/PM_FSSF_AMBIENCE_SOUNDSCAPE_LOOP_3.mp3" id="10_kvpfn"]
 [ext_resource type="Texture2D" uid="uid://bc68g84isq4p2" path="res://assets/831c95ad2d399bf5ed9acffaa956d824-removebg-preview.png" id="10_vtaks"]
 [ext_resource type="AudioStream" uid="uid://kiyqsyw7j3i2" path="res://audio/soundreality-footsteps-walking-boots-parquet-1-420135.mp3" id="11_kvpfn"]
@@ -997,6 +998,12 @@ text = "I"
 horizontal_alignment = 1
 vertical_alignment = 2
 
+[node name="clock_ticking" type="AudioStreamPlayer2D" parent="r18/collect/num" unique_id=1074117176]
+position = Vector2(-169, 598)
+stream = ExtResource("10_37s47")
+max_distance = 900.0
+parameters/looping = true
+
 [node name="num1" type="Area2D" parent="r18/collect" unique_id=2136047156]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="r18/collect/num1" unique_id=1163543778]
@@ -1005,7 +1012,6 @@ rotation = -1.5707964
 shape = SubResource("CapsuleShape2D_0tnpc")
 
 [node name="lights" type="Node2D" parent="r18" unique_id=410495781]
-visible = false
 
 [node name="PointLight2D" type="PointLight2D" parent="r18/lights" unique_id=811135468]
 z_index = 2
@@ -4293,7 +4299,7 @@ position = Vector2(1325, 439)
 shape = SubResource("SegmentShape2D_qnb83")
 
 [node name="player" parent="." unique_id=312059141 instance=ExtResource("12_ssvqc")]
-position = Vector2(364.99982, 60)
+position = Vector2(300, -10.999985)
 scale = Vector2(0.71256596, 0.71256596)
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=870738312]
@@ -4304,8 +4310,8 @@ limit_enabled = false
 
 [node name="flash" type="PointLight2D" parent="player" unique_id=493230440]
 position = Vector2(16.840576, -65.9588)
-scale = Vector2(8.332561, 8.33256)
-energy = 0.3
+scale = Vector2(14.077642, 11.227029)
+energy = 1.3
 texture = SubResource("GradientTexture2D_dinhu")
 
 [node name="flash2" type="PointLight2D" parent="player" unique_id=1460880421]
@@ -4320,7 +4326,6 @@ texture = ExtResource("3_lnu2h")
 [node name="canvas" type="CanvasLayer" parent="." unique_id=1209985598]
 
 [node name="mobile" parent="canvas" unique_id=2043303018 instance=ExtResource("14_5newe")]
-visible = false
 
 [node name="paper" type="Sprite2D" parent="canvas" unique_id=1963877162]
 visible = false
@@ -4455,7 +4460,7 @@ offset_right = 823.0
 offset_bottom = 698.8333
 theme_override_fonts/font = ExtResource("5_gee14")
 theme_override_font_sizes/font_size = 46
-text = "Happy Birthday Doctor!"
+text = "Happy Birthday my Doctor!"
 horizontal_alignment = 1
 vertical_alignment = 1
 

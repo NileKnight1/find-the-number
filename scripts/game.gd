@@ -90,8 +90,16 @@ func init_book_labels():
 func _ready() -> void:
 	#play_sound(sound_collect)
 	init_game()
+	
+	if OS.has_feature("web_android") or OS.has_feature("web_ios"):
+		$CanvasLayer/mobile.visible = 1
+		
+		
+	await get_tree().create_timer(10).timeout
+	#start_clock()
 	#start_clock()
 	#start_party()
+	
 	
 	pass
 
@@ -585,7 +593,7 @@ func start_party():
 	play_sound(sound_fireworks)
 	play_sound(sound_horn2)
 	await get_tree().create_timer(1).timeout
-	#play_sound(sound_bd)
+	play_sound(sound_bd)
 	await get_tree().create_timer(3).timeout
 	play_sound(sound_horn2)
 	play_sound(sound_balloon)
