@@ -3,19 +3,59 @@
 [ext_resource type="Script" uid="uid://bvj6hhvs87sm5" path="res://scripts/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://okb7hnr57f6n" path="res://assets/rect.png" id="1_l6cm7"]
 [ext_resource type="FontFile" uid="uid://bqn4um072n8b2" path="res://assets/Stranger back in the Night.ttf" id="2_ekxnf"]
+[ext_resource type="FontFile" uid="uid://cuqyrw2hhre2p" path="res://assets/HoldMoney-Regular.ttf" id="3_wu84c"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vue75"]
 bg_color = Color(0.37890625, 0, 0, 1)
 border_color = Color(0, 0, 0, 1)
 
-[sub_resource type="Gradient" id="Gradient_0tnpc"]
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rtw2f"]
+content_margin_top = 6.0
+bg_color = Color(0.38039216, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_ekxnf"]
-gradient = SubResource("Gradient_0tnpc")
-fill = 1
-fill_from = Vector2(0.517094, 0.3803419)
-fill_to = Vector2(0.7991453, 0.47863248)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oa1go"]
+content_margin_top = 6.0
+bg_color = Color(0.23046875, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbmy8"]
+content_margin_top = 6.0
+bg_color = Color(0.45703125, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vlew8"]
+content_margin_left = 9.0
+bg_color = Color(0.38039216, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bqqt6"]
 draw_center = false
@@ -26,45 +66,103 @@ draw_center = false
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ln24"]
 draw_center = false
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vlew8"]
+
+[sub_resource type="Gradient" id="Gradient_0tnpc"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ekxnf"]
+gradient = SubResource("Gradient_0tnpc")
+fill = 1
+fill_from = Vector2(0.517094, 0.3803419)
+fill_to = Vector2(0.7991453, 0.47863248)
+
 [node name="main_menu" type="Node2D" unique_id=922493659]
 script = ExtResource("1_bqqt6")
 
-[node name="bg" type="Panel" parent="." unique_id=311924974]
-layout_direction = 2
-offset_right = 1303.0
-offset_bottom = 720.0
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_vue75")
-
-[node name="R-19" type="PointLight2D" parent="." unique_id=623298830]
-z_index = 2
-position = Vector2(650.99994, 359.25803)
-scale = Vector2(20.375002, 11.273188)
-energy = 1.27
-texture = SubResource("GradientTexture2D_ekxnf")
-
 [node name="black" type="PointLight2D" parent="." unique_id=726974481]
 z_index = 2
-position = Vector2(653.8203, 359.99997)
-scale = Vector2(1.065102, 1.4117646)
+position = Vector2(640, 359.99997)
+scale = Vector2(1.050041, 1.4117646)
 energy = 0.97
 blend_mode = 1
 texture = ExtResource("1_l6cm7")
+metadata/_edit_lock_ = true
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=2034702864]
-position = Vector2(662, 361)
+[node name="bg" type="Panel" parent="." unique_id=311924974]
+offset_right = 1280.0
+offset_bottom = 720.0
+layout_direction = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vue75")
+metadata/_edit_lock_ = true
 
-[node name="play" type="Button" parent="." unique_id=1392224073]
-offset_left = 557.0
-offset_top = 206.0
-offset_right = 789.0
-offset_bottom = 338.0
+[node name="submit" type="Button" parent="." unique_id=325175786]
+light_mask = 0
+offset_left = 652.0
+offset_top = 242.0
+offset_right = 733.0
+offset_bottom = 282.0
+theme_override_fonts/font = ExtResource("3_wu84c")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_rtw2f")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oa1go")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tbmy8")
+text = "Submit"
+
+[node name="paste" type="Button" parent="." unique_id=464803688]
+light_mask = 0
+offset_left = 551.0
+offset_top = 242.0
+offset_right = 632.0
+offset_bottom = 282.0
+theme_override_fonts/font = ExtResource("3_wu84c")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_rtw2f")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oa1go")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tbmy8")
+text = "Paste"
+
+[node name="code" type="CenterContainer" parent="." unique_id=980063033]
+offset_top = -21.0
+offset_right = 1280.0
+offset_bottom = 433.0
+mouse_filter = 2
+
+[node name="code" type="LineEdit" parent="code" unique_id=159982752]
+light_mask = 0
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_wu84c")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vlew8")
+placeholder_text = "Paste invitation here!"
+
+[node name="play" type="CenterContainer" parent="." unique_id=2144960543]
+offset_top = -7.0
+offset_right = 1280.0
+offset_bottom = 713.0
+mouse_filter = 2
+
+[node name="play" type="Button" parent="play" unique_id=231886536]
+layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.3671875, 0.3671875, 0.3671875, 1)
 theme_override_fonts/font = ExtResource("2_ekxnf")
 theme_override_font_sizes/font_size = 122
 theme_override_styles/normal = SubResource("StyleBoxFlat_bqqt6")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_wu84c")
 theme_override_styles/hover = SubResource("StyleBoxFlat_8ln24")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_vlew8")
+disabled = true
 text = "Play"
 
-[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[node name="R-19" type="PointLight2D" parent="." unique_id=623298830]
+visible = false
+z_index = 2
+position = Vector2(625, 421)
+scale = Vector2(20.187502, 11.273188)
+energy = 1.27
+texture = SubResource("GradientTexture2D_ekxnf")
+
+[connection signal="pressed" from="submit" to="." method="_on_submit_pressed"]
+[connection signal="pressed" from="paste" to="." method="_on_paste_pressed"]
+[connection signal="pressed" from="play/play" to="." method="_on_play_pressed"]
