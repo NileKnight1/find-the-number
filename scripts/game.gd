@@ -90,6 +90,7 @@ func init_book_labels():
 func _ready() -> void:
 	#play_sound(sound_collect)
 	init_game()
+	$canvas/hbd.text = "Happy Birthday " + str(global.him) + "!"
 	
 	if OS.has_feature("web_android") or OS.has_feature("web_ios"):
 		$CanvasLayer/mobile.visible = 1

@@ -552,38 +552,38 @@ position = Vector2(1332, 0)
 [node name="wall2" type="Panel" parent="r19/room" unique_id=34580977]
 light_mask = 0
 visibility_layer = 2
-layout_direction = 2
 offset_left = -835.0
 offset_top = -596.0
 offset_right = 867.0
 offset_bottom = 238.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_kvpfn")
 
 [node name="wall" type="Panel" parent="r19/room" unique_id=1642587687]
-layout_direction = 2
 offset_left = -457.0
 offset_top = -282.0
 offset_right = 458.0
 offset_bottom = 89.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_twgab")
 
 [node name="floor2" type="Panel" parent="r19/room" unique_id=1419273344]
-layout_direction = 2
 offset_left = -457.0
 offset_top = 85.0
 offset_right = 458.0
 offset_bottom = 229.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_02fa5")
 
 [node name="door" type="Panel" parent="r19/room" unique_id=536255701]
-layout_direction = 2
 offset_left = -238.0
 offset_top = -107.0
 offset_right = -114.0
 offset_bottom = 85.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
@@ -595,20 +595,20 @@ scale = Vector2(0.51111114, 0.51111114)
 texture = ExtResource("6_ir15t")
 
 [node name="door2" type="Panel" parent="r19/room/desk" unique_id=477473316]
-layout_direction = 2
 offset_left = -406.0
 offset_top = 16.0
 offset_right = -285.0
 offset_bottom = 85.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_0tnpc")
 
 [node name="door3" type="Panel" parent="r19/room/desk" unique_id=1005239007]
-layout_direction = 2
 offset_left = -372.0
 offset_top = -3.0
 offset_right = -324.0
 offset_bottom = 16.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_vtaks")
 
@@ -630,12 +630,12 @@ vertical_alignment = 1
 visible = false
 
 [node name="lighter" type="Panel" parent="r19/room/lighter/outline" unique_id=1512560834]
-layout_direction = 2
 offset_left = -298.00003
 offset_top = 7.9999943
 offset_right = -290.5592
 offset_bottom = 25.456003
 rotation = 0.7853982
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_wljb1")
 
@@ -652,38 +652,38 @@ scale = Vector2(0.3064287, 0.30642864)
 texture = ExtResource("5_ca42v")
 
 [node name="door2" type="Panel" parent="r19/room/table" unique_id=188682382]
-layout_direction = 2
 offset_left = -20.0
 offset_top = 23.0
 offset_right = 235.0
 offset_bottom = 38.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_v2yb1")
 
 [node name="door5" type="Panel" parent="r19/room/table" unique_id=374753947]
-layout_direction = 2
 offset_left = -27.0
 offset_top = 6.0
 offset_right = 242.0
 offset_bottom = 29.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_js0lu")
 
 [node name="door3" type="Panel" parent="r19/room/table" unique_id=128270015]
-layout_direction = 2
 offset_left = -20.0
 offset_top = 35.0
 offset_right = -6.0
 offset_bottom = 90.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_gxtfn")
 
 [node name="door4" type="Panel" parent="r19/room/table" unique_id=759449258]
-layout_direction = 2
 offset_left = 221.0
 offset_top = 35.0
 offset_right = 235.0
 offset_bottom = 90.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_gxtfn")
 
@@ -786,38 +786,38 @@ disabled = true
 [node name="wall2" type="Panel" parent="r18/room" unique_id=1314097121]
 light_mask = 0
 visibility_layer = 2
-layout_direction = 2
 offset_left = -835.0
 offset_top = -596.0
 offset_right = 867.0
 offset_bottom = 238.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_kvpfn")
 
 [node name="wall" type="Panel" parent="r18/room" unique_id=1314548764]
-layout_direction = 2
 offset_left = -457.0
 offset_top = -282.0
 offset_right = 458.0
 offset_bottom = 89.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_uwrxv")
 
 [node name="floor2" type="Panel" parent="r18/room" unique_id=95648590]
-layout_direction = 2
 offset_left = -457.0
 offset_top = 85.0
 offset_right = 458.0
 offset_bottom = 229.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_yqjtg")
 
 [node name="door" type="Panel" parent="r18/room" unique_id=2057259471]
-layout_direction = 2
 offset_left = -238.0
 offset_top = -107.0
 offset_right = -114.0
 offset_bottom = 85.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
@@ -825,20 +825,20 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 position = Vector2(-222, 0)
 
 [node name="wardrobe" type="Panel" parent="r18/room/wardrobe" unique_id=2146049518]
-layout_direction = 2
 offset_left = 215.0
 offset_top = -117.0
 offset_right = 322.0
 offset_bottom = 86.725006
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_iywne")
 
 [node name="wardrobe2" type="Panel" parent="r18/room/wardrobe" unique_id=772663460]
-layout_direction = 2
 offset_left = 215.0
 offset_top = -117.0
 offset_right = 271.0
 offset_bottom = 86.725006
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_iywne")
 
@@ -846,85 +846,85 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_iywne")
 position = Vector2(0, -11)
 
 [node name="door6" type="Panel" parent="r18/room/bed" unique_id=515564276]
-layout_direction = 2
 offset_left = 201.0
 offset_top = 1.0
 offset_right = 212.0
 offset_bottom = 64.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
 [node name="door7" type="Panel" parent="r18/room/bed" unique_id=1803741992]
-layout_direction = 2
 offset_left = 365.0
 offset_top = 1.0
 offset_right = 376.0
 offset_bottom = 64.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
 [node name="door3" type="Panel" parent="r18/room/bed" unique_id=11376788]
-layout_direction = 2
 offset_left = 209.0
 offset_top = -21.0
 offset_right = 369.0
 offset_bottom = 26.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_gee14")
 
 [node name="door2" type="Panel" parent="r18/room/bed" unique_id=536526126]
-layout_direction = 2
 offset_left = 207.0
 offset_top = 17.0
 offset_right = 374.0
 offset_bottom = 49.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_p57ef")
 
 [node name="door" type="Panel" parent="r18/room/bed" unique_id=238333703]
-layout_direction = 2
 offset_left = 199.0
 offset_top = 49.0
 offset_right = 381.0
 offset_bottom = 96.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lbhrr")
 
 [node name="door4" type="Panel" parent="r18/room/bed" unique_id=277045787]
-layout_direction = 2
 offset_left = 199.0
 offset_top = 39.0
 offset_right = 210.0
 offset_bottom = 96.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
 [node name="door5" type="Panel" parent="r18/room/bed" unique_id=817479282]
-layout_direction = 2
 offset_left = 370.0
 offset_top = 39.0
 offset_right = 381.0
 offset_bottom = 96.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
 [node name="desk" type="Node2D" parent="r18/room" unique_id=863180369]
 
 [node name="door2" type="Panel" parent="r18/room/desk" unique_id=1165357505]
-layout_direction = 2
 offset_left = -406.0
 offset_top = 16.0
 offset_right = -285.0
 offset_bottom = 85.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_0tnpc")
 
 [node name="door3" type="Panel" parent="r18/room/desk" unique_id=83217325]
-layout_direction = 2
 offset_left = -372.0
 offset_top = -3.0
 offset_right = -324.0
 offset_bottom = 16.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_vtaks")
 
@@ -946,22 +946,22 @@ vertical_alignment = 1
 visible = false
 
 [node name="lighter" type="Panel" parent="r18/room/lighter/outline" unique_id=971001394]
-layout_direction = 2
 offset_left = -298.00003
 offset_top = 7.9999943
 offset_right = -290.5592
 offset_bottom = 25.456003
 rotation = 0.7853982
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_wljb1")
 
 [node name="lighter" type="Panel" parent="r18/room/lighter" unique_id=17446811]
-layout_direction = 2
 offset_left = -298.00003
 offset_top = 7.9999943
 offset_right = -290.5592
 offset_bottom = 25.456003
 rotation = 0.7853982
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_qouja")
 
@@ -977,11 +977,11 @@ shape = SubResource("RectangleShape2D_v2yb1")
 
 [node name="num" type="Panel" parent="r18/collect" unique_id=641963778]
 modulate = Color(1.0000322, 1.0000322, 1.0039686, 1)
-layout_direction = 2
 offset_left = 54.0
 offset_top = -120.0
 offset_right = 58.0
 offset_bottom = -116.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_bhx41")
 
@@ -1089,47 +1089,47 @@ position = Vector2(-1329, 0)
 [node name="wall2" type="Panel" parent="r17/room" unique_id=2009939075]
 light_mask = 0
 visibility_layer = 2
-layout_direction = 2
 offset_left = -835.0
 offset_top = -596.0
 offset_right = 867.0
 offset_bottom = 238.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_kvpfn")
 
 [node name="wall" type="Panel" parent="r17/room" unique_id=1355897510]
-layout_direction = 2
 offset_left = -457.0
 offset_top = -282.0
 offset_right = 458.0
 offset_bottom = 89.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_uwrxv")
 
 [node name="pond" type="Panel" parent="r17/room" unique_id=56443473]
-layout_direction = 2
 offset_left = -457.0
 offset_top = 85.0
 offset_right = 458.0
 offset_bottom = 229.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_yqjtg")
 
 [node name="door" type="Panel" parent="r17/room" unique_id=1711318001]
-layout_direction = 2
 offset_left = -238.0
 offset_top = -107.0
 offset_right = -114.0
 offset_bottom = 85.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
 [node name="pond2" type="Panel" parent="r17/room" unique_id=364611071]
-layout_direction = 2
 offset_left = -100.0
 offset_top = 85.0
 offset_right = 24.0
 offset_bottom = 134.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_37s47")
 
@@ -1151,20 +1151,20 @@ shape = SubResource("CapsuleShape2D_vtaks")
 position = Vector2(-222, 0)
 
 [node name="wardrobe" type="Panel" parent="r17/room/wardrobe" unique_id=1647067203]
-layout_direction = 2
 offset_left = 215.0
 offset_top = -117.0
 offset_right = 322.0
 offset_bottom = 86.725006
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_iywne")
 
 [node name="wardrobe2" type="Panel" parent="r17/room/wardrobe" unique_id=569356599]
-layout_direction = 2
 offset_left = 215.0
 offset_top = -117.0
 offset_right = 271.0
 offset_bottom = 86.725006
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_iywne")
 
@@ -1172,85 +1172,85 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_iywne")
 position = Vector2(0, -11)
 
 [node name="door6" type="Panel" parent="r17/room/bed" unique_id=1734382053]
-layout_direction = 2
 offset_left = 201.0
 offset_top = 1.0
 offset_right = 212.0
 offset_bottom = 64.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
 [node name="door7" type="Panel" parent="r17/room/bed" unique_id=1840542247]
-layout_direction = 2
 offset_left = 365.0
 offset_top = 1.0
 offset_right = 376.0
 offset_bottom = 64.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
 [node name="door3" type="Panel" parent="r17/room/bed" unique_id=983923516]
-layout_direction = 2
 offset_left = 209.0
 offset_top = -21.0
 offset_right = 369.0
 offset_bottom = 26.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_gee14")
 
 [node name="door2" type="Panel" parent="r17/room/bed" unique_id=1284853867]
-layout_direction = 2
 offset_left = 207.0
 offset_top = 17.0
 offset_right = 374.0
 offset_bottom = 49.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_p57ef")
 
 [node name="door" type="Panel" parent="r17/room/bed" unique_id=446944910]
-layout_direction = 2
 offset_left = 199.0
 offset_top = 49.0
 offset_right = 381.0
 offset_bottom = 96.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lbhrr")
 
 [node name="door4" type="Panel" parent="r17/room/bed" unique_id=1777190970]
-layout_direction = 2
 offset_left = 199.0
 offset_top = 39.0
 offset_right = 210.0
 offset_bottom = 96.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
 [node name="door5" type="Panel" parent="r17/room/bed" unique_id=155031319]
-layout_direction = 2
 offset_left = 370.0
 offset_top = 39.0
 offset_right = 381.0
 offset_bottom = 96.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
 [node name="desk" type="Node2D" parent="r17/room" unique_id=506387775]
 
 [node name="door2" type="Panel" parent="r17/room/desk" unique_id=1476257252]
-layout_direction = 2
 offset_left = -406.0
 offset_top = 16.0
 offset_right = -285.0
 offset_bottom = 85.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_0tnpc")
 
 [node name="door3" type="Panel" parent="r17/room/desk" unique_id=760445974]
-layout_direction = 2
 offset_left = -372.0
 offset_top = -3.0
 offset_right = -324.0
 offset_bottom = 16.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_vtaks")
 
@@ -1364,11 +1364,11 @@ position = Vector2(2, -23)
 [node name="num" type="Panel" parent="r17/collect" unique_id=1745473937]
 visible = false
 modulate = Color(1.0000322, 1.0000322, 1.0039686, 1)
-layout_direction = 2
 offset_left = -46.0
 offset_top = 109.0
 offset_right = -42.0
 offset_bottom = 113.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_bhx41")
 
@@ -1402,47 +1402,47 @@ position = Vector2(-2658, 0)
 [node name="wall2" type="Panel" parent="r16/room" unique_id=1408001516]
 light_mask = 0
 visibility_layer = 2
-layout_direction = 2
 offset_left = -835.0
 offset_top = -596.0
 offset_right = 867.0
 offset_bottom = 238.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_kvpfn")
 
 [node name="wall" type="Panel" parent="r16/room" unique_id=938689190]
-layout_direction = 2
 offset_left = -457.0
 offset_top = -282.0
 offset_right = 458.0
 offset_bottom = 89.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_uwrxv")
 
 [node name="pond" type="Panel" parent="r16/room" unique_id=1853597111]
-layout_direction = 2
 offset_left = -457.0
 offset_top = 85.0
 offset_right = 458.0
 offset_bottom = 229.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_yqjtg")
 
 [node name="candle2" type="Panel" parent="r16/room" unique_id=1349002389]
-layout_direction = 2
 offset_left = -309.0
 offset_top = -2.0
 offset_right = -301.0
 offset_bottom = 17.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_bt5mj")
 
 [node name="door" type="Panel" parent="r16/room" unique_id=1992607329]
-layout_direction = 2
 offset_left = -238.0
 offset_top = -107.0
 offset_right = -114.0
 offset_bottom = 85.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
@@ -1450,85 +1450,85 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 position = Vector2(0, -11)
 
 [node name="door6" type="Panel" parent="r16/room/bed" unique_id=1419092634]
-layout_direction = 2
 offset_left = 201.0
 offset_top = 1.0
 offset_right = 212.0
 offset_bottom = 64.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
 [node name="door7" type="Panel" parent="r16/room/bed" unique_id=68162445]
-layout_direction = 2
 offset_left = 365.0
 offset_top = 1.0
 offset_right = 376.0
 offset_bottom = 64.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
 [node name="door3" type="Panel" parent="r16/room/bed" unique_id=1963759925]
-layout_direction = 2
 offset_left = 209.0
 offset_top = -21.0
 offset_right = 369.0
 offset_bottom = 26.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_gee14")
 
 [node name="door2" type="Panel" parent="r16/room/bed" unique_id=362325508]
-layout_direction = 2
 offset_left = 207.0
 offset_top = 17.0
 offset_right = 374.0
 offset_bottom = 49.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_p57ef")
 
 [node name="door" type="Panel" parent="r16/room/bed" unique_id=1994526996]
-layout_direction = 2
 offset_left = 199.0
 offset_top = 49.0
 offset_right = 381.0
 offset_bottom = 96.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lbhrr")
 
 [node name="door4" type="Panel" parent="r16/room/bed" unique_id=1531329394]
-layout_direction = 2
 offset_left = 199.0
 offset_top = 39.0
 offset_right = 210.0
 offset_bottom = 96.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
 [node name="door5" type="Panel" parent="r16/room/bed" unique_id=617203219]
-layout_direction = 2
 offset_left = 370.0
 offset_top = 39.0
 offset_right = 381.0
 offset_bottom = 96.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
 [node name="desk" type="Node2D" parent="r16/room" unique_id=1898135866]
 
 [node name="door2" type="Panel" parent="r16/room/desk" unique_id=1827841225]
-layout_direction = 2
 offset_left = -406.0
 offset_top = 16.0
 offset_right = -285.0
 offset_bottom = 85.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_0tnpc")
 
 [node name="door3" type="Panel" parent="r16/room/desk" unique_id=731941174]
-layout_direction = 2
 offset_left = -390.0
 offset_top = -3.0
 offset_right = -342.0
 offset_bottom = 16.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_vtaks")
 
@@ -1548,39 +1548,39 @@ vertical_alignment = 1
 position = Vector2(391, 0)
 
 [node name="door2" type="Panel" parent="r16/room/bookshelf" unique_id=1375395802]
-layout_direction = 2
 offset_left = -415.0
 offset_top = 5.0
 offset_right = -253.0
 offset_bottom = 85.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_0tnpc")
 
 [node name="door3" type="Panel" parent="r16/room/bookshelf" unique_id=692679683]
-layout_direction = 2
 offset_left = -405.0
 offset_top = -71.0
 offset_right = -263.0
 offset_bottom = 8.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ir15t")
 
 [node name="door4" type="Panel" parent="r16/room/bookshelf" unique_id=422009711]
-layout_direction = 2
 offset_left = -403.0
 offset_top = -31.0
 offset_right = -264.0
 offset_bottom = -27.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxLine_ca42v")
 
 [node name="door5" type="Panel" parent="r16/room/bookshelf" unique_id=1559983155]
 visible = false
-layout_direction = 2
 offset_left = -403.0
 offset_top = 6.0
 offset_right = -264.0
 offset_bottom = 10.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxLine_ca42v")
 
@@ -1674,11 +1674,11 @@ position = Vector2(125, 16)
 shape = SubResource("RectangleShape2D_dinhu")
 
 [node name="book1" type="Panel" parent="r16/room/bookshelf/books" unique_id=1023999160]
-layout_direction = 2
 offset_left = -399.0
 offset_top = -27.0
 offset_right = -389.0
 offset_bottom = 6.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_rysoc")
 
@@ -1694,11 +1694,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book2" type="Panel" parent="r16/room/bookshelf/books" unique_id=25807347]
-layout_direction = 2
 offset_left = -387.0
 offset_top = -27.0
 offset_right = -377.0
 offset_bottom = 6.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ca42v")
 
@@ -1714,11 +1714,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book3" type="Panel" parent="r16/room/bookshelf/books" unique_id=1131511051]
-layout_direction = 2
 offset_left = -375.0
 offset_top = -27.0
 offset_right = -365.0
 offset_bottom = 6.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ssvqc")
 
@@ -1734,11 +1734,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book4" type="Panel" parent="r16/room/bookshelf/books" unique_id=1515341109]
-layout_direction = 2
 offset_left = -363.0
 offset_top = -27.0
 offset_right = -353.0
 offset_bottom = 6.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_264po")
 
@@ -1760,11 +1760,11 @@ position = Vector2(5, 16)
 shape = SubResource("RectangleShape2D_dinhu")
 
 [node name="book5" type="Panel" parent="r16/room/bookshelf/books" unique_id=1939216122]
-layout_direction = 2
 offset_left = -351.0
 offset_top = -27.0
 offset_right = -341.0
 offset_bottom = 6.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_1kice")
 
@@ -1780,11 +1780,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book6" type="Panel" parent="r16/room/bookshelf/books" unique_id=2033806803]
-layout_direction = 2
 offset_left = -339.0
 offset_top = -27.0
 offset_right = -329.0
 offset_bottom = 6.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_5newe")
 
@@ -1800,11 +1800,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book7" type="Panel" parent="r16/room/bookshelf/books" unique_id=1996451246]
-layout_direction = 2
 offset_left = -327.0
 offset_top = -27.0
 offset_right = -317.0
 offset_bottom = 6.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_rysoc")
 
@@ -1820,11 +1820,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book13" type="Panel" parent="r16/room/bookshelf/books" unique_id=423356292]
-layout_direction = 2
 offset_left = -279.0
 offset_top = -27.0
 offset_right = -269.0
 offset_bottom = 6.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ssvqc")
 
@@ -1840,11 +1840,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book10" type="Panel" parent="r16/room/bookshelf/books" unique_id=1426500689]
-layout_direction = 2
 offset_left = -315.0
 offset_top = -27.0
 offset_right = -305.0
 offset_bottom = 6.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_264po")
 
@@ -1860,11 +1860,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book11" type="Panel" parent="r16/room/bookshelf/books" unique_id=1538153454]
-layout_direction = 2
 offset_left = -291.0
 offset_top = -27.0
 offset_right = -281.0
 offset_bottom = 6.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_1kice")
 
@@ -1880,11 +1880,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book12" type="Panel" parent="r16/room/bookshelf/books" unique_id=837722357]
-layout_direction = 2
 offset_left = -303.0
 offset_top = -27.0
 offset_right = -293.0
 offset_bottom = 6.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_5newe")
 
@@ -1900,11 +1900,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book22" type="Panel" parent="r16/room/bookshelf/books" unique_id=1872391726]
-layout_direction = 2
 offset_left = -279.0
 offset_top = -64.0
 offset_right = -269.0
 offset_bottom = -31.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_264po")
 
@@ -1920,11 +1920,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book18" type="Panel" parent="r16/room/bookshelf/books" unique_id=128557359]
-layout_direction = 2
 offset_left = -327.0
 offset_top = -64.0
 offset_right = -317.0
 offset_bottom = -31.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_1kice")
 
@@ -1940,11 +1940,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book19" type="Panel" parent="r16/room/bookshelf/books" unique_id=117595258]
-layout_direction = 2
 offset_left = -315.0
 offset_top = -64.0
 offset_right = -305.0
 offset_bottom = -31.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_rysoc")
 
@@ -1960,11 +1960,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book8" type="Panel" parent="r16/room/bookshelf/books" unique_id=1344510209]
-layout_direction = 2
 offset_left = -399.0
 offset_top = -64.0
 offset_right = -389.0
 offset_bottom = -31.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ca42v")
 
@@ -1980,11 +1980,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book9" type="Panel" parent="r16/room/bookshelf/books" unique_id=630572769]
-layout_direction = 2
 offset_left = -387.0
 offset_top = -64.0
 offset_right = -377.0
 offset_bottom = -31.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ssvqc")
 
@@ -2000,11 +2000,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book17" type="Panel" parent="r16/room/bookshelf/books" unique_id=1638908787]
-layout_direction = 2
 offset_left = -339.0
 offset_top = -64.0
 offset_right = -329.0
 offset_bottom = -31.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ssvqc")
 
@@ -2020,11 +2020,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book20" type="Panel" parent="r16/room/bookshelf/books" unique_id=485678190]
-layout_direction = 2
 offset_left = -303.0
 offset_top = -64.0
 offset_right = -293.0
 offset_bottom = -31.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_264po")
 
@@ -2040,11 +2040,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book21" type="Panel" parent="r16/room/bookshelf/books" unique_id=1030404657]
-layout_direction = 2
 offset_left = -291.0
 offset_top = -64.0
 offset_right = -281.0
 offset_bottom = -31.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_1kice")
 
@@ -2060,11 +2060,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book14" type="Panel" parent="r16/room/bookshelf/books" unique_id=671226709]
-layout_direction = 2
 offset_left = -363.0
 offset_top = -64.0
 offset_right = -353.0
 offset_bottom = -31.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_264po")
 
@@ -2080,11 +2080,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book15" type="Panel" parent="r16/room/bookshelf/books" unique_id=537863714]
-layout_direction = 2
 offset_left = -375.0
 offset_top = -64.0
 offset_right = -365.0
 offset_bottom = -31.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_rysoc")
 
@@ -2100,11 +2100,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book16" type="Panel" parent="r16/room/bookshelf/books" unique_id=933763228]
-layout_direction = 2
 offset_left = -351.0
 offset_top = -64.0
 offset_right = -341.0
 offset_bottom = -31.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_5newe")
 
@@ -2229,38 +2229,38 @@ position = Vector2(-3995, 0)
 [node name="wall2" type="Panel" parent="r15/room" unique_id=897157062]
 light_mask = 0
 visibility_layer = 2
-layout_direction = 2
 offset_left = -835.0
 offset_top = -596.0
 offset_right = 867.0
 offset_bottom = 238.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_kvpfn")
 
 [node name="wall" type="Panel" parent="r15/room" unique_id=535059527]
-layout_direction = 2
 offset_left = -457.0
 offset_top = -282.0
 offset_right = 458.0
 offset_bottom = 89.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_uwrxv")
 
 [node name="pond" type="Panel" parent="r15/room" unique_id=1600119847]
-layout_direction = 2
 offset_left = -457.0
 offset_top = 85.0
 offset_right = 458.0
 offset_bottom = 229.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_yqjtg")
 
 [node name="door" type="Panel" parent="r15/room" unique_id=377903231]
-layout_direction = 2
 offset_left = -198.0
 offset_top = -107.0
 offset_right = -74.0
 offset_bottom = 85.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
@@ -2270,42 +2270,42 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 visible = false
 
 [node name="rod4" type="Panel" parent="r15/room/mob/outline" unique_id=676149253]
-layout_direction = 2
 offset_left = 406.0
 offset_top = -18.0
 offset_right = 412.5415
 offset_bottom = 73.6264
 rotation = -0.16929694
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_suyxu")
 
 [node name="rod3" type="Panel" parent="r15/room/mob/outline" unique_id=220652673]
-layout_direction = 2
 offset_left = 400.0
 offset_top = 75.0
 offset_right = 449.59985
 offset_bottom = 84.43536
 rotation = -0.18325958
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_sww3w")
 
 [node name="rod2" type="Panel" parent="r15/room/mob" unique_id=1629818181]
-layout_direction = 2
 offset_left = 400.0
 offset_top = 75.0
 offset_right = 449.59985
 offset_bottom = 84.43536
 rotation = -0.18325958
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_sgl2t")
 
 [node name="rod" type="Panel" parent="r15/room/mob" unique_id=1303987254]
-layout_direction = 2
 offset_left = 406.00012
 offset_top = -18.0
 offset_right = 412.54163
 offset_bottom = 73.6264
 rotation = -0.16929694
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_qnb83")
 
@@ -2327,96 +2327,96 @@ shape = SubResource("RectangleShape2D_vtaks")
 position = Vector2(-140, -11)
 
 [node name="door6" type="Panel" parent="r15/room/bed" unique_id=832478253]
-layout_direction = 2
 offset_left = 201.0
 offset_top = 1.0
 offset_right = 212.0
 offset_bottom = 64.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
 [node name="door7" type="Panel" parent="r15/room/bed" unique_id=25181787]
-layout_direction = 2
 offset_left = 365.0
 offset_top = 1.0
 offset_right = 376.0
 offset_bottom = 64.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
 [node name="door3" type="Panel" parent="r15/room/bed" unique_id=155253487]
-layout_direction = 2
 offset_left = 209.0
 offset_top = -21.0
 offset_right = 369.0
 offset_bottom = 26.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_gee14")
 
 [node name="door2" type="Panel" parent="r15/room/bed" unique_id=1580745097]
-layout_direction = 2
 offset_left = 207.0
 offset_top = 17.0
 offset_right = 374.0
 offset_bottom = 49.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_p57ef")
 
 [node name="door" type="Panel" parent="r15/room/bed" unique_id=1727494778]
-layout_direction = 2
 offset_left = 199.0
 offset_top = 49.0
 offset_right = 381.0
 offset_bottom = 96.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lbhrr")
 
 [node name="door4" type="Panel" parent="r15/room/bed" unique_id=1718772841]
-layout_direction = 2
 offset_left = 199.0
 offset_top = 39.0
 offset_right = 210.0
 offset_bottom = 96.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
 [node name="door5" type="Panel" parent="r15/room/bed" unique_id=310710702]
-layout_direction = 2
 offset_left = 370.0
 offset_top = 39.0
 offset_right = 381.0
 offset_bottom = 96.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
 [node name="desk" type="Node2D" parent="r15/room" unique_id=1000830769]
 
 [node name="door2" type="Panel" parent="r15/room/desk" unique_id=484661523]
-layout_direction = 2
 offset_left = -406.0
 offset_top = 16.0
 offset_right = -285.0
 offset_bottom = 85.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_0tnpc")
 
 [node name="door4" type="Panel" parent="r15/room/desk" unique_id=1125192316]
-layout_direction = 2
 offset_left = -348.0
 offset_top = -2.0
 offset_right = -340.0
 offset_bottom = 17.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_bt5mj")
 
 [node name="paint" type="Node2D" parent="r15/room" unique_id=132569715]
 
 [node name="paint" type="Panel" parent="r15/room/paint" unique_id=1734073725]
-layout_direction = 2
 offset_left = -31.0
 offset_top = -110.0
 offset_right = 25.0
 offset_bottom = -45.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_e1j6l")
 
@@ -2430,20 +2430,20 @@ shape = SubResource("RectangleShape2D_kvuet")
 position = Vector2(82, 0)
 
 [node name="wardrobe" type="Panel" parent="r15/room/wardrobe" unique_id=529105086]
-layout_direction = 2
 offset_left = 215.0
 offset_top = -117.0
 offset_right = 322.0
 offset_bottom = 86.725006
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_iywne")
 
 [node name="wardrobe2" type="Panel" parent="r15/room/wardrobe" unique_id=1825077507]
-layout_direction = 2
 offset_left = 215.0
 offset_top = -117.0
 offset_right = 271.0
 offset_bottom = 86.725006
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_iywne")
 
@@ -2476,11 +2476,11 @@ position = Vector2(-297, -223)
 
 [node name="num" type="Panel" parent="r15/room/collect" unique_id=1815835486]
 modulate = Color(1.0000322, 1.0000322, 1.0039686, 1)
-layout_direction = 2
 offset_left = -46.0
 offset_top = 109.0
 offset_right = -42.0
 offset_bottom = 113.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_bhx41")
 
@@ -2586,38 +2586,38 @@ position = Vector2(-5322, 0)
 [node name="wall2" type="Panel" parent="r14/room" unique_id=1748449977]
 light_mask = 0
 visibility_layer = 2
-layout_direction = 2
 offset_left = -835.0
 offset_top = -596.0
 offset_right = 867.0
 offset_bottom = 238.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_kvpfn")
 
 [node name="wall" type="Panel" parent="r14/room" unique_id=1954650282]
-layout_direction = 2
 offset_left = -457.0
 offset_top = -282.0
 offset_right = 458.0
 offset_bottom = 89.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_uwrxv")
 
 [node name="pond" type="Panel" parent="r14/room" unique_id=1110576758]
-layout_direction = 2
 offset_left = -457.0
 offset_top = 85.0
 offset_right = 458.0
 offset_bottom = 229.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_yqjtg")
 
 [node name="door" type="Panel" parent="r14/room" unique_id=2031938847]
-layout_direction = 2
 offset_left = -198.0
 offset_top = -107.0
 offset_right = -74.0
 offset_bottom = 85.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
@@ -2625,65 +2625,65 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 position = Vector2(-140, -11)
 
 [node name="door6" type="Panel" parent="r14/room/bed" unique_id=1788870898]
-layout_direction = 2
 offset_left = 201.0
 offset_top = 1.0
 offset_right = 212.0
 offset_bottom = 64.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
 [node name="door7" type="Panel" parent="r14/room/bed" unique_id=1651160559]
-layout_direction = 2
 offset_left = 365.0
 offset_top = 1.0
 offset_right = 376.0
 offset_bottom = 64.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
 [node name="door3" type="Panel" parent="r14/room/bed" unique_id=1505404097]
-layout_direction = 2
 offset_left = 209.0
 offset_top = -21.0
 offset_right = 369.0
 offset_bottom = 26.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_gee14")
 
 [node name="door2" type="Panel" parent="r14/room/bed" unique_id=604778480]
-layout_direction = 2
 offset_left = 207.0
 offset_top = 17.0
 offset_right = 374.0
 offset_bottom = 49.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_p57ef")
 
 [node name="door" type="Panel" parent="r14/room/bed" unique_id=686094462]
-layout_direction = 2
 offset_left = 199.0
 offset_top = 49.0
 offset_right = 381.0
 offset_bottom = 96.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lbhrr")
 
 [node name="door4" type="Panel" parent="r14/room/bed" unique_id=558359813]
-layout_direction = 2
 offset_left = 199.0
 offset_top = 39.0
 offset_right = 210.0
 offset_bottom = 96.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
 [node name="door5" type="Panel" parent="r14/room/bed" unique_id=404872883]
-layout_direction = 2
 offset_left = 370.0
 offset_top = 39.0
 offset_right = 381.0
 offset_bottom = 96.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
@@ -2698,11 +2698,11 @@ position = Vector2(-341, -27)
 
 [node name="num" type="Panel" parent="r14/room/collect" unique_id=784253910]
 modulate = Color(1.0000322, 1.0000322, 1.0039686, 1)
-layout_direction = 2
 offset_left = -46.0
 offset_top = 109.0
 offset_right = -42.0
 offset_bottom = 113.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_bhx41")
 
@@ -2735,11 +2735,11 @@ position = Vector2(0, -4)
 position = Vector2(0, 6)
 
 [node name="door2" type="Panel" parent="r14/room/desk/RigidBody2D" unique_id=1886668475]
-layout_direction = 2
 offset_left = -406.0
 offset_top = 16.0
 offset_right = -285.0
 offset_bottom = 85.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_0tnpc")
 
@@ -2763,11 +2763,11 @@ shape = SubResource("RectangleShape2D_gee14")
 [node name="paint" type="Node2D" parent="r14/room" unique_id=1250849493]
 
 [node name="paint" type="Panel" parent="r14/room/paint" unique_id=1059489311]
-layout_direction = 2
 offset_left = -31.0
 offset_top = -110.0
 offset_right = 25.0
 offset_bottom = -45.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_e1j6l")
 
@@ -2775,29 +2775,29 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_e1j6l")
 position = Vector2(82, 0)
 
 [node name="wardrobe" type="Panel" parent="r14/room/wardrobe" unique_id=1174057421]
-layout_direction = 2
 offset_left = 215.0
 offset_top = -117.0
 offset_right = 322.0
 offset_bottom = 86.725006
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_iywne")
 
 [node name="wardrobe2" type="Panel" parent="r14/room/wardrobe" unique_id=109540528]
-layout_direction = 2
 offset_left = 215.0
 offset_top = -117.0
 offset_right = 271.0
 offset_bottom = 86.725006
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_iywne")
 
 [node name="paper" type="Panel" parent="r14/room" unique_id=23884399]
-layout_direction = 2
 offset_left = 356.0
 offset_top = -123.0
 offset_right = 373.0
 offset_bottom = -114.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_nepv3")
 
@@ -2883,38 +2883,38 @@ position = Vector2(-6662, 0)
 [node name="wall2" type="Panel" parent="r13/room" unique_id=409967644]
 light_mask = 0
 visibility_layer = 2
-layout_direction = 2
 offset_left = -835.0
 offset_top = -596.0
 offset_right = 867.0
 offset_bottom = 238.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_kvpfn")
 
 [node name="wall" type="Panel" parent="r13/room" unique_id=331080648]
-layout_direction = 2
 offset_left = -457.0
 offset_top = -282.0
 offset_right = 458.0
 offset_bottom = 89.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_uwrxv")
 
 [node name="floor2" type="Panel" parent="r13/room" unique_id=491336714]
-layout_direction = 2
 offset_left = -457.0
 offset_top = 85.0
 offset_right = 458.0
 offset_bottom = 229.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_yqjtg")
 
 [node name="door" type="Panel" parent="r13/room" unique_id=1888968098]
-layout_direction = 2
 offset_left = -238.0
 offset_top = -107.0
 offset_right = -114.0
 offset_bottom = 85.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
@@ -2922,85 +2922,85 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 position = Vector2(-35, -11)
 
 [node name="door6" type="Panel" parent="r13/room/bed" unique_id=76222206]
-layout_direction = 2
 offset_left = 201.0
 offset_top = 1.0
 offset_right = 212.0
 offset_bottom = 64.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
 [node name="door7" type="Panel" parent="r13/room/bed" unique_id=1031589675]
-layout_direction = 2
 offset_left = 365.0
 offset_top = 1.0
 offset_right = 376.0
 offset_bottom = 64.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
 [node name="door3" type="Panel" parent="r13/room/bed" unique_id=74448682]
-layout_direction = 2
 offset_left = 209.0
 offset_top = -21.0
 offset_right = 369.0
 offset_bottom = 26.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_gee14")
 
 [node name="door2" type="Panel" parent="r13/room/bed" unique_id=586383664]
-layout_direction = 2
 offset_left = 207.0
 offset_top = 17.0
 offset_right = 374.0
 offset_bottom = 49.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_p57ef")
 
 [node name="door" type="Panel" parent="r13/room/bed" unique_id=1258654634]
-layout_direction = 2
 offset_left = 199.0
 offset_top = 49.0
 offset_right = 381.0
 offset_bottom = 96.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lbhrr")
 
 [node name="door4" type="Panel" parent="r13/room/bed" unique_id=442564927]
-layout_direction = 2
 offset_left = 199.0
 offset_top = 39.0
 offset_right = 210.0
 offset_bottom = 96.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
 [node name="door5" type="Panel" parent="r13/room/bed" unique_id=1429933787]
-layout_direction = 2
 offset_left = 370.0
 offset_top = 39.0
 offset_right = 381.0
 offset_bottom = 96.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
 
 [node name="desk" type="Node2D" parent="r13/room" unique_id=883850782]
 
 [node name="door2" type="Panel" parent="r13/room/desk" unique_id=318607827]
-layout_direction = 2
 offset_left = -406.0
 offset_top = 16.0
 offset_right = -285.0
 offset_bottom = 85.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_0tnpc")
 
 [node name="door3" type="Panel" parent="r13/room/desk" unique_id=545435396]
-layout_direction = 2
 offset_left = -351.0
 offset_top = -2.0
 offset_right = -343.0
 offset_bottom = 17.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_bt5mj")
 
@@ -3008,20 +3008,20 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_bt5mj")
 position = Vector2(755, 0)
 
 [node name="door2" type="Panel" parent="r13/room/desk2" unique_id=242877030]
-layout_direction = 2
 offset_left = -385.0
 offset_top = 16.0
 offset_right = -311.0
 offset_bottom = 85.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_0tnpc")
 
 [node name="door3" type="Panel" parent="r13/room/desk2" unique_id=1834540959]
-layout_direction = 2
 offset_left = -372.0
 offset_top = -3.0
 offset_right = -324.0
 offset_bottom = 16.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_vtaks")
 
@@ -3041,39 +3041,39 @@ vertical_alignment = 1
 position = Vector2(391, 0)
 
 [node name="door2" type="Panel" parent="r13/room/bookshelf" unique_id=524160254]
-layout_direction = 2
 offset_left = -415.0
 offset_top = 5.0
 offset_right = -253.0
 offset_bottom = 85.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_0tnpc")
 
 [node name="door3" type="Panel" parent="r13/room/bookshelf" unique_id=1280136594]
-layout_direction = 2
 offset_left = -405.0
 offset_top = -71.0
 offset_right = -263.0
 offset_bottom = 8.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ir15t")
 
 [node name="door4" type="Panel" parent="r13/room/bookshelf" unique_id=497430754]
-layout_direction = 2
 offset_left = -403.0
 offset_top = -31.0
 offset_right = -264.0
 offset_bottom = -27.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxLine_ca42v")
 
 [node name="door5" type="Panel" parent="r13/room/bookshelf" unique_id=58883050]
 visible = false
-layout_direction = 2
 offset_left = -403.0
 offset_top = 6.0
 offset_right = -264.0
 offset_bottom = 10.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxLine_ca42v")
 
@@ -3171,11 +3171,11 @@ position = Vector2(125, 16)
 shape = SubResource("RectangleShape2D_dinhu")
 
 [node name="book1" type="Panel" parent="r13/room/bookshelf/books" unique_id=170970757]
-layout_direction = 2
 offset_left = -399.0
 offset_top = -27.0
 offset_right = -389.0
 offset_bottom = 6.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_rysoc")
 
@@ -3191,11 +3191,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book2" type="Panel" parent="r13/room/bookshelf/books" unique_id=905049544]
-layout_direction = 2
 offset_left = -387.0
 offset_top = -27.0
 offset_right = -377.0
 offset_bottom = 6.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ca42v")
 
@@ -3211,11 +3211,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book3" type="Panel" parent="r13/room/bookshelf/books" unique_id=980921574]
-layout_direction = 2
 offset_left = -375.0
 offset_top = -27.0
 offset_right = -365.0
 offset_bottom = 6.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ssvqc")
 
@@ -3231,11 +3231,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book4" type="Panel" parent="r13/room/bookshelf/books" unique_id=410233663]
-layout_direction = 2
 offset_left = -363.0
 offset_top = -27.0
 offset_right = -353.0
 offset_bottom = 6.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_264po")
 
@@ -3251,11 +3251,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book5" type="Panel" parent="r13/room/bookshelf/books" unique_id=788008219]
-layout_direction = 2
 offset_left = -351.0
 offset_top = -27.0
 offset_right = -341.0
 offset_bottom = 6.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_1kice")
 
@@ -3271,11 +3271,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book6" type="Panel" parent="r13/room/bookshelf/books" unique_id=1241206641]
-layout_direction = 2
 offset_left = -339.0
 offset_top = -27.0
 offset_right = -329.0
 offset_bottom = 6.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_5newe")
 
@@ -3291,11 +3291,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book7" type="Panel" parent="r13/room/bookshelf/books" unique_id=925010264]
-layout_direction = 2
 offset_left = -327.0
 offset_top = -27.0
 offset_right = -317.0
 offset_bottom = 6.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_rysoc")
 
@@ -3311,11 +3311,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book13" type="Panel" parent="r13/room/bookshelf/books" unique_id=786926203]
-layout_direction = 2
 offset_left = -279.0
 offset_top = -27.0
 offset_right = -269.0
 offset_bottom = 6.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ssvqc")
 
@@ -3331,11 +3331,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book10" type="Panel" parent="r13/room/bookshelf/books" unique_id=491054062]
-layout_direction = 2
 offset_left = -315.0
 offset_top = -27.0
 offset_right = -305.0
 offset_bottom = 6.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_264po")
 
@@ -3351,11 +3351,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book11" type="Panel" parent="r13/room/bookshelf/books" unique_id=1578936465]
-layout_direction = 2
 offset_left = -291.0
 offset_top = -27.0
 offset_right = -281.0
 offset_bottom = 6.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_1kice")
 
@@ -3371,11 +3371,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book12" type="Panel" parent="r13/room/bookshelf/books" unique_id=1307452594]
-layout_direction = 2
 offset_left = -303.0
 offset_top = -27.0
 offset_right = -293.0
 offset_bottom = 6.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_5newe")
 
@@ -3391,11 +3391,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book22" type="Panel" parent="r13/room/bookshelf/books" unique_id=816060044]
-layout_direction = 2
 offset_left = -279.0
 offset_top = -64.0
 offset_right = -269.0
 offset_bottom = -31.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_264po")
 
@@ -3411,11 +3411,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book18" type="Panel" parent="r13/room/bookshelf/books" unique_id=1367825254]
-layout_direction = 2
 offset_left = -327.0
 offset_top = -64.0
 offset_right = -317.0
 offset_bottom = -31.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_1kice")
 
@@ -3431,11 +3431,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book19" type="Panel" parent="r13/room/bookshelf/books" unique_id=708339259]
-layout_direction = 2
 offset_left = -315.0
 offset_top = -64.0
 offset_right = -305.0
 offset_bottom = -31.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_rysoc")
 
@@ -3451,11 +3451,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book8" type="Panel" parent="r13/room/bookshelf/books" unique_id=563808715]
-layout_direction = 2
 offset_left = -399.0
 offset_top = -64.0
 offset_right = -389.0
 offset_bottom = -31.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ca42v")
 
@@ -3471,11 +3471,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book9" type="Panel" parent="r13/room/bookshelf/books" unique_id=583593229]
-layout_direction = 2
 offset_left = -387.0
 offset_top = -64.0
 offset_right = -377.0
 offset_bottom = -31.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ssvqc")
 
@@ -3491,11 +3491,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book17" type="Panel" parent="r13/room/bookshelf/books" unique_id=182329088]
-layout_direction = 2
 offset_left = -339.0
 offset_top = -64.0
 offset_right = -329.0
 offset_bottom = -31.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ssvqc")
 
@@ -3511,11 +3511,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book20" type="Panel" parent="r13/room/bookshelf/books" unique_id=1978247288]
-layout_direction = 2
 offset_left = -303.0
 offset_top = -64.0
 offset_right = -293.0
 offset_bottom = -31.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_264po")
 
@@ -3531,11 +3531,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book21" type="Panel" parent="r13/room/bookshelf/books" unique_id=1502581873]
-layout_direction = 2
 offset_left = -291.0
 offset_top = -64.0
 offset_right = -281.0
 offset_bottom = -31.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_1kice")
 
@@ -3551,11 +3551,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book14" type="Panel" parent="r13/room/bookshelf/books" unique_id=1289559489]
-layout_direction = 2
 offset_left = -363.0
 offset_top = -64.0
 offset_right = -353.0
 offset_bottom = -31.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_264po")
 
@@ -3571,11 +3571,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book15" type="Panel" parent="r13/room/bookshelf/books" unique_id=2116533597]
-layout_direction = 2
 offset_left = -375.0
 offset_top = -64.0
 offset_right = -365.0
 offset_bottom = -31.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_rysoc")
 
@@ -3591,11 +3591,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="book16" type="Panel" parent="r13/room/bookshelf/books" unique_id=490480667]
-layout_direction = 2
 offset_left = -351.0
 offset_top = -64.0
 offset_right = -341.0
 offset_bottom = -31.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_5newe")
 
@@ -3638,11 +3638,11 @@ position = Vector2(-274, -216)
 
 [node name="num" type="Panel" parent="r13/room/collect" unique_id=322651907]
 modulate = Color(1.0000322, 1.0000322, 1.0039686, 1)
-layout_direction = 2
 offset_left = -46.0
 offset_top = 109.0
 offset_right = -42.0
 offset_bottom = 113.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_bhx41")
 
@@ -3672,11 +3672,11 @@ disabled = true
 position = Vector2(-338, 0)
 
 [node name="paint" type="Panel" parent="r13/room/paint" unique_id=2140303355]
-layout_direction = 2
 offset_left = -31.0
 offset_top = -110.0
 offset_right = 25.0
 offset_bottom = -45.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_e1j6l")
 
@@ -3764,49 +3764,49 @@ one_way_collision = true
 [node name="map" type="Node2D" parent="hallway" unique_id=1312918689]
 
 [node name="wall" type="Panel" parent="hallway/map" unique_id=479889919]
-layout_direction = 2
 offset_left = -6776.0
 offset_top = 378.0
 offset_right = 2424.0
 offset_bottom = 829.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_kvuet")
 
 [node name="floor2" type="Panel" parent="hallway/map" unique_id=396282768]
-layout_direction = 2
 offset_left = -6776.0
 offset_top = 825.0
 offset_right = 2424.0
 offset_bottom = 969.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_yqjtg")
 
 [node name="floor3" type="Panel" parent="hallway/map" unique_id=1282165388]
-layout_direction = 2
 offset_left = -6776.0
 offset_top = 825.0
 offset_right = 2424.0
 offset_bottom = 872.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_dinhu")
 
 [node name="R-19" type="Panel" parent="hallway/map" unique_id=1536788159]
 visible = false
-layout_direction = 2
 offset_left = 759.0
 offset_top = 633.0
 offset_right = 883.0
 offset_bottom = 825.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
 [node name="frame" type="Panel" parent="hallway/map/R-19" unique_id=2010168792]
-layout_direction = 2
 layout_mode = 0
 offset_left = 32.0
 offset_top = 22.0
 offset_right = 92.0
 offset_bottom = 41.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_pl11u")
 
@@ -3822,21 +3822,21 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="R-18" type="Panel" parent="hallway/map" unique_id=512268165]
-layout_direction = 2
 offset_left = -230.0
 offset_top = 633.0
 offset_right = -106.0
 offset_bottom = 825.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
 [node name="frame" type="Panel" parent="hallway/map/R-18" unique_id=251705069]
-layout_direction = 2
 layout_mode = 0
 offset_left = 32.0
 offset_top = 22.0
 offset_right = 92.0
 offset_bottom = 41.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_pl11u")
 
@@ -3852,21 +3852,21 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="R-17" type="Panel" parent="hallway/map" unique_id=1237685079]
-layout_direction = 2
 offset_left = -1175.0
 offset_top = 633.0
 offset_right = -1051.0
 offset_bottom = 825.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
 [node name="frame" type="Panel" parent="hallway/map/R-17" unique_id=322776469]
-layout_direction = 2
 layout_mode = 0
 offset_left = 32.0
 offset_top = 22.0
 offset_right = 92.0
 offset_bottom = 41.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_pl11u")
 
@@ -3882,21 +3882,21 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="R-16" type="Panel" parent="hallway/map" unique_id=686374180]
-layout_direction = 2
 offset_left = -2165.0
 offset_top = 633.0
 offset_right = -2041.0
 offset_bottom = 825.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
 [node name="frame" type="Panel" parent="hallway/map/R-16" unique_id=1870972032]
-layout_direction = 2
 layout_mode = 0
 offset_left = 32.0
 offset_top = 22.0
 offset_right = 92.0
 offset_bottom = 41.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_pl11u")
 
@@ -3912,21 +3912,21 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="R-15" type="Panel" parent="hallway/map" unique_id=663292078]
-layout_direction = 2
 offset_left = -3154.0
 offset_top = 633.0
 offset_right = -3030.0
 offset_bottom = 825.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
 [node name="frame" type="Panel" parent="hallway/map/R-15" unique_id=1014266510]
-layout_direction = 2
 layout_mode = 0
 offset_left = 32.0
 offset_top = 22.0
 offset_right = 92.0
 offset_bottom = 41.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_pl11u")
 
@@ -3942,21 +3942,21 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="R-14" type="Panel" parent="hallway/map" unique_id=1361050792]
-layout_direction = 2
 offset_left = -4099.0
 offset_top = 633.0
 offset_right = -3975.0
 offset_bottom = 825.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
 [node name="frame" type="Panel" parent="hallway/map/R-14" unique_id=2119203945]
-layout_direction = 2
 layout_mode = 0
 offset_left = 32.0
 offset_top = 22.0
 offset_right = 92.0
 offset_bottom = 41.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_pl11u")
 
@@ -3972,21 +3972,21 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="R-13" type="Panel" parent="hallway/map" unique_id=1107769710]
-layout_direction = 2
 offset_left = -5086.0
 offset_top = 633.0
 offset_right = -4962.0
 offset_bottom = 825.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
 [node name="frame" type="Panel" parent="hallway/map/R-13" unique_id=1260528728]
-layout_direction = 2
 layout_mode = 0
 offset_left = 32.0
 offset_top = 22.0
 offset_right = 92.0
 offset_bottom = 41.0
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_pl11u")
 
@@ -4005,41 +4005,41 @@ vertical_alignment = 1
 position = Vector2(0, -57)
 
 [node name="door2" type="Panel" parent="hallway/map/clock" unique_id=710075294]
-layout_direction = 2
 offset_left = -207.0
 offset_top = 616.0
 offset_right = -134.0
 offset_bottom = 682.81354
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_trtic")
 
 [node name="seconds" type="Panel" parent="hallway/map/clock" unique_id=595875245]
-layout_direction = 2
 offset_left = -170.99997
 offset_top = 650.00006
 offset_right = -149.06564
 offset_bottom = 652.00006
 rotation = 4.712389
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxLine_dinhu")
 
 [node name="minutes" type="Panel" parent="hallway/map/clock" unique_id=89949075]
-layout_direction = 2
 offset_left = -170.99997
 offset_top = 650.00006
 offset_right = -153.53275
 offset_bottom = 652.00006
 rotation = 4.6076694
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxLine_kvuet")
 
 [node name="hours" type="Panel" parent="hallway/map/clock" unique_id=1225852243]
-layout_direction = 2
 offset_left = -170.99997
 offset_top = 650.00006
 offset_right = -166.12192
 offset_bottom = 652.00006
 rotation = 4.694936
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxLine_trtic")
 
@@ -4394,12 +4394,12 @@ position = Vector2(665, 378)
 
 [node name="num" type="Panel" parent="canvas/book/collect" unique_id=817102482]
 modulate = Color(1.0000322, 1.0000322, 1.0039686, 1)
-layout_direction = 2
 offset_left = 33.0
 offset_top = -50.000004
 offset_right = 37.0
 offset_bottom = -46.000004
 scale = Vector2(11.225244, 11.225244)
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_bhx41")
 
@@ -4423,7 +4423,6 @@ visible = false
 
 [node name="num1" type="Panel" parent="canvas/nums/num1" unique_id=2092677175]
 modulate = Color(1.0000322, 1.0000322, 1.0039686, 1)
-layout_direction = 2
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -4436,6 +4435,7 @@ offset_bottom = 201.99998
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(100, 100)
+layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_bhx41")
 
