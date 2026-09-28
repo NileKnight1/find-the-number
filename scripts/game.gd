@@ -689,10 +689,31 @@ func _on_paper_area_body_exited(body: Node2D) -> void:
 		$canvas/paper.visible = 0
 
 var hints = [
-	["Jump!", "Wardrobe.", "It's on "],
+	["Jump!", "Wardrobe.", "It's above the wardrobe!", "It's above the wardrobe in room "+str(global.age-1) ,],
+	["Push!", "Desk.", "It's behind the desk.", "Push the desk in room "+str(global.age-5)],
+	["Light!", "Candle.", "Light candles!", "Light the candle in room "+str(global.age-4), "Get the lighter from room "+str(global.age-1)],
+	["Read!", "Books.", "Note above wardrobe.",
+	 "Get the note above the wardrobe in room "+str(global.age-5),
+	 "Open the book with the code that was on the note.",
+	 "The code is "+ str(global.day) + "-" + str(global.month),
+	 "The book is in room "+str(global.age-3)+", second shelf, 4th book from left."],
+	["Clean!", "Water.", "Clean the water in room "+str(global.age-2),"Use the mob from room "+ str(global.age-4)],
+	["Drop!", "Paintings.", "Behing a paiting"],
+
+
+
 ]
 
+var hint = 0
+var hinted_num = 0
 func _on_hint_pressed() -> void:
+	for i in range(collected_nums.size()):
+		if collected_nums[i] == 0:
+			hinted_num = i
+			break
+	hinted_num = 4 #edit
 	print("hint")
-	
+	print(hints[hinted_num][hint])
+	if hint < hints[hinted_num].size()-1:
+		hint += 1
 	
