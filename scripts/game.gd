@@ -411,6 +411,8 @@ var collected_nums_count = 0
 func collect_num(node1, tex):
 	#play_sound()
 	if !node1.visible: return
+	hint = 0
+	$canvas/sub.text = ""
 	node1.visible = 0
 	play_sound(sound_collect)
 	var node2 = $canvas/nums/num1
@@ -689,16 +691,16 @@ func _on_paper_area_body_exited(body: Node2D) -> void:
 		$canvas/paper.visible = 0
 
 var hints = [
-	["Jump!", "Wardrobe.", "It's above the wardrobe!", "It's above the wardrobe in room "+str(global.age-1) ,],
-	["Push!", "Desk.", "It's behind the desk.", "Push the desk in room "+str(global.age-5)],
-	["Light!", "Candle.", "Light candles!", "Light the candle in room "+str(global.age-4), "Get the lighter from room "+str(global.age-1)],
+	["Jump!", "Wardrobe.", "It's above the wardrobe!", "It's above the wardrobe in room "+str(max(0,global.age-1)) ,],
+	["Push!", "Desk.", "It's behind the desk.", "Push the desk in room "+str(max(0,global.age-5))],
+	["Light!", "Candle.", "Light candles!", "Light the candle in room "+str(max(0,global.age-4)), "Get the lighter from room "+str(max(0,global.age-1))],
 	["Read!", "Books.", "Note above wardrobe.",
-	 "Get the note above the wardrobe in room "+str(global.age-5),
+	 "Get the note above the wardrobe in room "+str(max(0,global.age-5)),
 	 "Open the book with the code that was on the note.",
-	 "The code is "+ str(global.day) + "-" + str(global.month),
-	 "The book is in room "+str(global.age-3)+", second shelf, 4th book from left."],
-	["Clean!", "Water.", "Clean the water in room "+str(global.age-2),"Use the mob from room "+ str(global.age-4)],
-	["Drop!", "Paintings.", "Behing a paiting"],
+	 "The code is "+ str(global.day)+ "-" + str(global.month),
+	 "The book is in room "+str(max(0,global.age-3))+", second shelf, 4th book from left."],
+	["Clean!", "Water.", "Clean the water in room "+str(max(0,global.age-2)),"Use the mob from room "+ str(max(0,global.age-4))],
+	["Drop!", "Paintings.", "Behind a paiting.", "Click a painting to drop it.", "The painting is in room "+str(max(0,global.age-6))],
 
 
 
@@ -711,9 +713,11 @@ func _on_hint_pressed() -> void:
 		if collected_nums[i] == 0:
 			hinted_num = i
 			break
-	hinted_num = 4 #edit
-	print("hint")
+	#hinted_num = 4 #edit
+	#print("hint")
 	print(hints[hinted_num][hint])
+	$canvas/sub.text = hints[hinted_num][hint]
 	if hint < hints[hinted_num].size()-1:
 		hint += 1
-	
+	else:
+		hint = 0

@@ -4462,13 +4462,21 @@ vertical_alignment = 2
 
 [node name="hbd" type="Label" parent="canvas" unique_id=1560285411]
 visible = false
-offset_left = 440.0
 offset_top = 626.0
-offset_right = 823.0
+offset_right = 1280.0
 offset_bottom = 698.8333
 theme_override_fonts/font = ExtResource("5_gee14")
 theme_override_font_sizes/font_size = 46
 text = "Happy Birthday my Doctor!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="sub" type="Label" parent="canvas" unique_id=1171172797]
+offset_top = 650.0
+offset_right = 1280.0
+offset_bottom = 722.8333
+theme_override_fonts/font = ExtResource("5_gee14")
+theme_override_font_sizes/font_size = 35
 horizontal_alignment = 1
 vertical_alignment = 1
 
