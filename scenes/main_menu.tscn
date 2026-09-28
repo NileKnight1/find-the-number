@@ -156,7 +156,6 @@ disabled = true
 text = "Play"
 
 [node name="R-19" type="PointLight2D" parent="." unique_id=623298830]
-visible = false
 z_index = 2
 position = Vector2(625, 421)
 scale = Vector2(20.187502, 11.273188)

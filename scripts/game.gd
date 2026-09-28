@@ -117,15 +117,20 @@ func init_rooms_labels():
 	#collect_num($r18/collect/num, "I")
 	
 	for i in range(6-global.rooms):
-		var temp = randi_range(0, nums_list.size)
+		var temp = randi_range(0, nums_list.size()-1)
+		collect_num_silent(get_node_or_null(nums_list[temp][0]), nums_list[temp][1])
+		print(nums_list[temp][1])
+		nums_list.remove_at(temp)
+	
+	print(nums_list)
 
 var nums_list = [
-	[$r13/room/collect/num, "XI"],
-	[$r14/room/collect/num, "IV"],
-	[$r15/room/collect/num, "V"],
-	[$canvas/book/collect/num, "VI"],
-	[$r17/collect/num, "X"],
-	[$r18/collect/num, "I"],
+	[^"r13/room/collect/num", "XI"],
+	[^"r14/room/collect/num", "IV"],
+	[^"r15/room/collect/num", "V"],
+	[^"canvas/book/collect/num", "VI"],
+	[^"r17/collect/num", "X"],
+	[^"r18/collect/num", "I"],
 ]
 
 func _ready() -> void:
@@ -137,13 +142,11 @@ func _ready() -> void:
 		$CanvasLayer/mobile.visible = 1
 		
 		
-	await get_tree().create_timer(10).timeout
 	#start_clock()
 	#start_clock()
 	#start_party()
 	
 	
-	pass
 
 var main_room_door_1 = 0
 var main_room_door_2 = 0
@@ -440,7 +443,6 @@ func collect_num(node1, tex):
 		start_clock()
 
 func collect_num_silent(node1, tex):
-	if !node1.visible: return
 	node1.visible = 0
 	var node2 = $canvas/nums/num1
 	node2.get_node('num1').get_node('Label').text = tex
@@ -448,6 +450,13 @@ func collect_num_silent(node1, tex):
 	node2.visible = 0
 	$hallway/map/clock.get_node(tex).visible = 1
 	collected_nums_count += 1
+	match tex:
+		"I": collected_nums[0] = 1
+		"IV": collected_nums[1] = 1
+		"V": collected_nums[2] = 1
+		"VI": collected_nums[3] = 1
+		"X": collected_nums[4] = 1
+		"XI": collected_nums[5] = 1
 
 
 func _on_num_r17_body_entered(body: Node2D) -> void:
@@ -678,3 +687,12 @@ func _on_paper_area_body_exited(body: Node2D) -> void:
 	if body == $player:
 		play_sound(sound_book_close)
 		$canvas/paper.visible = 0
+
+var hints = [
+	["Jump!", "Wardrobe.", "It's on "],
+]
+
+func _on_hint_pressed() -> void:
+	print("hint")
+	
+	
