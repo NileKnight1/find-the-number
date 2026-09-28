@@ -45,6 +45,7 @@ func init_game():
 	init_shine()
 	init_sounds()
 	init_book_labels()
+	init_rooms_labels()
 
 func init_shine():
 	shine($r18/collect/num)
@@ -76,16 +77,56 @@ func init_sounds():
 	init_sounds()
 
 var book_label = 10
+
+var book_labels = [
+	
+]
 func init_book_labels():
+	for i in range(1, 50):
+		if i != global.day:
+			book_labels.append(i)
+		else:
+			print("day " ,global.day)
+	
 	for i in $r16/room/bookshelf/books.get_children():
 		if i is Panel:
-			i.get_child(0).text = str(book_label) + "-9"
-			book_label += 1
+			book_label = randi_range(0, book_labels.size()-1)
+			i.get_child(0).text = str(book_labels[book_label]) + "-" + str(global.month)
+			book_labels.erase([book_label])
 	for i in $r13/room/bookshelf/books.get_children():
 		if i is Panel:
-			i.get_child(0).text = str(book_label) + "-9"
-			book_label += 1
+			book_label = randi_range(0, book_labels.size()-1)
+			i.get_child(0).text = str(book_labels[book_label]) + "-" + str(global.month)
+			book_labels.erase([book_label])
+	$r16/room/bookshelf/books/book4/Label.text = str(global.day) + "-" + str(global.month)
+	$canvas/paper/Label.text = str(global.day) + "-" + str(global.month)
+#
+var age = global.age
+func init_rooms_labels():
+	for i in $hallway/map/rooms.get_children():
+		i.get_node("Label").text = "R-" + str(age)
+		if age > 0:
+			age-=1
 	
+	# 1 2 3 4 5 6 
+	#collect_num($r13/room/collect/num, "XI")
+	#collect_num($r14/room/collect/num, "IV")
+	#collect_num($r15/room/collect/num, "V")
+	#collect_num($canvas/book/collect/num, "VI")
+	#collect_num($r17/collect/num, "X")
+	#collect_num($r18/collect/num, "I")
+	
+	for i in range(6-global.rooms):
+		var temp = randi_range(0, nums_list.size)
+
+var nums_list = [
+	[$r13/room/collect/num, "XI"],
+	[$r14/room/collect/num, "IV"],
+	[$r15/room/collect/num, "V"],
+	[$canvas/book/collect/num, "VI"],
+	[$r17/collect/num, "X"],
+	[$r18/collect/num, "I"],
+]
 
 func _ready() -> void:
 	#play_sound(sound_collect)
@@ -398,6 +439,17 @@ func collect_num(node1, tex):
 	if collected_nums_count == 6:
 		start_clock()
 
+func collect_num_silent(node1, tex):
+	if !node1.visible: return
+	node1.visible = 0
+	var node2 = $canvas/nums/num1
+	node2.get_node('num1').get_node('Label').text = tex
+	node2.modulate.a = 0
+	node2.visible = 0
+	$hallway/map/clock.get_node(tex).visible = 1
+	collected_nums_count += 1
+
+
 func _on_num_r17_body_entered(body: Node2D) -> void:
 	if body == $player:
 		collect_num($r17/collect/num, "X")
@@ -551,7 +603,7 @@ func start_clock_effects():
 	await get_tree().create_timer(10).timeout
 	tick_increase_apply = 0
 	await get_tree().create_timer(5.5).timeout
-	$"hallway/map/R-19".visible = 1
+	$"hallway/map/rooms/R-19".visible = 1
 	$"hallway/lights/R-19".visible = 1
 	$sfx/clock_ticking.stop()
 	$r19/boundaries/main_room_door_1/CollisionShape2D.set_deferred("disabled", 0)

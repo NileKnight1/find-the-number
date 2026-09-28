@@ -3790,7 +3790,9 @@ layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_dinhu")
 
-[node name="R-19" type="Panel" parent="hallway/map" unique_id=1536788159]
+[node name="rooms" type="Node2D" parent="hallway/map" unique_id=228831391]
+
+[node name="R-19" type="Panel" parent="hallway/map/rooms" unique_id=1536788159]
 visible = false
 offset_left = 759.0
 offset_top = 633.0
@@ -3800,7 +3802,7 @@ layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
-[node name="frame" type="Panel" parent="hallway/map/R-19" unique_id=2010168792]
+[node name="frame" type="Panel" parent="hallway/map/rooms/R-19" unique_id=2010168792]
 layout_mode = 0
 offset_left = 32.0
 offset_top = 22.0
@@ -3810,7 +3812,7 @@ layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_pl11u")
 
-[node name="Label" type="Label" parent="hallway/map/R-19" unique_id=529515385]
+[node name="Label" type="Label" parent="hallway/map/rooms/R-19" unique_id=529515385]
 layout_mode = 0
 offset_left = 42.0
 offset_top = 20.0
@@ -3821,7 +3823,7 @@ label_settings = SubResource("LabelSettings_qnb83")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="R-18" type="Panel" parent="hallway/map" unique_id=512268165]
+[node name="R-18" type="Panel" parent="hallway/map/rooms" unique_id=512268165]
 offset_left = -230.0
 offset_top = 633.0
 offset_right = -106.0
@@ -3830,7 +3832,7 @@ layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
-[node name="frame" type="Panel" parent="hallway/map/R-18" unique_id=251705069]
+[node name="frame" type="Panel" parent="hallway/map/rooms/R-18" unique_id=251705069]
 layout_mode = 0
 offset_left = 32.0
 offset_top = 22.0
@@ -3840,7 +3842,7 @@ layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_pl11u")
 
-[node name="Label" type="Label" parent="hallway/map/R-18" unique_id=412714938]
+[node name="Label" type="Label" parent="hallway/map/rooms/R-18" unique_id=412714938]
 layout_mode = 0
 offset_left = 42.0
 offset_top = 20.0
@@ -3851,7 +3853,7 @@ label_settings = SubResource("LabelSettings_bhx41")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="R-17" type="Panel" parent="hallway/map" unique_id=1237685079]
+[node name="R-17" type="Panel" parent="hallway/map/rooms" unique_id=1237685079]
 offset_left = -1175.0
 offset_top = 633.0
 offset_right = -1051.0
@@ -3860,7 +3862,7 @@ layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
-[node name="frame" type="Panel" parent="hallway/map/R-17" unique_id=322776469]
+[node name="frame" type="Panel" parent="hallway/map/rooms/R-17" unique_id=322776469]
 layout_mode = 0
 offset_left = 32.0
 offset_top = 22.0
@@ -3870,7 +3872,7 @@ layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_pl11u")
 
-[node name="Label" type="Label" parent="hallway/map/R-17" unique_id=1096680305]
+[node name="Label" type="Label" parent="hallway/map/rooms/R-17" unique_id=1096680305]
 layout_mode = 0
 offset_left = 42.0
 offset_top = 20.0
@@ -3881,7 +3883,7 @@ label_settings = SubResource("LabelSettings_qnb83")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="R-16" type="Panel" parent="hallway/map" unique_id=686374180]
+[node name="R-16" type="Panel" parent="hallway/map/rooms" unique_id=686374180]
 offset_left = -2165.0
 offset_top = 633.0
 offset_right = -2041.0
@@ -3890,7 +3892,7 @@ layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
-[node name="frame" type="Panel" parent="hallway/map/R-16" unique_id=1870972032]
+[node name="frame" type="Panel" parent="hallway/map/rooms/R-16" unique_id=1870972032]
 layout_mode = 0
 offset_left = 32.0
 offset_top = 22.0
@@ -3900,7 +3902,7 @@ layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_pl11u")
 
-[node name="Label" type="Label" parent="hallway/map/R-16" unique_id=700972107]
+[node name="Label" type="Label" parent="hallway/map/rooms/R-16" unique_id=700972107]
 layout_mode = 0
 offset_left = 42.0
 offset_top = 20.0
@@ -3911,7 +3913,7 @@ label_settings = SubResource("LabelSettings_qnb83")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="R-15" type="Panel" parent="hallway/map" unique_id=663292078]
+[node name="R-15" type="Panel" parent="hallway/map/rooms" unique_id=663292078]
 offset_left = -3154.0
 offset_top = 633.0
 offset_right = -3030.0
@@ -3920,7 +3922,7 @@ layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
-[node name="frame" type="Panel" parent="hallway/map/R-15" unique_id=1014266510]
+[node name="frame" type="Panel" parent="hallway/map/rooms/R-15" unique_id=1014266510]
 layout_mode = 0
 offset_left = 32.0
 offset_top = 22.0
@@ -3930,7 +3932,7 @@ layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_pl11u")
 
-[node name="Label" type="Label" parent="hallway/map/R-15" unique_id=1058915771]
+[node name="Label" type="Label" parent="hallway/map/rooms/R-15" unique_id=1058915771]
 layout_mode = 0
 offset_left = 42.0
 offset_top = 20.0
@@ -3941,7 +3943,7 @@ label_settings = SubResource("LabelSettings_qnb83")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="R-14" type="Panel" parent="hallway/map" unique_id=1361050792]
+[node name="R-14" type="Panel" parent="hallway/map/rooms" unique_id=1361050792]
 offset_left = -4099.0
 offset_top = 633.0
 offset_right = -3975.0
@@ -3950,7 +3952,7 @@ layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
-[node name="frame" type="Panel" parent="hallway/map/R-14" unique_id=2119203945]
+[node name="frame" type="Panel" parent="hallway/map/rooms/R-14" unique_id=2119203945]
 layout_mode = 0
 offset_left = 32.0
 offset_top = 22.0
@@ -3960,7 +3962,7 @@ layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_pl11u")
 
-[node name="Label" type="Label" parent="hallway/map/R-14" unique_id=663659712]
+[node name="Label" type="Label" parent="hallway/map/rooms/R-14" unique_id=663659712]
 layout_mode = 0
 offset_left = 42.0
 offset_top = 20.0
@@ -3971,7 +3973,7 @@ label_settings = SubResource("LabelSettings_qnb83")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="R-13" type="Panel" parent="hallway/map" unique_id=1107769710]
+[node name="R-13" type="Panel" parent="hallway/map/rooms" unique_id=1107769710]
 offset_left = -5086.0
 offset_top = 633.0
 offset_right = -4962.0
@@ -3980,7 +3982,7 @@ layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 
-[node name="frame" type="Panel" parent="hallway/map/R-13" unique_id=1260528728]
+[node name="frame" type="Panel" parent="hallway/map/rooms/R-13" unique_id=1260528728]
 layout_mode = 0
 offset_left = 32.0
 offset_top = 22.0
@@ -3990,7 +3992,7 @@ layout_direction = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_pl11u")
 
-[node name="Label" type="Label" parent="hallway/map/R-13" unique_id=1431627118]
+[node name="Label" type="Label" parent="hallway/map/rooms/R-13" unique_id=1431627118]
 layout_mode = 0
 offset_left = 42.0
 offset_top = 20.0

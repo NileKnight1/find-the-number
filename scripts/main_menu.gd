@@ -55,6 +55,7 @@ func decipher():
 	global.month = int(month)
 	global.year = int(year)
 	global.rooms = int(code[0])
+	global.age = 2026 - int(year)
 	
 	#
 	#for i in range(1, code.length()):
