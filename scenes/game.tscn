@@ -538,7 +538,7 @@ b = Vector2(5, -14)
 gradient = SubResource("Gradient_vtaks")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(1, 0.5)
+fill_to = Vector2(0.48290598, 0.8632479)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7025r"]
 draw_center = false
@@ -550,6 +550,18 @@ draw_center = false
 draw_center = false
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pr1ej"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vlew8"]
+bg_color = Color(0.1484375, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [node name="game" type="Node2D" unique_id=994519513]
 script = ExtResource("1_lbhrr")
@@ -4312,21 +4324,26 @@ position = Vector2(1325, 439)
 shape = SubResource("SegmentShape2D_qnb83")
 
 [node name="player" parent="." unique_id=312059141 instance=ExtResource("12_ssvqc")]
-position = Vector2(-203.00002, 780)
+position = Vector2(380.99988, 60.00006)
 scale = Vector2(0.71256596, 0.71256596)
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=870738312]
-visible = false
 position = Vector2(16.840576, -98.23651)
 scale = Vector2(1.4033787, 1.4033787)
 zoom = Vector2(1.7, 1.7)
 limit_enabled = false
 
-[node name="flash" type="PointLight2D" parent="player" unique_id=493230440]
+[node name="flash2" type="PointLight2D" parent="player" unique_id=493230440]
 visible = false
 position = Vector2(16.840576, -65.9588)
 scale = Vector2(14.077642, 11.227029)
 energy = 1.3
+texture = SubResource("GradientTexture2D_dinhu")
+
+[node name="flash" type="PointLight2D" parent="player" unique_id=816711550]
+position = Vector2(16.840576, -65.9588)
+scale = Vector2(9.735941, 7.764488)
+energy = 0.7
 texture = SubResource("GradientTexture2D_dinhu")
 
 [node name="areas" type="Node2D" parent="." unique_id=1193393466]
@@ -4334,6 +4351,7 @@ texture = SubResource("GradientTexture2D_dinhu")
 [node name="canvas" type="CanvasLayer" parent="." unique_id=1209985598]
 
 [node name="mobile" parent="canvas" unique_id=2043303018 instance=ExtResource("14_5newe")]
+visible = false
 
 [node name="paper" type="Sprite2D" parent="canvas" unique_id=1963877162]
 visible = false
@@ -4481,10 +4499,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="hint" type="Button" parent="canvas" unique_id=870581184]
-offset_left = 1124.0
-offset_top = 5.0
-offset_right = 1248.0
-offset_bottom = 128.0
+offset_left = 1116.0
+offset_top = 27.0
+offset_right = 1256.0
+offset_bottom = 94.0
 theme_override_colors/font_hover_color = Color(0.3671875, 0.3671875, 0.3671875, 1)
 theme_override_fonts/font = ExtResource("15_1kice")
 theme_override_font_sizes/font_size = 66
@@ -4494,10 +4512,141 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_8ool0")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_pr1ej")
 text = "Hint?"
 
-[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1332446475]
+[node name="skip" type="Button" parent="canvas" unique_id=1780144751]
 visible = false
-position = Vector2(0, -1)
-color = Color(1, 0.92578125, 0.94547194, 1)
+offset_left = 1111.0
+offset_top = 100.0
+offset_right = 1255.0
+offset_bottom = 167.0
+theme_override_colors/font_hover_color = Color(0.3671875, 0.3671875, 0.3671875, 1)
+theme_override_fonts/font = ExtResource("15_1kice")
+theme_override_font_sizes/font_size = 66
+theme_override_styles/normal = SubResource("StyleBoxFlat_7025r")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_m4url")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8ool0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_pr1ej")
+text = "Skip?"
+
+[node name="settings" type="Button" parent="canvas" unique_id=195671662]
+offset_left = 27.0
+offset_top = 8.0
+offset_right = 171.0
+offset_bottom = 131.0
+theme_override_colors/font_hover_color = Color(0.3671875, 0.3671875, 0.3671875, 1)
+theme_override_fonts/font = ExtResource("15_1kice")
+theme_override_font_sizes/font_size = 66
+theme_override_styles/normal = SubResource("StyleBoxFlat_7025r")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_m4url")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8ool0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_pr1ej")
+text = "Settings"
+
+[node name="skip_menu" type="Node2D" parent="canvas" unique_id=440640235]
+visible = false
+
+[node name="Panel2" type="Panel" parent="canvas/skip_menu" unique_id=801238406]
+offset_right = 1280.0
+offset_bottom = 721.0
+
+[node name="Panel" type="Panel" parent="canvas/skip_menu" unique_id=1659578530]
+offset_left = 397.0
+offset_top = 90.0
+offset_right = 883.0
+offset_bottom = 466.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vlew8")
+
+[node name="sub" type="Label" parent="canvas/skip_menu" unique_id=367203945]
+offset_left = 415.0
+offset_top = 128.0
+offset_right = 865.0
+offset_bottom = 241.83334
+theme_override_fonts/font = ExtResource("5_gee14")
+theme_override_font_sizes/font_size = 35
+text = "You can use hints instead of directly skipping"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="confirm_skip" type="Button" parent="canvas/skip_menu" unique_id=1686812343]
+offset_left = 410.0
+offset_top = 328.0
+offset_right = 554.0
+offset_bottom = 451.0
+theme_override_colors/font_hover_color = Color(0.3671875, 0.3671875, 0.3671875, 1)
+theme_override_fonts/font = ExtResource("15_1kice")
+theme_override_font_sizes/font_size = 66
+theme_override_styles/normal = SubResource("StyleBoxFlat_7025r")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_m4url")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8ool0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_pr1ej")
+text = "Skip"
+
+[node name="cancel" type="Button" parent="canvas/skip_menu" unique_id=1158930606]
+offset_left = 726.0
+offset_top = 328.0
+offset_right = 870.0
+offset_bottom = 451.0
+theme_override_colors/font_hover_color = Color(0.3671875, 0.3671875, 0.3671875, 1)
+theme_override_fonts/font = ExtResource("15_1kice")
+theme_override_font_sizes/font_size = 66
+theme_override_styles/normal = SubResource("StyleBoxFlat_7025r")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_m4url")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8ool0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_pr1ej")
+text = "Cancel"
+
+[node name="settings_menu" type="Node2D" parent="canvas" unique_id=767316148]
+visible = false
+
+[node name="Panel2" type="Panel" parent="canvas/settings_menu" unique_id=1763090374]
+visible = false
+offset_right = 1280.0
+offset_bottom = 721.0
+
+[node name="Panel" type="Panel" parent="canvas/settings_menu" unique_id=1495899926]
+offset_left = 397.0
+offset_top = 90.0
+offset_right = 883.0
+offset_bottom = 268.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vlew8")
+
+[node name="touch" type="Label" parent="canvas/settings_menu" unique_id=1104500574]
+offset_left = 425.0
+offset_top = 114.0
+offset_right = 510.0
+offset_bottom = 186.83331
+theme_override_fonts/font = ExtResource("5_gee14")
+theme_override_font_sizes/font_size = 35
+text = "Touch?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CheckButton" type="CheckButton" parent="canvas/settings_menu" unique_id=2071787650]
+offset_left = 415.0
+offset_top = 120.0
+offset_right = 550.58057
+offset_bottom = 161.98877
+scale = Vector2(1.335, 1.335)
+
+[node name="brightness" type="Label" parent="canvas/settings_menu" unique_id=1830155052]
+offset_left = 425.0
+offset_top = 178.0
+offset_right = 510.0
+offset_bottom = 250.83331
+theme_override_fonts/font = ExtResource("5_gee14")
+theme_override_font_sizes/font_size = 35
+text = "Brightness?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CheckButton2" type="CheckButton" parent="canvas/settings_menu" unique_id=1209036922]
+offset_left = 415.0
+offset_top = 184.0
+offset_right = 580.5431
+offset_bottom = 225.98877
+scale = Vector2(1.335, 1.335)
 
 [node name="sfx" type="Node2D" parent="." unique_id=604922766]
 
@@ -4576,3 +4725,9 @@ parameters/looping = true
 [connection signal="pressed" from="canvas/paper/close" to="." method="_on_close_paper_pressed"]
 [connection signal="pressed" from="canvas/book/close" to="." method="_on_close_book_pressed"]
 [connection signal="pressed" from="canvas/hint" to="." method="_on_hint_pressed"]
+[connection signal="pressed" from="canvas/skip" to="." method="_on_skip_pressed"]
+[connection signal="pressed" from="canvas/settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="canvas/skip_menu/confirm_skip" to="." method="_on_confirm_skip_pressed"]
+[connection signal="pressed" from="canvas/skip_menu/cancel" to="." method="_on_cancel_pressed"]
+[connection signal="toggled" from="canvas/settings_menu/CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="toggled" from="canvas/settings_menu/CheckButton2" to="." method="_on_brightness_toggled"]

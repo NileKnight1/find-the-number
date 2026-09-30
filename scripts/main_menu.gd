@@ -6,7 +6,20 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+var sound_click = preload("res://audio/click.wav")
+
+func play_sound(sound, vol = 0.0):
+	var temp = AudioStreamPlayer.new()
+	temp.stream = sound
+	temp.volume_db = vol
+	add_child(temp)
+	
+	temp.finished.connect(temp.queue_free)
+	temp.play()
+
+
 func _on_play_pressed() -> void:
+	play_sound(sound_click)
 	get_tree().change_scene_to_file("res://scenes/game.tscn")
 
 var code = ""
@@ -72,6 +85,9 @@ func decipher():
 			deciphered += char(code[i].unicode_at(0)-1)
 
 func _on_submit_pressed() -> void:
+	
+	play_sound(sound_click)
+	
 	code = $code/code.text
 	decipher()
 	print(deciphered)
@@ -84,5 +100,7 @@ func _on_submit_pressed() -> void:
 	$play/play.disabled = 0
 	
 func _on_paste_pressed() -> void:
+	play_sound(sound_click)
+	
 	print(DisplayServer.clipboard_get())
 	$code/code.text = DisplayServer.clipboard_get()

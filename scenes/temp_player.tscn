@@ -97,7 +97,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_rdr7s")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle",
 "speed": 16.0
 }, {
@@ -120,7 +120,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4owxg")
 }],
-"loop": true,
+"loop": 1,
 "name": &"sprint",
 "speed": 10.0
 }, {
@@ -143,7 +143,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4owxg")
 }],
-"loop": true,
+"loop": 1,
 "name": &"walk",
 "speed": 7.0
 }]
@@ -159,19 +159,19 @@ height = 140.0
 script = ExtResource("1_qc3fp")
 
 [node name="sprite" type="AnimatedSprite2D" parent="." unique_id=805986178]
-position = Vector2(19, -50.000004)
-scale = Vector2(0.38833338, 0.3883334)
+position = Vector2(19, -71)
+scale = Vector2(0.48500004, 0.48500007)
 sprite_frames = SubResource("SpriteFrames_h0i82")
 animation = &"idle"
 autoplay = "idle"
 
 [node name="Panel" type="Panel" parent="." unique_id=1222239789]
 visible = false
-layout_direction = 2
 offset_top = 38.0
 offset_right = 40.0
 offset_bottom = 97.30395
 scale = Vector2(1, -2.7148278)
+layout_direction = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_v6iek")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=814663373]

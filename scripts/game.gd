@@ -1,5 +1,7 @@
 extends Node2D
 
+var sound_click = preload("res://audio/click.wav")
+
 var sound_door_open = preload("res://audio/yodguard-door-opening-slowly-1-535465.mp3")
 var sound_collect = preload("res://audio/638390__ulrich_wehner__horror-stinger-13_killing-machine.wav")
 var sound_clean_pond = preload("res://audio/freesound_community-water-splash-46402.mp3")
@@ -259,8 +261,8 @@ func _on_pond_area_body_entered(body: Node2D) -> void:
 		body.def_sprint_jump = -200
 func _on_pond_area_body_exited(body: Node2D) -> void:
 	if body == $player:
-		body.def_speed = 300
-		body.def_sprint = 400
+		body.def_speed = 400
+		body.def_sprint = 500
 		body.def_jump = -350.0
 		body.def_sprint_jump = -400
 		
@@ -412,6 +414,7 @@ func collect_num(node1, tex):
 	#play_sound()
 	if !node1.visible: return
 	hint = 0
+	$canvas/skip.visible = 0
 	$canvas/sub.text = ""
 	node1.visible = 0
 	play_sound(sound_collect)
@@ -447,6 +450,7 @@ func collect_num(node1, tex):
 func collect_num_silent(node1, tex):
 	node1.visible = 0
 	var node2 = $canvas/nums/num1
+	$canvas/sub.text = ""
 	node2.get_node('num1').get_node('Label').text = tex
 	node2.modulate.a = 0
 	node2.visible = 0
@@ -459,7 +463,8 @@ func collect_num_silent(node1, tex):
 		"VI": collected_nums[3] = 1
 		"X": collected_nums[4] = 1
 		"XI": collected_nums[5] = 1
-
+	if collected_nums_count == 6:
+		start_clock()
 
 func _on_num_r17_body_entered(body: Node2D) -> void:
 	if body == $player:
@@ -586,6 +591,8 @@ func _on_hallway_left_body_entered(body: Node2D) -> void:
 		$player.position.x = 2000
 
 func start_clock():
+	$canvas/skip.visible = 0
+	$canvas/hint.visible = 0
 	$sfx/clock_ticking.play()
 	force_no_enter = 1
 	start_clock_effects()
@@ -709,6 +716,7 @@ var hints = [
 var hint = 0
 var hinted_num = 0
 func _on_hint_pressed() -> void:
+	play_sound(sound_click)
 	for i in range(collected_nums.size()):
 		if collected_nums[i] == 0:
 			hinted_num = i
@@ -720,4 +728,33 @@ func _on_hint_pressed() -> void:
 	if hint < hints[hinted_num].size()-1:
 		hint += 1
 	else:
+		$canvas/skip.visible = 1
 		hint = 0
+
+func _on_cancel_pressed() -> void:
+	play_sound(sound_click)
+	$canvas/skip_menu.visible = 0
+func _on_confirm_skip_pressed() -> void:
+	play_sound(sound_click)
+	$canvas/skip_menu.visible = 0
+	$canvas/skip.visible = 0
+	
+	collect_num_silent(get_node_or_null(nums_list[0][0]), nums_list[0][1])
+	nums_list.remove_at(0)
+	
+
+func _on_skip_pressed() -> void:
+	play_sound(sound_click)
+	#play_sound(sound_pre)
+	$canvas/skip_menu.visible = 1
+
+func _on_settings_pressed() -> void:
+	play_sound(sound_click)
+	$canvas/settings_menu.visible = !$canvas/settings_menu.visible
+
+func _on_check_button_toggled(toggled_on: bool) -> void:
+	$canvas/mobile.visible = toggled_on
+
+func _on_brightness_toggled(toggled_on: bool) -> void:
+	$player/flash2.visible = toggled_on
+	$player/flash.visible = !toggled_on
